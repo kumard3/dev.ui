@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className="bg-[#101827] w-full min-h-screen ">
       <Nav />
-      <section className="text-white container w-full mx-3 mt-3 ">
+      <section className="text-white container w-full mx-auto mt-3 ">
         <h1 className="text-5xl font-bold">Components</h1>
       <section className="text-white flex justify-center items-center w-full my-4 ">
         {routes.map((n,index)=> {
@@ -49,6 +49,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <section className="text-white">
         <Component {...pageProps} />
       </section>
+<Footer />
     </div>
   );
 }

@@ -1,4 +1,4 @@
-export default function index() {
+export default function Card() {
     return (
         <div>
             All the Card Components

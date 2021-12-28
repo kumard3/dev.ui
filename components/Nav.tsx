@@ -28,7 +28,7 @@ export default function Nav() {
             <Popover.Button className=" rounded-md p-2 inline-flex items-center justify-center text-black hover:text-gray-500 ">
               <button
                 type="button"
-                className="inline-flex items-center lg:hidden bg-gray-200 hover:bg-gray-300 focus-visible:ring ring-indigo-300  active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2"
+                className="inline-flex items-center lg:hidden   focus-visible:ring ring-indigo-300  active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

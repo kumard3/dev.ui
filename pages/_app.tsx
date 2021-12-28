@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <h1 className="text-5xl font-bold">Components</h1>
       <section className="text-white flex justify-center items-center w-full my-4 ">
         {routes.map((n,index)=> {
-          return <Componentbutton href={n.href} title={n.title} key={n.index} />
+          return <Componentbutton href={n.href} title={n.title} key={n.title} />
         })}
         
       </section>

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 export default function Footer() {
     return (
 <footer className="py-6 dark:bg-gray-800 dark:text-gray-50 text-white">

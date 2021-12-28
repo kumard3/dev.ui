@@ -17,8 +17,8 @@ export default function CodeDisplay({component,jsx,html}:any) {
   return (
 <>
     <Tab.Group>
-    <section className="bg-[#1F2A37] h-[37rem] w-[90vw] flex flex-col rounded-2xl container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-3 ">
-      <section className="flex w-full justify-between">
+    <section className="bg-[#1F2A37] mb-5 h-[37rem] w-[90vw] flex flex-col rounded-2xl container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
+      <section className="flex p-3 w-full justify-between">
         <Tab.List className="p-3">
         <Tab className="px-3" >Preview</Tab>
         <Tab className="px-3" >HTML</Tab>
@@ -36,6 +36,7 @@ export default function CodeDisplay({component,jsx,html}:any) {
           </svg>
         </button>
       </section>
+      <hr/>
       <Tab.Panels>
       <Tab.Panel>
       <div className="max-h-[50rem] overflow-scroll">
@@ -45,8 +46,28 @@ export default function CodeDisplay({component,jsx,html}:any) {
                 </section>
                 </div>
                 </Tab.Panel>
-                <Tab.Panel><pre className="p-6 overflow-scroll  language-html max-h-[50vw] w-full prism-dark" > <code className="language-html">{html}</code></pre></Tab.Panel>
-        <Tab.Panel><pre className="p-6 overflow-scroll  language-html max-h-[50vw] w-full prism-dark" > <code className="language-html">{jsx}</code></pre></Tab.Panel>
+                <Tab.Panel>
+                <button 
+                className="absolute border-indigo-400 border-1 right-[10%] flex items-center px-4 py-2  border rounded-lg hover:ring-4 focus:ring-indigo-400 hover:ring-indigo-400 border-indigo-400 bg-coolGray-800 text-coolGray-100
+                "  
+  onClick={() =>  navigator.clipboard.writeText(html)}
+>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-[10px]"><path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"></path><path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"></path></svg>
+
+  Copy
+</button>
+                    <pre className="p-6 overflow-scroll  language-html max-h-[50vw] w-full prism-dark" > <code className="language-html">{html}</code></pre></Tab.Panel>
+        <Tab.Panel>
+        <button 
+                className="absolute border-indigo-400 border-1 right-[10%] flex items-center px-4 py-2  border rounded-lg hover:ring-4 focus:ring-indigo-400 hover:ring-indigo-400 border-indigo-400 bg-coolGray-800 text-coolGray-100
+                "   
+  onClick={() =>  navigator.clipboard.writeText(jsx)}
+>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 mr-[10px]"><path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"></path><path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"></path></svg>
+  Copy
+</button>
+            
+            <pre className="p-6 overflow-scroll  language-html max-h-[50vw] w-full prism-dark" > <code className="language-html">{jsx}</code></pre></Tab.Panel>
       </Tab.Panels>
       <section>
         <Transition appear show={isOpen} as={Fragment}>

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-sync-scripts */
+
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { Tab } from "@headlessui/react";
@@ -47,45 +48,7 @@ export default function CodeDisplay({ component, jsx, html }: any) {
               </div>
             </Tab.Panel>
             <Tab.Panel className="max-h-[20rem] overflow-scroll">
-              {/* <button
-                className="absolute border-indigo-400 border-1 right-[10%] flex items-center px-4 py-2 m-3 border rounded-lg hover:ring-4 focus:ring-indigo-400 hover:ring-indigo-400 border-indigo-400 bg-gray-800 text-gray-100
- 
-                "
-                color={clipboard.copied ? "teal" : "blue"}
-                onClick={() => clipboard.copy(html)}
-              >
-                {clipboard.copied ? (
-                  <>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="w-5 h-5 mr-[10px]"
-                    >
-                      <path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"></path>
-                      <path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"></path>
-                    </svg>
-                    Copied
-                  </>
-                ) : (
-                  <>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="w-5 h-5 mr-[10px]"
-                    >
-                      <path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"></path>
-                      <path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"></path>
-                    </svg>
-                    Copy
-                  </>
-                )}
-              </button> */}
-              {/* <pre className="p-6 overflow-scroll  language-html  w-full prism-dark">
-                {" "}
-                <code className=" language-markup">{html}</code>
-              </pre> */}
+             
               <Prism
                 colorScheme="dark"
                 language="tsx"
@@ -96,55 +59,19 @@ export default function CodeDisplay({ component, jsx, html }: any) {
               </Prism>
             </Tab.Panel>
             <Tab.Panel className="max-h-[20rem] overflow-scroll">
-              {/* <button
-                className="absolute border-indigo-400 border-1 right-[10%] flex items-center px-4 py-2 m-3 border rounded-lg hover:ring-4 focus:ring-indigo-400 hover:ring-indigo-400 border-indigo-400 bg-gray-800 text-gray-100
- 
-                "
-                color={clipboard.copied ? "teal" : "blue"}
-                onClick={() => clipboard.copy(jsx)}
-              >
-                {clipboard.copied ? (
-                  <>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="w-5 h-5 mr-[10px]"
-                    >
-                      <path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"></path>
-                      <path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"></path>
-                    </svg>
-                    Copied
-                  </>
-                ) : (
-                  <>
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="w-5 h-5 mr-[10px]"
-                    >
-                      <path d="M9 2a2 2 0 00-2 2v8a2 2 0 002 2h6a2 2 0 002-2V6.414A2 2 0 0016.414 5L14 2.586A2 2 0 0012.586 2H9z"></path>
-                      <path d="M3 8a2 2 0 012-2v10h8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"></path>
-                    </svg>
-                    Copy
-                  </>
-                )}
-              </button> */}
-
-              {/* <pre className="p-6 overflow-scroll  language-html  w-full prism-dark">
-                {" "}
-                <code className=" language-javascript">{jsx}</code>
-              </pre> */}
-
+              
+            
               <Prism
                 colorScheme="dark"
                 language="tsx"
                 copyLabel="Copy code to clipboard"
                 copiedLabel="Code copied to clipboard"
               >
-                {jsx}
+              {jsx}
+              
               </Prism>
+           
+                
             </Tab.Panel>
           </Tab.Panels>
           <section>
@@ -154,7 +81,7 @@ export default function CodeDisplay({ component, jsx, html }: any) {
                 className="fixed top-0 w-full z-10 overflow-y-auto"
                 onClose={closeModal}
               >
-                <div className="min-h-screen bg-[#1F2A37] w-full px-4">
+                <div className="h-full bg-[#1F2A37] w-full px-4 o">
                   <button
                     onClick={closeModal}
                     className="text-white float-right p-[1rem]"
@@ -175,7 +102,9 @@ export default function CodeDisplay({ component, jsx, html }: any) {
                       ></polygon>
                     </svg>
                   </button>
-                  <section className="text-white pt-[3rem]">
+             
+           
+                         <section className="text-white pt-[3rem] h-screen overflow-scroll ">
                     {component}
                   </section>
                 </div>
@@ -187,3 +116,5 @@ export default function CodeDisplay({ component, jsx, html }: any) {
     </>
   );
 }
+
+

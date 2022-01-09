@@ -5,17 +5,24 @@ import Link from "next/link";
 
 const navData = [
   {
-    name: "Component",
-    href: "/components",
+    name: "Home",
+    href: "#home",
   },
   {
-    name: "Templates",
-    href: "/templates",
+    name: "Work",
+    href: "#work",
   },
-
+  {
+    name: "About",
+    href: "#about",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
 ];
 
-export default function Nav() {
+export default function NavComponent() {
   // Create a ref that we add to the element for which we want to detect outside clicks
   const ref = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLDivElement>(null);
@@ -28,7 +35,7 @@ export default function Nav() {
 
   return (
     // <Popover className= {`sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-gray-900/10 bg-white supports-backdrop-blur:bg-white/95 ${show && 'bg-inherit	'}`}>
-    <div className=" top-0  bg-[#818CF8]  text-xl font-bold drop-shadow-xl flex-none transition-colors duration-500 lg:z-50 ">
+    <div className="sticky top-0 z-10 backdrop-blur-sm  text-xl font-bold drop-shadow-xl flex-none transition-colors duration-500  ">
       <div className="w-full container mx-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
@@ -36,8 +43,8 @@ export default function Nav() {
               {/* <li className={router.pathname == "#hero" ? "active" : "koko"}>
               <Link href="#hero">home</Link>
             </li> */}
-              <Link href="/">
-                Dev.ui
+              <Link href="#home">
+                <img src="/temp-logo.png" alt="logo" className="h-[3.5rem]" />
                 {/* <span className="text-4xl font-bold">logo</span> */}
               </Link>
             </div>
@@ -132,3 +139,4 @@ export default function Nav() {
     </div>
   );
 }
+

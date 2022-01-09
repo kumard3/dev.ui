@@ -1,5 +1,6 @@
-import {useState}  from 'react'
-import { Componentbutton } from '../../components/ComponentButton';
+/* eslint-disable @next/next/no-img-element */
+import { useState } from "react";
+import { Componentbutton } from "../../components/ComponentButton";
 
 import Card1 from "../../components/card/Card1";
 import Card2 from "../../components/card/Card2";
@@ -10,7 +11,7 @@ import Footer2 from "../../components/footer/Footer2";
 import Button1 from "../../components/button/Button1";
 import Button2 from "../../components/button/Button2";
 import Button3 from "../../components/button/Button3";
-import Nav2 from "../../components/nav/Nav2"
+import Nav2 from "../../components/nav/Nav2";
 const routes = [
   {
     href: "/components/card",
@@ -28,16 +29,17 @@ const routes = [
     href: "/components/nav",
     title: "Nav",
   },
-]
+];
 
 export default function Component() {
-  const [stores,setStore] = useState("")
-  const [codeData,setCodeData] = useState([
+  const [stores, setStore] = useState("");
+  const [codeData, setCodeData] = useState([
     {
-      title:'Card',
-      store:[    {
-        component: <Card1 />,
-        jsx: `<div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
+      title: "Card",
+      store: [
+        {
+          component: <Card1 />,
+          jsx: `<div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
         <img src="https://source.unsplash.com/300x300/?random" alt="" className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"/>
         <div className="mt-6 mb-2">
             <span className="block text-xs font-medium tracking-widest uppercase dark:text-indigo-400">Quisque</span>
@@ -45,7 +47,7 @@ export default function Component() {
         </div>
         <p className="dark:text-gray-100">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
     </div>`,
-        html: `<div class="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
+          html: `<div class="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
     <img src="https://source.unsplash.com/300x300/?random" alt="" class="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500">
     <div class="mt-6 mb-2">
         <span class="block text-xs font-medium tracking-widest uppercase dark:text-indigo-400">Quisque</span>
@@ -53,10 +55,10 @@ export default function Component() {
     </div>
     <p class="dark:text-gray-100">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
   </div>`,
-      },
-      {
-        component: <Card2 />,
-        jsx: `<div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+        },
+        {
+          component: <Card2 />,
+          jsx: `<div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
         <img src="https://source.unsplash.com/301x301/?random" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500"/>
         <div className="flex flex-col justify-between p-6 space-y-8">
             <div className="space-y-2">
@@ -66,7 +68,7 @@ export default function Component() {
             <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-indigo-400 dark:text-gray-900">Read more</button>
         </div>
     </div>`,
-        html: `<div class="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
+          html: `<div class="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
     <img src="https://source.unsplash.com/301x301/?random" alt="" class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
     <div class="flex flex-col justify-between p-6 space-y-8">
         <div class="space-y-2">
@@ -76,12 +78,15 @@ export default function Component() {
         <button type="button" class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-indigo-400 dark:text-gray-900">Read more</button>
     </div>
   </div>`,
-      },]
-  },    {
-      title:'Footer',
-      store:[     {
-        component: <Footer1 />,
-        jsx: `footer className="px-4 py-8 dark:bg-gray-800 dark:text-gray-400">
+        },
+      ],
+    },
+    {
+      title: "Footer",
+      store: [
+        {
+          component: <Footer1 />,
+          jsx: `footer className="px-4 py-8 dark:bg-gray-800 dark:text-gray-400">
               <div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
                 <div className="flex flex-row pr-3 space-x-4 sm:space-x-8">
                   <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full dark:bg-indigo-400">
@@ -109,7 +114,7 @@ export default function Component() {
                 </ul>
               </div>
             </footer>`,
-        html: `<footer class="px-4 py-8 dark:bg-gray-800 dark:text-gray-400">
+          html: `<footer class="px-4 py-8 dark:bg-gray-800 dark:text-gray-400">
             <div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
                 <div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
                     <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full dark:bg-indigo-400">
@@ -139,10 +144,10 @@ export default function Component() {
                 </ul>
             </div>
         </footer>`,
-      },
-      {
-        component: <Footer2 />,
-        html: `<footer class="py-6 dark:bg-gray-800 dark:text-gray-50">
+        },
+        {
+          component: <Footer2 />,
+          html: `<footer class="py-6 dark:bg-gray-800 dark:text-gray-50">
               <div class="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
                   <div class="grid grid-cols-12">
                       <div class="pb-6 col-span-full md:pb-0 md:col-span-6">
@@ -227,7 +232,7 @@ export default function Component() {
                   </div>
               </div>
           </footer>`,
-        jsx: `<footer className="py-6 dark:bg-gray-800 dark:text-gray-50">
+          jsx: `<footer className="py-6 dark:bg-gray-800 dark:text-gray-50">
           <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
               <div className="grid grid-cols-12">
                   <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
@@ -310,31 +315,35 @@ export default function Component() {
               </div>
           </div>
       </footer>`,
-      },]
-  },    {
-      title:'Button',
-      store:[    {
-        component: <Button1 />,
-        jsx: `<button type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800">Basic</button>`,
-        html: `<button type="button" class="px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800">Basic</button>`,
-      },
-      {
-        component: <Button2 />,
-        jsx: `<button type="button" className="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">Border</button>`,
-        html: `<button type="button" class="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">Border</button>`,
-      },
-      {
-        component: <Button3 />,
-        jsx: `<button type="button" className="px-8 py-3 font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800">Rounded</button>`,
-        html: `<button type="button" class="px-8 py-3 font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800">Rounded</button>`,
-      },]
-  },
-{
-  title:'Nav',
-  store:[
+        },
+      ],
+    },
     {
-      component:<Nav2 />,
-      jsx:`<header className = "p-4 dark:bg-gray-800 dark:text-gray-100">
+      title: "Button",
+      store: [
+        {
+          component: <Button1 />,
+          jsx: `<button type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800">Basic</button>`,
+          html: `<button type="button" class="px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800">Basic</button>`,
+        },
+        {
+          component: <Button2 />,
+          jsx: `<button type="button" className="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">Border</button>`,
+          html: `<button type="button" class="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">Border</button>`,
+        },
+        {
+          component: <Button3 />,
+          jsx: `<button type="button" className="px-8 py-3 font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800">Rounded</button>`,
+          html: `<button type="button" class="px-8 py-3 font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800">Rounded</button>`,
+        },
+      ],
+    },
+    {
+      title: "Nav",
+      store: [
+        {
+          component: <Nav2 />,
+          jsx: `<header className = "p-4 dark:bg-gray-800 dark:text-gray-100">
       <div className="container flex justify-between h-16 mx-auto">
         <a
           href="#"
@@ -403,7 +412,7 @@ export default function Component() {
         </button>
       </div>
     </header>`,
-    html:`<header class="p-4 dark:bg-coolGray-800 dark:text-coolGray-100">
+          html: `<header class="p-4 dark:bg-coolGray-800 dark:text-coolGray-100">
     <div class="container flex justify-between h-16 mx-auto">
         <a href="#" aria-label="Back to homepage" class="flex items-center p-2">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32" class="w-8 h-8 dark:text-indigo-400">
@@ -431,15 +440,14 @@ export default function Component() {
             </svg>
         </button>
     </div>
-</header>`
-  }
-  ]
-}
-])
+</header>`,
+        },
+      ],
+    },
+  ]);
 
-
-const filterdata = codeData.filter((e) => e.title === stores);
-const Filter = filterdata[0]
+  const filterdata = codeData.filter((e) => e.title === stores);
+  const Filter = filterdata[0];
   return (
     <div className="min-h-screen">
       <section className="text-white container w-full mx-auto mt-3 ">
@@ -448,40 +456,37 @@ const Filter = filterdata[0]
           {routes.map((n, index) => {
             return (
               <div key={n.title} onClick={() => setStore(n.title)}>
-              <Componentbutton  title={n.title} />
+                <Componentbutton title={n.title} />
               </div>
             );
           })}
         </section>
       </section>
-      
-      {stores === "" ? 
-      <div className="container flex items-center justify-center p-6 mx-auto mt-8 lg:my-16 h-80 sm:h-96 md:h-112 xl:h-128">
-        <img
-          src="/pc_guy.png"
-          alt="pc_guy"
-          className="object-contain h-80 sm:h-96 md:h-112 xl:h-128"
-        />
-      </div>
-       : 
-       <div className="text-white">
-      <div className="container mx-auto flex w-full justify-center flex-col items-center">
-        
-        {Filter?.store.map((n) => {
-          return (
-            <CodeDisplay
-              component={n.component}
-              key={n.component}
-              jsx={n.jsx}
-              html={n.html}
-            />
-          );
-        })}
-      </div>
-    </div>
-      }
-      
+
+      {stores === "" ? (
+        <div className="container flex items-center justify-center p-6 mx-auto mt-8 lg:my-16 h-80 sm:h-96 md:h-112 xl:h-128">
+          <img
+            src="/pc_guy.png"
+            alt="pc_guy"
+            className="object-contain h-80 sm:h-96 md:h-112 xl:h-128"
+          />
+        </div>
+      ) : (
+        <div className="text-white">
+          <div className="container mx-auto flex w-full justify-center flex-col items-center">
+            {Filter?.store.map((n) => {
+              return (
+                <CodeDisplay
+                  component={n.component}
+                  key={n.component}
+                  jsx={n.jsx}
+                  html={n.html}
+                />
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
-

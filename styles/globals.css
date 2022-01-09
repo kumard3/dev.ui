@@ -5,3 +5,11 @@
 pre{
     background-color:#101827 !important;
 }
+body ::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

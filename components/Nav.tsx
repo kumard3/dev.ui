@@ -1,114 +1,144 @@
-/* eslint-disable @next/next/link-passhref */
-import { Fragment } from "react";
-
-import { Popover, Transition } from "@headlessui/react";
-import { ChartBarIcon, XIcon } from "@heroicons/react/outline";
+import React, { useRef, useState } from "react";
+import useOnClickOutside from "./useOnClickOutside";
 
 import Link from "next/link";
 
-const solutions = [
+const navData = [
   {
-    name: "Components",
-    href: "/",
-    icon: ChartBarIcon,
+    name: "Component",
+    href: "/components",
   },
+  {
+    name: "Templates",
+    href: "/templates",
+  },
+
 ];
 
 export default function Nav() {
+  // Create a ref that we add to the element for which we want to detect outside clicks
+  const ref = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
+
+  // State for our modal
+  const [isModalOpen, setModalOpen] = useState(false);
+  // Call hook passing in the ref and a function to call on outside click
+  useOnClickOutside(ref, () => setModalOpen(false));
+
+
   return (
-    <Popover className="relative bg-[#818CF8]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
-        <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
-          <div className="flex justify-start lg:w-0 lg:flex-1">
-            <Link href="/">
-              <span className="text-4xl font-bold">Dev.ui</span>
-            </Link>
+    // <Popover className= {`sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-gray-900/10 bg-white supports-backdrop-blur:bg-white/95 ${show && 'bg-inherit	'}`}>
+    <div className="sticky top-0 z-50 bg-[#818CF8]  text-xl font-bold drop-shadow-xl flex-none transition-colors duration-500 lg:z-50 ">
+      <div className="w-full container mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
+          <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
+            <div className="flex justify-start lg:w-0 lg:flex-1">
+              {/* <li className={router.pathname == "#hero" ? "active" : "koko"}>
+              <Link href="#hero">home</Link>
+            </li> */}
+              <Link href="/">
+                Dev.ui
+                {/* <span className="text-4xl font-bold">logo</span> */}
+              </Link>
+            </div>
+            <div className="-mr-2 -my-2 sm:hidden">
+              <>
+                {isModalOpen ? (
+                  <div
+                    ref={ref}
+                    className="fixed w-[24rem] right-0 top-0   p-2 h-[100vh]  transition transform md:hidden"
+                  >
+                    <div className="rounded-lg shadow-lg  ring-1 h-full ring-black ring-opacity-5 bg-[#141628] border-[1px] border-red-100/20 text-white divide-y-2 divide-gray-50">
+                      <div className="pt-5 pb-6 px-5">
+                        <div className="-mr-2 float-right mb-3">
+                          <button
+                            onClick={() => setModalOpen(!true)}
+                            className="bg-white rounded-md p-2 inline-flex items-center justify-center text-black hover:text-gray-500 hover:bg-gray-100 "
+                          >
+                            <span className="sr-only">Close menu</span>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              stroke="currentColor"
+                              aria-hidden="true"
+                              className="h-6 w-6"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M6 18L18 6M6 6l12 12"
+                              ></path>
+                            </svg>
+                          </button>
+                        </div>
+
+                        <div className="mt-[5rem] z-10 relative">
+                          <nav className="grid gap-y-8">
+                            {navData.map((item) => (
+                              <a
+                                key={item.name}
+                                href={item.href}
+                                className="-m-3 p-3 flex items-center rounded-md hover:bg-black  border-[1px] border-red-500/60"
+                              >
+                                <h1 className="my-3 ml-3 text-3xl font-bold ">
+                                  {item.name}
+                                </h1>
+                              </a>
+                            ))}
+                          </nav>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className=" rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500 ">
+                    <button
+                      onClick={() => setModalOpen(true)}
+                      className="inline-flex items-center lg:hidden text-white  focus-visible:ring ring-indigo-300  active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-6 w-6"
+                        fill="white"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M4 6h16M4 12h16m-7 6h7"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                )}
+              </>
+            </div>
+            <nav className="hidden sm:flex space-x-10 items-center">
+              {navData.map((n) => {
+                return (
+                  <Link key={n.name} href={n.href}>
+                    {n.name}
+                  </Link>
+                );
+              })}
+            </nav>
           </div>
-          <div className="-mr-2 -my-2 sm:hidden">
-            <Popover.Button className=" rounded-md p-2 inline-flex items-center justify-center text-black hover:text-gray-500 ">
-              <button
-                type="button"
-                className="inline-flex items-center lg:hidden   focus-visible:ring ring-indigo-300  active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-                Menu
-              </button>
-            </Popover.Button>
-          </div>
-          <Popover.Group
-            as="nav"
-            className="hidden sm:flex space-x-10 items-center text-xl"
-          >
-            <Link
-              href="/components"
-              //   className="text-base font-medium text-gray-500 hover:text-gray-900"
-            >
-              Components
-            </Link>
-          </Popover.Group>
         </div>
       </div>
-
-      <Transition
-        as={Fragment}
-        enter="duration-200 ease-out"
-        enterFrom="opacity-0 scale-95"
-        enterTo="opacity-100 scale-100"
-        leave="duration-100 ease-in"
-        leaveFrom="opacity-100 scale-100"
-        leaveTo="opacity-0 scale-95"
-      >
-        <Popover.Panel
-          focus
-          className="absolute top-0 inset-x-0 p-2 h-[100vh] transition transform origin-top-right md:hidden"
-        >
-          <div className="rounded-lg shadow-lg ring-1 h-full ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
-            <div className="pt-5 pb-6 px-5">
-              <div className="flex items-center justify-between">
-                <div className="text-black">
-                  <Link href="/">
-                    <span className="text-4xl font-bold">Dev.ui</span>
-                  </Link>
-                </div>
-                <div className="-mr-2">
-                  <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-black hover:text-gray-500 hover:bg-gray-100 ">
-                    <span className="sr-only">Close menu</span>
-                    <XIcon className="h-6 w-6" aria-hidden="true" />
-                  </Popover.Button>
-                </div>
-              </div>
-              <div className="mt-6">
-                <nav className="grid gap-y-8">
-                  {solutions.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50"
-                    >
-                      <h1 className="my-3 ml-3 text-3xl font-bold text-gray-900">
-                        {item.name}
-                      </h1>
-                    </a>
-                  ))}
-                </nav>
-              </div>
-            </div>
-          </div>
-        </Popover.Panel>
-      </Transition>
-    </Popover>
+    </div>
   );
 }
 
+
+function setMenuOpen(arg0: boolean) {
+  throw new Error("Function not implemented.");
+}
+
+function useEffect(arg0: () => () => void, arg1: never[]) {
+  throw new Error("Function not implemented.");
+}
 // bg-[#EF404A]

@@ -5,27 +5,6 @@ import { useRouter } from "next/router";
 import { Componentbutton } from "../components/ComponentButton";
 import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }: AppProps) {
-  const routes = [
-    {
-      href: "/components/card",
-      title: "Card",
-    },
-    {
-      href: "/components/footer",
-      title: "Footer",
-    },
-    {
-      href: "/components/button",
-      title: "Button",
-    },
-    {
-      href: "/components/nav",
-      title: "Nav",
-    },
-  ];
-  const router = useRouter();
-  console.log(router);
-
   
     return (
       <div className="bg-[#101827] w-full min-h-screen ">

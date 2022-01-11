@@ -14,7 +14,7 @@ export default function Hero() {
             Dev UI is a free, open-source collection of UI components and
             templates based on Tailwind CSS.{" "}
           </p>
-          <div className="flex space-y-4 items-center justify-start ">
+          <div className="flex space-y-4 items-center sm:justify-start justify-center ">
             <Link href="/components">
               <span className="px-8 py-3 text-lg font-bold rounded bg-indigo-500 text-white ">
                 Components

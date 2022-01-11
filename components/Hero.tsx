@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="dark:bg-gray-800 dark:text-gray-100">
       <div className="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-        <div className="flex flex-col text-white  justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+        <div className="flex flex-col dark:text-white  justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
           <h1 className="text-5xl font-bold leading-none sm:text-6xl">
             Kickstart your next
             <span className="dark:text-indigo-400 mx-2">website</span>in minutes
@@ -16,7 +16,7 @@ export default function Hero() {
           </p>
           <div className="flex space-y-4 items-center justify-start ">
             <Link href="/components">
-              <span className="px-8 py-3 text-lg font-semibold rounded bg-indigo-500  ">
+              <span className="px-8 py-3 text-lg font-bold rounded bg-indigo-500 text-white ">
                 Components
               </span>
             </Link>{" "}

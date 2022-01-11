@@ -1,17 +1,20 @@
 /* eslint-disable @next/next/no-img-element */
 import { useState } from "react";
 import { Componentbutton } from "../../components/ComponentButton";
+import CodeDisplay from "../../components/CodeDisplay";
 
 import Card1 from "../../components/card/Card1";
 import Card2 from "../../components/card/Card2";
-import CodeDisplay from "../../components/CodeDisplay";
 
 import Footer1 from "../../components/footer/Footer1";
 import Footer2 from "../../components/footer/Footer2";
 import Button1 from "../../components/button/Button1";
 import Button2 from "../../components/button/Button2";
 import Button3 from "../../components/button/Button3";
+
+import Nav1 from "../../components/nav/Nav1";
 import Nav2 from "../../components/nav/Nav2";
+
 const routes = [
   {
     href: "/components/card",
@@ -341,7 +344,10 @@ export default function Component() {
     {
       title: "Nav",
       store: [
-        {
+{
+  component:<Nav1 />,
+}
+        ,{
           component: <Nav2 />,
           jsx: `<header className = "p-4 dark:bg-gray-800 dark:text-gray-100">
       <div className="container flex justify-between h-16 mx-auto">
@@ -450,9 +456,9 @@ export default function Component() {
   const Filter = filterdata[0];
   return (
     <div className="min-h-screen">
-      <section className="text-white container w-full mx-auto mt-3 ">
+      <section className="dark:text-white container w-full mx-auto mt-3 ">
         <h1 className="text-5xl font-bold">Components</h1>
-        <section className="text-white flex justify-center items-center w-full my-4 ">
+        <section className="dark:text-white text-dark flex justify-center items-center w-full my-4 ">
           {routes.map((n, index) => {
             return (
               <div key={n.title} onClick={() => setStore(n.title)}>
@@ -472,7 +478,7 @@ export default function Component() {
           />
         </div>
       ) : (
-        <div className="text-white">
+        <div className="dark:text-white">
           <div className="container mx-auto flex w-full justify-center flex-col items-center">
             {Filter?.store.map((n) => {
               return (

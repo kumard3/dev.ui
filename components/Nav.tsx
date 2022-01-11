@@ -18,7 +18,6 @@ const navData = [
 export default function Nav() {
   // Create a ref that we add to the element for which we want to detect outside clicks
   const ref = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLDivElement>(null);
 
   // State for our modal
   const [isModalOpen, setModalOpen] = useState(false);
@@ -27,18 +26,14 @@ export default function Nav() {
 
 
   return (
-    // <Popover className= {`sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-gray-900/10 bg-white supports-backdrop-blur:bg-white/95 ${show && 'bg-inherit	'}`}>
     <div className=" top-0  bg-[#818CF8]  text-xl font-bold drop-shadow-xl flex-none transition-colors duration-500 lg:z-50 ">
       <div className="w-full container mx-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
-              {/* <li className={router.pathname == "#hero" ? "active" : "koko"}>
-              <Link href="#hero">home</Link>
-            </li> */}
+              
               <Link href="/">
                 Dev.ui
-                {/* <span className="text-4xl font-bold">logo</span> */}
               </Link>
             </div>
             <div className="-mr-2 -my-2 sm:hidden">
@@ -46,7 +41,7 @@ export default function Nav() {
                 {isModalOpen ? (
                   <div
                     ref={ref}
-                    className="fixed w-[24rem] right-0 top-0   p-2 h-[100vh]  transition transform md:hidden"
+                    className="fixed w-[24rem] right-0 top-0   p-2 h-[100vh]  transition translate-x-[-5px] md:hidden"
                   >
                     <div className="rounded-lg shadow-lg  ring-1 h-full ring-black ring-opacity-5 bg-[#141628] border-[1px] border-red-100/20 text-white divide-y-2 divide-gray-50">
                       <div className="pt-5 pb-6 px-5">
@@ -117,7 +112,7 @@ export default function Nav() {
                 )}
               </>
             </div>
-            <nav className="hidden sm:flex space-x-10 items-center">
+            <nav className="hidden sm:flex space-x-10 items-center text-white">
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href}>

@@ -19,14 +19,14 @@ export default function CodeDisplay({ component, jsx, html }: any) {
   return (
     <>
       <Tab.Group>
-        <section className="bg-[#1F2A37] mb-5 min-h-[10rem]  w-[90vw] flex flex-col rounded-2xl container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
+        <section className="dark:bg-[#1F2A37] mb-5 min-h-[10rem]  w-[90vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
           <section className="flex p-3 w-full justify-between">
-            <Tab.List className="p-3">
+            <Tab.List className="p-3 text-black dark:text-white">
               <Tab className="px-3">Preview</Tab>
               <Tab className="px-3">HTML</Tab>
               <Tab className="px-3">JSX</Tab>
             </Tab.List>
-            <button type="button" onClick={openModal}>
+            <button type="button" onClick={openModal} className="text-black  dark:text-white">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -51,7 +51,7 @@ export default function CodeDisplay({ component, jsx, html }: any) {
              
               <Prism
                 colorScheme="dark"
-                language="tsx"
+                language="markup"
                 copyLabel="Copy code to clipboard"
                 copiedLabel="Code copied to clipboard"
               >
@@ -81,10 +81,10 @@ export default function CodeDisplay({ component, jsx, html }: any) {
                 className="fixed top-0 w-full z-10 overflow-y-auto"
                 onClose={closeModal}
               >
-                <div className="h-full bg-[#1F2A37] w-full px-4 o">
+                <div className="h-full bg-white dark:bg-[#1F2A37] w-full px-4 o">
                   <button
                     onClick={closeModal}
-                    className="text-white float-right p-[1rem]"
+                    className="dark:text-white float-right p-[1rem]"
                   >
                     {" "}
                     <svg
@@ -102,9 +102,7 @@ export default function CodeDisplay({ component, jsx, html }: any) {
                       ></polygon>
                     </svg>
                   </button>
-             
-           
-                         <section className="text-white pt-[3rem] h-screen overflow-scroll ">
+                  <section className="dark:text-white pt-[3rem] h-screen overflow-scroll flex justify-center ">
                     {component}
                   </section>
                 </div>

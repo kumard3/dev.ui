@@ -33,7 +33,7 @@ export default function Nav() {
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
             <div className="flex justify-start items-center text-center lg:w-0 lg:flex-1">
               
-              <Link href="#home">
+              <Link href="/">
                 <h1 className="h-[3.5rem] flex items-center text-center" > Dev.ui </h1>
               </Link>
             </div>

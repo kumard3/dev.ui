@@ -5,19 +5,27 @@ import Link from "next/link";
 
 const navData = [
   {
-    name: "Component",
-    href: "/components",
+    name: "Home",
+    href: "#home",
   },
   {
-    name: "Templates",
-    href: "/templates",
+    name: "Work",
+    href: "#work",
   },
-
+  {
+    name: "About",
+    href: "#about",
+  },
+  {
+    name: "Contact",
+    href: "#contact",
+  },
 ];
 
 export default function Nav() {
   // Create a ref that we add to the element for which we want to detect outside clicks
   const ref = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
   // State for our modal
   const [isModalOpen, setModalOpen] = useState(false);
@@ -26,24 +34,25 @@ export default function Nav() {
 
 
   return (
-    <div className=" top-0  bg-[#818CF8]  text-xl font-bold drop-shadow-xl flex-none transition-colors duration-500 lg:z-50 ">
+    // <Popover className= {`sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-gray-900/10 bg-white supports-backdrop-blur:bg-white/95 ${show && 'bg-inherit	'}`}>
+    <div className="sticky top-0 z-50 backdrop-blur-sm  bg-[#818CF8] text-xl font-bold drop-shadow-xl flex-none transition-colors duration-500 lg:z-50 ">
       <div className="w-full container mx-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
-            <div className="flex justify-start lg:w-0 lg:flex-1">
+            <div className="flex justify-start items-center text-center lg:w-0 lg:flex-1">
               
-              <Link href="/">
-                Dev.ui
+              <Link href="#home">
+                <h1 className="h-[3.5rem] flex items-center text-center" > Dev.ui </h1>
               </Link>
             </div>
-            <div className="-mr-2 -my-2 sm:hidden">
+            <div className=" sm:hidden">
               <>
                 {isModalOpen ? (
                   <div
                     ref={ref}
-                    className="fixed w-[24rem] right-0 top-0   p-2 h-[100vh]  transition translate-x-[-5px] md:hidden"
+                    className="fixed w-[24rem] right-0 top-0   h-[100vh]  transition  translate-x-[-1px] md:hidden"
                   >
-                    <div className="rounded-lg shadow-lg  ring-1 h-full ring-black ring-opacity-5 bg-[#141628] border-[1px] border-red-100/20 text-white divide-y-2 divide-gray-50">
+                    <div className="rounded-lg shadow-lg  ring-1 h-full ring-black ring-opacity-5 bg-[#818CF8] border-[1px] border-red-100/20 text-white divide-y-2 divide-gray-50">
                       <div className="pt-5 pb-6 px-5">
                         <div className="-mr-2 float-right mb-3">
                           <button
@@ -112,7 +121,7 @@ export default function Nav() {
                 )}
               </>
             </div>
-            <nav className="hidden sm:flex space-x-10 items-center text-white">
+            <nav className="hidden sm:flex space-x-10 items-center">
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href}>
@@ -127,3 +136,5 @@ export default function Nav() {
     </div>
   );
 }
+
+

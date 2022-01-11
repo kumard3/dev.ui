@@ -15,21 +15,11 @@ body {
 }
 
 
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.demo-content {
-  padding: 20px;
-}
-
 input {
   max-width: 100%;
 }
 /* Demo only styles */
-
+/* 
 .drawer-container {
   --transition-speed: 0.3s;
 }
@@ -105,4 +95,4 @@ input {
   opacity: 1;
   pointer-events: auto;
   z-index: 999;
-}
+} */

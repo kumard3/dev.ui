@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }: AppProps) {
   
     return (
-      <div className="dark:bg-[#101827] w-full min-h-screen dark:text-white text-dark">
+      <div className="dark:bg-[#101827] w-full min-h-screen dark:text-white text-black">
         <Nav />
         <section className="dark:text-white">
           <Component {...pageProps} />

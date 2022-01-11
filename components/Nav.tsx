@@ -5,20 +5,12 @@ import Link from "next/link";
 
 const navData = [
   {
-    name: "Home",
-    href: "#home",
+    name: "Component",
+    href: "/components",
   },
   {
-    name: "Work",
-    href: "#work",
-  },
-  {
-    name: "About",
-    href: "#about",
-  },
-  {
-    name: "Contact",
-    href: "#contact",
+    name: "Templates",
+    href: "/templates",
   },
 ];
 

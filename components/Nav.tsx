@@ -27,7 +27,7 @@ export default function Nav() {
 
   return (
     // <Popover className= {`sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-gray-900/10 bg-white supports-backdrop-blur:bg-white/95 ${show && 'bg-inherit	'}`}>
-    <div className="fixed top-0 z-50  w-full  text-xl font-bold drop-shadow-xl flex-none transition-colors duration-500 lg:z-50 ">
+    <div className="fixed top-0  w-full  text-xl font-bold drop-shadow-x lg:z-50 ">
       <div className="w-full container mx-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">

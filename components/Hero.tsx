@@ -1,7 +1,7 @@
 import Link from "next/link";
 export default function Hero() {
   return (
-    <section className=" text-gray-100 min-h-screen py-[100px] ">
+    <section className=" text-gray-100 min-h-screen  ">
       <div className="absolute w-full overflow-hidden ">
         <div className="inline-block w-full transform  mt-[-20px] opacity-10">
           <svg

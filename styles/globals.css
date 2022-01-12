@@ -160,3 +160,10 @@ input {
   50%{background-position:100% 59%}
   100%{background-position:0% 42%}
 }
+
+.mantine-Drawer-drawer{
+
+  background-color:#0A192F;
+  color:white;
+
+}

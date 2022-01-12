@@ -3,7 +3,7 @@ export default function Button3() {
     <div>
       <button
         type="button"
-        className="px-8 py-3 font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800"
+        className="min-h-[3rem] px-4  active:scale-105 scale-110 active:transition-all font-semibold rounded-full bg-gray-100 dark:text-gray-800"
       >
         Rounded
       </button>

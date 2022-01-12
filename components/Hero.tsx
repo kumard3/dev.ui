@@ -60,7 +60,7 @@ export default function Hero() {
           </svg> */}
         </div>
       </div>
-      <div className="container flex relative z-50 flex-col justify-center items-center p-6 mx-auto py-24 text-center">
+      <div className="container flex  flex-col justify-center items-center p-6 mx-auto py-24 text-center">
         <div className="flex flex-col dark:text-white  justify-center p-6 text-center rounded-sm max-w-md ">
           <h1 className="text-5xl font-bold leading-none sm:text-6xl">
             Kickstart your next

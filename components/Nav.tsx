@@ -170,7 +170,7 @@ export default function Nav() {
 
   return (
     <div
-      className={ `fixed w-full flex  z-50 backdrop-blur-sm text-xl font-bold drop-shadow-xl flex-none ease-in-out duration-300 0 lg:z-50 lg:border-b lg:border-gray-900/10 bg-[#141628]/50  ${
+      className={ `fixed w-full flex  z-[100] backdrop-blur-sm text-xl font-bold drop-shadow-xl flex-none ease-in-out duration-300 0 lg:z-50 lg:border-b lg:border-gray-900/10 bg-[#141628]/50  ${
         scrollDirection === 'down' && "text-xl font-bold drop-shadow-xl mt-[-120px] ease-in-out duration-300 	"
       } ${
         scrollDirection === 'up' &&

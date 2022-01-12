@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 export default function Footer() {
     return (
-<footer className="py-6 dark:bg-gray-800 dark:text-gray-50 ">
+<footer className="py-6 border-t-2 mt-[60px] text-gray-50 ">
 	<div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
 		<div className="flex grid-cols-12 justify-between w-full">
 			<div className="pb-6 col-span-full md:pb-0 md:col-span-6">

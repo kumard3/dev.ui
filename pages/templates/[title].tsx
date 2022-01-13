@@ -22,7 +22,7 @@ export default function Post() {
       <h1 className="text-5xl font-bold px-2"><Link href='/templates'> Template</Link> </h1>
 
         <section className="dark:text-white text-dark flex justify-center items-center w-full my-4 ">
-          {showCode.map((n, index) => {
+          {showCode.map((n) => {
             return (
               <div key={n.title}>
                 <Componentbutton title={n.title} url={n.url} />

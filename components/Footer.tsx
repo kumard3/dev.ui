@@ -11,11 +11,29 @@ export default function Footer() {
 					{/* </div> */}
 				</a>
 			</div>
-            		<div className="col-span-6 text-center md:text-left md:col-span-3">
+            <div className="col-span-6 text-center md:text-left md:col-span-3">
 				<p className="pb-1 text-lg font-medium">Components</p>
 				<ul>
 					<li>
 						<a href="/components/card" className="hover:dark:text-indigo-400">Card</a>
+					</li>
+					<li>
+						<a href="/components/nav" className="hover:dark:text-indigo-400">Nav</a>
+					</li>
+					<li>
+						<a href="/components/footer" className="hover:dark:text-indigo-400">Footer</a>
+					</li>
+					<li>
+						<a href="/components/button" className="hover:dark:text-indigo-400">Button</a>
+					</li>
+
+				</ul>
+			</div>            
+		<div className="col-span-6 text-center md:text-left md:col-span-3">
+				<p className="pb-1 text-lg font-medium">Templates</p>
+				<ul>
+					<li>
+						<a href="/templates/Portfolio" className="hover:dark:text-indigo-400">Portfolio</a>
 					</li>
 					<li>
 						<a href="/components/nav" className="hover:dark:text-indigo-400">Nav</a>

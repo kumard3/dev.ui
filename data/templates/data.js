@@ -2,9 +2,11 @@
 import Portfolio1 from '../../components/template/Portfolio1';
 
 
-export const showCode = [
+export const showCode = 
+[
     {
       title: "Portfolio",
+      url:'/templates/',
       store: [
         {
           title: "Portfolio",

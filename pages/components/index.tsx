@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { useState } from "react";
+
 import { Componentbutton } from "../../components/ComponentButton";
 
 import { codeData } from "../../data/components/data";
@@ -16,7 +16,7 @@ export default function Component() {
           <Link href="/components"> Components</Link>{" "}
         </h1>
         <section className="dark:text-white text-dark flex justify-center items-center w-full my-4 ">
-          {codeData.map((n, index) => {
+          {codeData.map((n) => {
             return (
               <div key={n.title} >
                 <Componentbutton title={n.title} url={n.url} />
@@ -32,24 +32,7 @@ export default function Component() {
             className="object-contain h-80 sm:h-96 md:h-112 xl:h-128"
           />
         </div>
-      {/* {stores === "" ? (
-
-      ) : (
-        <div className="dark:text-white">
-          <div className="container mx-auto flex w-full justify-center flex-col items-center">
-            {Filter?.store.map((n) => {
-              return (
-                <CodeDisplay
-                  component={n.component}
-                  key={n.component}
-                  jsx={n.jsx}
-                  html={n.html}
-                />
-              );
-            })}
-          </div>
-        </div>
-      )} */}
+      
     </div>
   );
 }

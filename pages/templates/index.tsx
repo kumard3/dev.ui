@@ -1,7 +1,6 @@
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import { showCode } from '../../data/templates/data';
 import { Componentbutton } from '../../components/ComponentButton';
-import CodeDisplay from "../../components/CodeDisplay";
 import Link from 'next/link'
 import {useRouter} from 'next/router';
 const routes = [
@@ -13,10 +12,7 @@ const routes = [
   export default function Template() {
 const router = useRouter()
 const [stores, setStore] = useState(router.asPath);
-
-
-    
-    
+  
     return (
       <div className="min-h-screen container mx-auto sm:px-10">
         <section className="dark:text-white container w-full mx-auto mt-3 ">

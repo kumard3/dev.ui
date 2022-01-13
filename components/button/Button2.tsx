@@ -1,12 +1,11 @@
 export default function Button2() {
   return (
-    <div>
       <button
         type="button"
-        className="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100"
+        className="px-6 py-3   active:scale-95 scale-105 font-semibold border duration-50 rounded dark:border-gray-100 dark:text-gray-100"
       >
         Border
       </button>
-    </div>
+
   );
 }

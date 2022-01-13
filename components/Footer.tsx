@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-html-link-for-pages */
 export default function Footer() {
     return (
-<footer className="py-6 dark:bg-gray-800 dark:text-gray-50 ">
+<footer className="py-6 border-t-2 mt-[60px] text-gray-50 ">
 	<div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
 		<div className="flex grid-cols-12 justify-between w-full">
 			<div className="pb-6 col-span-full md:pb-0 md:col-span-6">
@@ -11,11 +11,29 @@ export default function Footer() {
 					{/* </div> */}
 				</a>
 			</div>
-            		<div className="col-span-6 text-center md:text-left md:col-span-3">
+            <div className="col-span-6 text-center md:text-left md:col-span-3">
 				<p className="pb-1 text-lg font-medium">Components</p>
 				<ul>
 					<li>
 						<a href="/components/card" className="hover:dark:text-indigo-400">Card</a>
+					</li>
+					<li>
+						<a href="/components/nav" className="hover:dark:text-indigo-400">Nav</a>
+					</li>
+					<li>
+						<a href="/components/footer" className="hover:dark:text-indigo-400">Footer</a>
+					</li>
+					<li>
+						<a href="/components/button" className="hover:dark:text-indigo-400">Button</a>
+					</li>
+
+				</ul>
+			</div>            
+		<div className="col-span-6 text-center md:text-left md:col-span-3">
+				<p className="pb-1 text-lg font-medium">Templates</p>
+				<ul>
+					<li>
+						<a href="/templates/Portfolio" className="hover:dark:text-indigo-400">Portfolio</a>
 					</li>
 					<li>
 						<a href="/components/nav" className="hover:dark:text-indigo-400">Nav</a>

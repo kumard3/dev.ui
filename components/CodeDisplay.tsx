@@ -1,32 +1,30 @@
 /* eslint-disable @next/next/no-sync-scripts */
 
-import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import { Prism } from "@mantine/prism";
+import { Modal,Tabs  } from "@mantine/core";
+export default function CodeDisplay({ component, jsx, html }: any): JSX.Element {
+const dark = '#000'
 
-export default function CodeDisplay({ component, jsx, html }: any) {
-  let [isOpen, setIsOpen] = useState(false);
- 
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
+  const [opened, setOpened] = useState(false);
+  const [activeTab, setActiveTab] = useState(1);
 
   return (
     <>
       <Tab.Group>
-        <section className="dark:bg-[#1F2A37] mb-5 min-h-[10rem]  w-[90vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
+        <section className="bg-[#1F2A37] mb-5 min-h-[10rem]  w-[90vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
           <section className="flex p-3 w-full justify-between">
-            <Tab.List className="p-3 text-black dark:text-white">
-              <Tab className="px-3">Preview</Tab>
-              <Tab className="px-3">HTML</Tab>
-              <Tab className="px-3">JSX</Tab>
+            <Tab.List className="p-3 ">
+              <Tab className="px-3  ">Preview</Tab>
+              <Tab className="px-3  ">HTML</Tab>
+              <Tab className="px-3  ">JSX</Tab>
             </Tab.List>
-            <button type="button" onClick={openModal} className="text-black  dark:text-white">
+            <button
+              type="button"
+              onClick={() => setOpened(true)}
+              className="   "
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 512 512"
@@ -42,13 +40,12 @@ export default function CodeDisplay({ component, jsx, html }: any) {
           <Tab.Panels>
             <Tab.Panel>
               <div className="max-h-[50rem] overflow-scroll">
-                <section className=" p-3 flex flex-col items-center justify-center w-full">
+                <section className=" p-3 flex flex-col items-center justify-center w-full ">
                   {component}
                 </section>
               </div>
             </Tab.Panel>
             <Tab.Panel className="max-h-[20rem] overflow-scroll">
-             
               <Prism
                 colorScheme="dark"
                 language="markup"
@@ -59,32 +56,27 @@ export default function CodeDisplay({ component, jsx, html }: any) {
               </Prism>
             </Tab.Panel>
             <Tab.Panel className="max-h-[20rem] overflow-scroll">
-              
-            
               <Prism
                 colorScheme="dark"
                 language="tsx"
                 copyLabel="Copy code to clipboard"
                 copiedLabel="Code copied to clipboard"
               >
-              {jsx}
-              
+                {jsx}
               </Prism>
-           
-                
             </Tab.Panel>
           </Tab.Panels>
           <section>
-            <Transition appear show={isOpen} as={Fragment}>
-              <Dialog
+            <div >
+              {/* <Dialog
                 as="div"
-                className="fixed top-0 w-full z-10 overflow-y-auto"
+                className="fixed top-0 w-full z-[200] overflow-y-auto"
                 onClose={closeModal}
               >
-                <div className="h-full bg-white dark:bg-[#1F2A37] w-full px-4 o">
+                <div className="h-full bg-[#1F2A37] w-full px-4 o">
                   <button
                     onClick={closeModal}
-                    className="dark:text-white float-right p-[1rem]"
+                    className= " float-right p-[1rem]"
                   >
                     {" "}
                     <svg
@@ -102,17 +94,26 @@ export default function CodeDisplay({ component, jsx, html }: any) {
                       ></polygon>
                     </svg>
                   </button>
-                  <section className="dark:text-white pt-[3rem] h-screen overflow-scroll flex justify-center ">
-                    {component}
+                  <section className= " pt-[3rem] h-screen overflow-scroll flex justify-center ">
+                    
                   </section>
                 </div>
-              </Dialog>
-            </Transition>
+              </Dialog> */}
+              <Modal
+
+                overflow="inside"
+                
+
+                opened={opened}
+                onClose={() => setOpened(false)}
+                size="100%"
+              >
+                {component}
+              </Modal>
+            </div>
           </section>
         </section>
       </Tab.Group>
     </>
   );
 }
-
-

@@ -1,6 +1,6 @@
 export default function Card1() {
   return (
-    <div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
+    <div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50 resize">
       <img
         src="https://source.unsplash.com/300x300/?random"
         alt=""

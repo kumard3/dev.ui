@@ -44,7 +44,7 @@ export default function NavComponent() {
               <Link href="#hero">home</Link>
             </li> */}
               <Link href="#home">
-                <img src="/temp-logo.png" alt="logo" className="h-[3.5rem]" />
+                <h1>LOGO</h1>
                 {/* <span className="text-4xl font-bold">logo</span> */}
               </Link>
             </div>
@@ -60,7 +60,7 @@ export default function NavComponent() {
                         <div className="-mr-2 float-right mb-3">
                           <button
                             onClick={() => setModalOpen(!true)}
-                            className="bg-white rounded-md p-2 inline-flex items-center justify-center text-black hover:text-gray-500 hover:bg-gray-100 "
+                            className="bg-white rounded-md p-2 inline-flex items-center justify-center  hover:text-gray-500 hover:bg-gray-100 "
                           >
                             <span className="sr-only">Close menu</span>
                             <svg

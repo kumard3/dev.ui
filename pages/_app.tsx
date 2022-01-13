@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <section className=" py-[50px]">
           <Component {...pageProps} />
         </section>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     );
 

@@ -47,7 +47,7 @@ export default function Post() {
                 component={n.component}
                 key={n.component}
                 jsx={n.jsx}
-                html={n.html}
+              
               />
             );
           })}

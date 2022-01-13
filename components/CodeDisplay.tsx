@@ -45,7 +45,7 @@ const dark = '#000'
                 </section>
               </div>
             </Tab.Panel>
-            <Tab.Panel className="max-h-[20rem] overflow-scroll">
+            {/* <Tab.Panel className="max-h-[20rem] overflow-scroll">
               <Prism
                 colorScheme="dark"
                 language="markup"
@@ -54,7 +54,7 @@ const dark = '#000'
               >
                 {html}
               </Prism>
-            </Tab.Panel>
+            </Tab.Panel> */}
             <Tab.Panel className="max-h-[20rem] overflow-scroll">
               <Prism
                 colorScheme="dark"

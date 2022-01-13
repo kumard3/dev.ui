@@ -21,7 +21,7 @@ export default function Post() {
       <section className="dark:text-white container w-full mx-auto mt-3 ">
       <h1 className="text-5xl font-bold px-2"><Link href='/templates'> Template</Link> </h1>
 
-        <section className="dark:text-white text-dark flex justify-center items-center w-full my-4 ">
+        <section className="dark:text-white text-dark flex flex-wrap justify-center items-center w-full my-4 ">
           {showCode.map((n) => {
             return (
               <div key={n.title}>

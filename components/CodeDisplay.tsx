@@ -38,7 +38,7 @@ const dark = '#000'
           </section>
           <hr />
           <Tab.Panels>
-            <Tab.Panel>
+            <Tab.Panel >
               <div className="max-h-[50rem] overflow-scroll">
                 <section className=" p-3 flex flex-col items-center justify-center w-full ">
                   {component}

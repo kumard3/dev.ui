@@ -15,10 +15,10 @@ export default function Component() {
         <h1 className="text-5xl font-bold px-2">
           <Link href="/components"> Components</Link>{" "}
         </h1>
-        <section className="dark:text-white text-dark flex justify-center items-center w-full my-4 ">
+        <section className="dark:text-white text-dark flex flex-wrap justify-center items-center w-full my-4 ">
           {codeData.map((n) => {
             return (
-              <div key={n.title} >
+              <div key={n.title} className="flex flex-wrap  ">
                 <Componentbutton title={n.title} url={n.url} />
               </div>
             );

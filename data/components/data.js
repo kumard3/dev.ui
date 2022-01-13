@@ -11,10 +11,12 @@ import Button3 from "../../components/button/Button3";
 
 import Nav1 from "../../components/nav/Nav1";
 import Nav2 from "../../components/nav/Nav2";
+import { Feature1 } from "../../components/features/Features1";
 
 export const codeData = [
   {
-   url:"/components/", title: "Card",
+    url: "/components/",
+    title: "Card",
     store: [
       {
         component: <Card1 />,
@@ -61,7 +63,18 @@ export const codeData = [
     ],
   },
   {
-   url:"/components/", title: "Footer",
+    url: "/components/",
+    title: "Feature",
+    store: [
+      {
+        component: <Feature1 />,
+        jsx: <Feature1 />,
+      },
+    ],
+  },
+  {
+    url: "/components/",
+    title: "Footer",
     store: [
       {
         component: <Footer1 />,
@@ -298,7 +311,8 @@ export const codeData = [
     ],
   },
   {
-   url:"/components/", title: "Button",
+    url: "/components/",
+    title: "Button",
     store: [
       {
         component: <Button1 />,
@@ -318,7 +332,8 @@ export const codeData = [
     ],
   },
   {
-   url:"/components/", title: "Nav",
+    url: "/components/",
+    title: "Nav",
     store: [
       {
         component: <Nav1 />,

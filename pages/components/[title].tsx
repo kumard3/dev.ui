@@ -29,7 +29,7 @@ export default function Post() {
         <h1 className="text-5xl font-bold px-2">
           <Link href="/components"> Components</Link>{" "}
         </h1>
-        <section className="dark:text-white text-dark flex justify-center items-center w-full my-4 ">
+        <section className="dark:text-white text-dark flex flex-wrap justify-center items-center w-full my-4 ">
           {codeData.map((n, index) => {
             return (
               <div key={n.title}>
@@ -47,7 +47,7 @@ export default function Post() {
                 component={n.component}
                 key={n.component}
                 jsx={n.jsx}
-                html={n.html}
+              
               />
             );
           })}

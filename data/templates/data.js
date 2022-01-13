@@ -11,6 +11,8 @@ export const showCode =
         {
           title: "Portfolio",
           component: <Portfolio1 />,
+          jsx:"yoo",
+          html:"yoo",
         },
       ],
     },

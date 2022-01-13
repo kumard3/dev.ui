@@ -455,9 +455,9 @@ export default function Component() {
   const filterdata = codeData.filter((e) => e.title === stores);
   const Filter = filterdata[0];
   return (
-    <div className="min-h-screen  container sm:px-10">
+    <div className="min-h-screen container mx-auto sm:px-10">
       <section className="dark:text-white container w-full mx-auto mt-3 ">
-        <h1 className="text-5xl font-bold px-10">Components</h1>
+        <h1 className="text-5xl font-bold px-2">Components</h1>
         <section className="dark:text-white text-dark flex justify-center items-center w-full my-4 ">
           {routes.map((n, index) => {
             return (

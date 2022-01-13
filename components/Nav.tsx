@@ -183,7 +183,8 @@ export default function Nav() {
 
           
               <Link href="/">
-                Dev ui
+              <h1 className="hero-title text-[32px] font-bold leading-none "> dev.UI </h1>
+
                 {/* <span className="text-4xl font-bold">logo</span> */}
               </Link>
             </div>

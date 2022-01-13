@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -166,4 +168,10 @@ input {
   background-color:#0A192F;
   color:white;
 
+}
+
+
+.hero-title{
+  /* font-family: 'Rampart One', cursive; */
+  font-family: 'Montserrat', sans-serif;
 }

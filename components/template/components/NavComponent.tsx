@@ -44,7 +44,7 @@ export default function NavComponent() {
               <Link href="#hero">home</Link>
             </li> */}
               <Link href="#home">
-                <img src="/temp-logo.png" alt="logo" className="h-[3.5rem]" />
+                <h1>LOGO</h1>
                 {/* <span className="text-4xl font-bold">logo</span> */}
               </Link>
             </div>

@@ -5,6 +5,7 @@ import CodeDisplay from "../../components/CodeDisplay";
 
 // import codeData from '../../data/codeData.json';
 import { codeData } from '../../data/components/data';
+import Link from 'next/link'
 
 const routes = [
   {
@@ -29,7 +30,7 @@ export default function Component() {
   return (
     <div className="min-h-screen container mx-auto sm:px-10">
       <section className="dark:text-white container w-full mx-auto mt-3 ">
-        <h1 className="text-5xl font-bold px-2">Components</h1>
+        <h1 className="text-5xl font-bold px-2"><Link href="/components"> Components</Link> </h1>
         <section className="dark:text-white text-dark flex justify-center items-center w-full my-4 ">
           {routes.map((n, index) => {
             return (

@@ -167,7 +167,7 @@ export default function Nav() {
     };
   }, []);
   
-
+const button = `min-h-[3rem] px-4  active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 flex justify-center items-center rounded-xl`
   return (
     <div
       className={ ` w-full flex  backdrop-blur-sm text-xl font-bold drop-shadow-xl flex-none ease-in-out duration-300 0  lg:border-b lg:border-gray-900/10 `}>
@@ -178,7 +178,7 @@ export default function Nav() {
 
           
               <Link href="/">
-              <h1 className="hero-title text-[32px] font-bold leading-none "> dev.UI </h1>
+              <h1 className={` ${button} hero-title text-[32px] font-bold leading-none `}> dev.UI </h1>
 
                 {/* <span className="text-4xl font-bold">logo</span> */}
               </Link>
@@ -209,7 +209,7 @@ export default function Nav() {
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href}>
-                    {n.name}
+                    <span className={`${button}`}>{n.name}</span>
                   </Link>
                 );
               })}

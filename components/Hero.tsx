@@ -5,7 +5,7 @@ export default function Hero() {
       <div className="absolute w-full overflow-hidden ">
         <div className="inline-block w-full transform  mt-[-60px] opacity-5">
           <svg
-            width="1400"
+            width="100%"
             height="799"
             viewBox="0 0 1512 799"
             fill="#000"

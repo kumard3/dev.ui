@@ -175,3 +175,17 @@ input {
   /* font-family: 'Rampart One', cursive; */
   font-family: 'Montserrat', sans-serif;
 }
+.div{
+  width: 100px;
+  height: 100px;
+  margin: 0 1rem;
+  overflow: auto;
+}
+.div{
+  resize: both;
+  background: #EF476F;
+}
+
+.mantine-5ygtff {
+background-color: #1F2A37;
+}

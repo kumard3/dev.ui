@@ -170,12 +170,7 @@ export default function Nav() {
 
   return (
     <div
-      className={ `fixed w-full flex  z-[100] backdrop-blur-sm text-xl font-bold drop-shadow-xl flex-none ease-in-out duration-300 0 lg:z-50 lg:border-b lg:border-gray-900/10 bg-[#141628]/50  ${
-        scrollDirection === 'down' && "text-xl font-bold drop-shadow-xl mt-[-120px] ease-in-out duration-300 	"
-      } ${
-        scrollDirection === 'up' &&
-        " mt-0 backdrop-blur-sm text-xl font-bold drop-shadow-xl flex-none ease-in-out duration-300 0 lg:z-50 lg:border-b lg:border-gray-900/10 bg-[#141628]/50"
-      }`}>
+      className={ ` w-full flex  backdrop-blur-sm text-xl font-bold drop-shadow-xl flex-none ease-in-out duration-300 0  lg:border-b lg:border-gray-900/10 `}>
       <div className="w-full container mx-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">

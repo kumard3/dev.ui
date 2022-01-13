@@ -7,9 +7,9 @@ import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }: AppProps) {
   
     return (
-      <div className="bg-[#101827] w-full min-h-screen text-white ">
+      <div className="bg-[#00091b] w-full min-h-screen text-white ">
         <Nav />
-        <section className=" py-[100px]">
+        <section className=" py-[50px]">
           <Component {...pageProps} />
         </section>
         <Footer />

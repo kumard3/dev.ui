@@ -7,7 +7,7 @@ import NavComponent from "./components/NavComponent";
 
 export default function Portfolio1() {
   return (
-    <div className="bg-[#141628] min-h-screen text-slate-50	">
+    <div className="bg-[#141628] min-h-screen text-slate-50 relative 	">
       <NavComponent />
       <Hero />
       <Carousel />

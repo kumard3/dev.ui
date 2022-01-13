@@ -19,7 +19,7 @@ export default function Post() {
   const router = useRouter();
   const route = router.query.title;
   const filterdata = codeData.filter((e) => e.title === route);
-  const Filter = filterdata[0].store;
+  const Filter = filterdata[0]?.store;
 
   console.log(router);
 

@@ -4,12 +4,12 @@ import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import { Prism } from "@mantine/prism";
 import { Modal,Tabs  } from "@mantine/core";
-export default function CodeDisplay({ component, jsx, html }: any): JSX.Element {
+export default function CodeDisplay({ component, jsx, html }: any) {
 const dark = '#000'
 
   const [opened, setOpened] = useState(false);
   const [activeTab, setActiveTab] = useState(1);
-
+console.log(jsx)
   return (
     <>
       <Tab.Group>
@@ -17,7 +17,7 @@ const dark = '#000'
           <section className="flex p-3 w-full justify-between">
             <Tab.List className="p-3 ">
               <Tab className="px-3  ">Preview</Tab>
-              <Tab className="px-3  ">HTML</Tab>
+              {/* <Tab className="px-3  ">HTML</Tab> */}
               <Tab className="px-3  ">JSX</Tab>
             </Tab.List>
             <button

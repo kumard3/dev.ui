@@ -3,8 +3,24 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import { Prism } from "@mantine/prism";
-import { Modal,Tabs  } from "@mantine/core";
+import { Code, Modal,Tabs  } from "@mantine/core";
+
+import ReactDOMServer from "react-dom/server";
+
+const Hello = () => <div>hello</div>;
+
+
+
 export default function CodeDisplay({ component, jsx, html }: any) {
+  const htmls = ReactDOMServer.renderToStaticMarkup(component);
+
+console.log(htmls.toString());
+
+
+console.log(htmls)
+const tsx =  htmls.toString()
+
+
 const dark = '#000'
 
   const [opened, setOpened] = useState(false);
@@ -58,12 +74,17 @@ console.log(jsx)
             <Tab.Panel className="max-h-[20rem] overflow-scroll">
               <Prism
                 colorScheme="dark"
-                language="tsx"
+                language="jsx"
                 copyLabel="Copy code to clipboard"
                 copiedLabel="Code copied to clipboard"
-              >
+                withLineNumbers='true'
+         
+                >
+             
                 {jsx}
+          
               </Prism>
+
             </Tab.Panel>
           </Tab.Panels>
           <section>

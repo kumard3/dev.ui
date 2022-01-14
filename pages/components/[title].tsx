@@ -21,7 +21,7 @@ export default function Post() {
   const filterdata = codeData.filter((e) => e.title === route);
   const Filter = filterdata[0]?.store;
 
-  console.log(router);
+  // console.log(filterdata);
 
   return (
     <div className="min-h-screen container mx-auto sm:px-10">
@@ -32,7 +32,7 @@ export default function Post() {
         <section className="dark:text-white text-dark flex flex-wrap justify-center items-center w-full my-4 ">
           {codeData.map((n, index) => {
             return (
-              <div key={n.title}>
+              <div key={index}>
                 <Componentbutton title={n.title} url={n.url} />
               </div>
             );
@@ -41,11 +41,12 @@ export default function Post() {
       </section>
       <div className="dark:text-white">
         <div className="container mx-auto flex w-full justify-center flex-col items-center">
-          {Filter?.map((n) => {
+          {Filter?.map((n,index) => {
+            console.log(n)
             return (
               <CodeDisplay
                 component={n.component}
-                key={n.component}
+                key={index}
                 jsx={n.jsx}
               
               />

@@ -77,7 +77,7 @@ console.log(jsx)
                 language="jsx"
                 copyLabel="Copy code to clipboard"
                 copiedLabel="Code copied to clipboard"
-                withLineNumbers='true'
+          
          
                 >
              

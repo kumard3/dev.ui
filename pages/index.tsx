@@ -10,6 +10,8 @@ export default function Home() {
     <div className="overflow-hidden">
       <Seo title={"Devui"} description={"Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"} image={""} url={""} />
       <Hero />
+
+      
     </div>
   );
 }

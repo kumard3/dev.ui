@@ -1,11 +1,10 @@
 /* eslint-disable @next/next/no-sync-scripts */
 
 import { useState } from "react";
-import { Tab } from "@headlessui/react";
-import { Prism } from "@mantine/prism";
-import { Code, Modal, Tabs } from "@mantine/core";
 
-import ReactDOMServer from "react-dom/server";
+import { Prism } from "@mantine/prism";
+import { Modal } from "@mantine/core";
+
 
 export default function CodeDisplay({ component, jsx }: any) {
   const [opened, setOpened] = useState(false);
@@ -29,7 +28,7 @@ export default function CodeDisplay({ component, jsx }: any) {
 
   return (
     <>
-      <Tab.Group>
+   
         <section className="bg-[#1F2A37] mb-5 min-h-[10rem]  w-[90vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
           <section className="flex p-3 w-full justify-between">
             {/* <Tab.List className="p-3 ">
@@ -126,7 +125,7 @@ export default function CodeDisplay({ component, jsx }: any) {
             </div>
           </section>
         </section>
-      </Tab.Group>
+   
     </>
   );
 }

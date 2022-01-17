@@ -15,6 +15,8 @@ export default function TabSection() {
   console.log(tab);
 
   const filterdata = data.filter((e) => e.title === tab);
+  const active = filterdata[0].title;
+
   return (
     <div>
       <div>
@@ -22,7 +24,9 @@ export default function TabSection() {
           return (
             <button
               onClick={() => setTab(n.title)}
-              className="p-3  active:text-blue-500 active:border-b-2 active:border-black"
+              className={`${
+                active === n.title ? "border-b-2 border-black" : ""
+              } p-3  `}
               key={index}
             >
               {n.title}
@@ -32,11 +36,7 @@ export default function TabSection() {
       </div>
       <div>
         {filterdata.map((n, index) => {
-            return(
-                <div key={index}>
-                {n.data}
-                </div>
-            )
+          return <div key={index}>{n.data}</div>;
         })}
       </div>
     </div>

@@ -12,6 +12,8 @@ import Nav2 from "../../components/nav/Nav2";
 import { Feature1 } from "../../components/features/Features1";
 import TabSection from "../../components/tab/TabSection";
 
+
+
 export const codeData = [
   
   
@@ -21,10 +23,8 @@ export const codeData = [
     store:[
       {
         component:<TabSection />,
-        jsx:`import { useState } from "react";
-
-        export default function TabSection() {
-          const [tab, setTab] = useState("Preview");
+        jsx:` export default function TabSection() {
+          const [tab, setTab] = useState("First");
           const data = [
             {
               title: "First",
@@ -38,6 +38,8 @@ export const codeData = [
           console.log(tab);
         
           const filterdata = data.filter((e) => e.title === tab);
+          const active = filterdata[0].title;
+        
           return (
             <div>
               <div>
@@ -45,7 +47,8 @@ export const codeData = [
                   return (
                     <button
                       onClick={() => setTab(n.title)}
-                      className="p-3  active:text-blue-500"
+                      className={
+                        $ { active === n.title ? "border-b-2 border-black" : ""} p-3  }
                       key={index}
                     >
                       {n.title}
@@ -55,17 +58,12 @@ export const codeData = [
               </div>
               <div>
                 {filterdata.map((n, index) => {
-                    return(
-                        <div key={index}>
-                        {n.data}
-                        </div>
-                    )
+                  return <div key={index}>{n.data}</div>;
                 })}
               </div>
             </div>
-          );
-        }
-        `
+          )
+        }`
       }
     ]
   },{

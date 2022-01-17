@@ -10,9 +10,65 @@ import Button3 from "../../components/button/Button3";
 import Nav1 from "../../components/nav/Nav1";
 import Nav2 from "../../components/nav/Nav2";
 import { Feature1 } from "../../components/features/Features1";
+import TabSection from "../../components/tab/TabSection";
 
 export const codeData = [
+  
+  
   {
+    url:"/components/",
+    title:"Tab",
+    store:[
+      {
+        component:<TabSection />,
+        jsx:`import { useState } from "react";
+
+        export default function TabSection() {
+          const [tab, setTab] = useState("Preview");
+          const data = [
+            {
+              title: "First",
+              data: "first",
+            },
+            {
+              title: "Second",
+              data: "Second",
+            },
+          ];
+          console.log(tab);
+        
+          const filterdata = data.filter((e) => e.title === tab);
+          return (
+            <div>
+              <div>
+                {data.map((n, index) => {
+                  return (
+                    <button
+                      onClick={() => setTab(n.title)}
+                      className="p-3  active:text-blue-500"
+                      key={index}
+                    >
+                      {n.title}
+                    </button>
+                  );
+                })}
+              </div>
+              <div>
+                {filterdata.map((n, index) => {
+                    return(
+                        <div key={index}>
+                        {n.data}
+                        </div>
+                    )
+                })}
+              </div>
+            </div>
+          );
+        }
+        `
+      }
+    ]
+  },{
     url: "/components/",
     title: "Card",
     store: [

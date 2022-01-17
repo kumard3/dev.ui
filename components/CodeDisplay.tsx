@@ -3,38 +3,52 @@
 import { useState } from "react";
 import { Tab } from "@headlessui/react";
 import { Prism } from "@mantine/prism";
-import { Code, Modal,Tabs  } from "@mantine/core";
+import { Code, Modal, Tabs } from "@mantine/core";
 
 import ReactDOMServer from "react-dom/server";
 
-
 export default function CodeDisplay({ component, jsx }: any) {
- 
-
-
   const [opened, setOpened] = useState(false);
-
+  const [tab, setTab] = useState("Preview");
   const data = [
     {
-      title:"Preview",
-      data:{component}
-    },  
-     {
-      title:"Jsx",
-      data:{jsx}
+      title: "Preview",
+      data: component,
+      code: "",
     },
-  ]
+    {
+      title: "Jsx",
+
+      data: "",
+      code: jsx,
+    },
+  ];
+  console.log(tab);
+
+  const filterdata = data.filter((e) => e.title === tab);
 
   return (
     <>
       <Tab.Group>
         <section className="bg-[#1F2A37] mb-5 min-h-[10rem]  w-[90vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
           <section className="flex p-3 w-full justify-between">
-            
-            <Tab.List className="p-3 ">
+            {/* <Tab.List className="p-3 ">
               <Tab className="px-3  ">Preview</Tab>
               <Tab className="px-3  ">JSX</Tab>
-            </Tab.List>
+            </Tab.List> */}
+            <div>
+              {data.map((n, index) => {
+                return (
+                  <button
+                    onClick={() => setTab(n.title)}
+                    className="p-3 "
+                    key={index}
+                  >
+                    {n.title}
+                  </button>
+                );
+              })}
+            </div>
             <button
               type="button"
               onClick={() => setOpened(true)}
@@ -52,38 +66,59 @@ export default function CodeDisplay({ component, jsx }: any) {
             </button>
           </section>
           <hr />
-          <Tab.Panels>
-            <Tab.Panel >
+          <div>
+            <div>
+              {filterdata.map((n) => {
+                return (
+                  <>
+                  {n.data ===""  ? '': <div className="max-h-[50rem] overflow-scroll">
+                      <section className=" p-3 flex flex-col items-center justify-center w-full ">
+                        {n.data}
+                      </section>
+                    </div>  }
+                  
+                    {n.code ==="" ? '':<div className="max-h-[20rem] overflow-scroll">
+                      <Prism
+                        colorScheme="dark"
+                        language="jsx"
+                        copyLabel="Copy code to clipboard"
+                        copiedLabel="Code copied to clipboard"
+                        withLineNumbers="true"
+                      >
+                        {n.code}
+                      </Prism>
+                    </div>}
+                    
+                  </>
+                );
+              })}
+            </div>
+          </div>
+          {/* <Tab.Panels>
+            <Tab.Panel>
               <div className="max-h-[50rem] overflow-scroll">
                 <section className=" p-3 flex flex-col items-center justify-center w-full ">
                   {component}
                 </section>
               </div>
             </Tab.Panel>
-          
+
             <Tab.Panel className="max-h-[20rem] overflow-scroll">
               <Prism
                 colorScheme="dark"
                 language="jsx"
                 copyLabel="Copy code to clipboard"
                 copiedLabel="Code copied to clipboard"
-                withLineNumbers='true'
-         
-                >
-             
+                withLineNumbers="true"
+              >
                 {jsx}
-          
               </Prism>
-
             </Tab.Panel>
-          </Tab.Panels>
+          </Tab.Panels> */}
           <section>
-            <div >
-           <Modal
-
+            <div>
+              <Modal
                 overflow="inside"
-                
-
                 opened={opened}
                 onClose={() => setOpened(false)}
                 size="100%"

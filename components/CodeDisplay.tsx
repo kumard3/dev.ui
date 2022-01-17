@@ -31,10 +31,7 @@ export default function CodeDisplay({ component, jsx }: any) {
    
         <section className="bg-[#1F2A37] mb-5 min-h-[10rem]  w-[90vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
           <section className="flex p-3 w-full justify-between">
-            {/* <Tab.List className="p-3 ">
-              <Tab className="px-3  ">Preview</Tab>
-              <Tab className="px-3  ">JSX</Tab>
-            </Tab.List> */}
+            
             <div>
               {data.map((n, index) => {
                 return (
@@ -93,25 +90,6 @@ export default function CodeDisplay({ component, jsx }: any) {
               })}
             </div>
           </div>
-          {/* <Tab.Panels>
-            <Tab.Panel>
-              <div className="max-h-[50rem] overflow-scroll">
-                <section className=" p-3 flex flex-col items-center justify-center w-full ">
-                  {component}
-                </section>
-              </div>
-            </Tab.Panel>
-
-            <Tab.Panel className="max-h-[20rem] overflow-scroll">
-              <Prism
-                colorScheme="dark"
-                language="jsx"
-                copyLabel="Copy code to clipboard"
-                copiedLabel="Code copied to clipboard"
-                {jsx}
-              </Prism>
-            </Tab.Panel>
-          </Tab.Panels> */}
           <section>
             <div>
               <Modal
@@ -125,7 +103,6 @@ export default function CodeDisplay({ component, jsx }: any) {
             </div>
           </section>
         </section>
-   
     </>
   );
 }

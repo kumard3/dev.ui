@@ -10,17 +10,67 @@ import Button3 from "../../components/button/Button3";
 import Nav1 from "../../components/nav/Nav1";
 import Nav2 from "../../components/nav/Nav2";
 import { Feature1 } from "../../components/features/Features1";
+
 import TabSection from "../../components/tab/TabSection";
+import VerticalTab from "../../components/tab/VerticalTab";
 
 
-
-export const codeData = [
+export const codeData= [
   
   
   {
     url:"/components/",
     title:"Tab",
     store:[
+      {
+        component:<VerticalTab/>,
+        jsx:`import { useState } from "react";
+
+
+        export default function VerticalTab(){
+            const [tab, setTab] = useState("First");
+            const data = [
+              {
+                title: "First",
+                data: "first",
+              },
+              {
+                title: "Second",
+                data: "Second",
+              },
+            ];
+          
+            const filterdata = data.filter((e) => e.title === tab);
+            const active = filterdata[0].title;
+          
+            return (
+              <div>
+                <div className="flex flex-col">
+                  {data.map((n, index) => {
+                    return (
+                      <button
+                        onClick={() => setTab(n.title)}
+                        className={$ {
+                          active === n.title ? "text-blue-400 bg-white/10 rounded-t-xl" : ""
+                        } p-3  }
+                        key={index}
+                      >
+                        {n.title}
+                      </button>
+                    );
+                  })}
+                </div>
+                <hr/>
+                <div>
+                  {filterdata.map((n, index) => {
+                    return <div key={index}>{n.data}</div>;
+                  })}
+                </div>
+              </div>
+            );
+          }
+          `
+      },
       {
         component:<TabSection />,
         jsx:` export default function TabSection() {

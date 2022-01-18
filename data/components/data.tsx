@@ -10,17 +10,158 @@ import Button3 from "../../components/button/Button3";
 import Nav1 from "../../components/nav/Nav1";
 import Nav2 from "../../components/nav/Nav2";
 import { Feature1 } from "../../components/features/Features1";
+
 import TabSection from "../../components/tab/TabSection";
+import VerticalTab from "../../components/tab/VerticalTab";
+import Modal from "../../components/modal/Modal";
 
 
-
-export const codeData = [
-  
+export const codeData= [
   
   {
     url:"/components/",
+    title:"Modal",
+    store:[
+      {
+        component:<Modal />,
+        jsx:`import { useState } from "react";
+
+        export default function Modal() {
+          const [isModalOpen, setModalOpen] = useState(false);
+        
+          console.log(isModalOpen);
+          return (
+            <div className=" flex flex-col">
+              <button
+                className="bg-white/20 p-3 rounded-xl"
+                onClick={() => setModalOpen(true)}
+              >
+                click me
+              </button>
+              <>
+                {isModalOpen ? (
+                  <div
+                    className="fixed z-10 inset-0 overflow-y-auto"
+                    aria-labelledby="modal-title"
+                    role="model"
+                    aria-modal="true"
+                  >
+                    <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+                      <div
+                        className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+                        aria-hidden="true"
+                      ></div>
+        
+                      <span
+                        className="hidden sm:inline-block sm:align-middle sm:h-screen"
+                        aria-hidden="true"
+                      >
+                        &#8203;
+                      </span>
+        
+                      <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
+                        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                          <div className="sm:flex sm:items-start">
+                            
+                            <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                              <h3
+                                className="text-lg leading-6 font-medium text-gray-900"
+                                id="modal-title"
+                              >
+                                Lorem ipsum
+                              </h3>
+                              <div className="mt-2">
+                                <p className="text-sm text-gray-500">
+                                  dolor sit amet consectetur adipisicing elit. Corporis
+                                  atque beatae exercitationem. Eligendi sit excepturi
+                                  harum necessitatibus. Veritatis sequi nemo corporis,
+                                  autem, itaque quae debitis error laboriosam recusandae
+                                  optio ea!
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                          <button
+                            type="button"
+                            onClick={() => setModalOpen(!true)}
+                            className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 sm:ml-3 sm:w-auto sm:text-sm"
+                          >
+                            Accept
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => setModalOpen(!true)}
+                            className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
+                          >
+                            Cancel
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </>
+            </div>
+          );
+        }
+        ` 
+      }
+    ]
+  }
+  ,{
+    url:"/components/",
     title:"Tab",
     store:[
+      {
+        component:<VerticalTab/>,
+        jsx:`'export default function VerticalTab(){
+            const [tab, setTab] = React.useState("First");
+            const data = [
+              {
+                title: "First",
+                data: "first",
+              },
+              {
+                title: "Second",
+                data: "Second",
+              },
+            ];
+          
+            const filterdata = data.filter((e) => e.title === tab);
+            const active = filterdata[0].title;
+          
+            return (
+              <div>
+                <div className="flex flex-col">
+                  {data.map((n, index) => {
+                    return (
+                      <button
+                        onClick={() => setTab(n.title)}
+                        className={$ {
+                          active === n.title ? "text-blue-400 bg-white/10 rounded-t-xl" : ""
+                        } p-3  }
+                        key={index}
+                      >
+                        {n.title}
+                      </button>
+                    );
+                  })}
+                </div>
+                <hr/>
+                <div>
+                  {filterdata.map((n, index) => {
+                    return <div key={index}>{n.data}</div>;
+                  })}
+                </div>
+              </div>
+            );
+          }'
+          `
+      },
       {
         component:<TabSection />,
         jsx:` export default function TabSection() {

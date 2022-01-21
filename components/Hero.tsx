@@ -29,11 +29,6 @@ export default function Hero() {
               </clipPath>
             </defs>
           </svg>
-
-        
-          
-
-      
         </div>
       </div>
       <div className="container flex relative z-10 flex-col justify-center items-center p-6 mx-auto py-24 text-center">
@@ -47,12 +42,10 @@ export default function Hero() {
               <span className="px-8 py-3 min-h-[3rem]  active:scale-105 scale-110 active:transition-all text-lg font-bold rounded bg-indigo-500 text-white ">
                 Components
               </span>
-            </Link>{" "}
+            </Link>
           </div>
         </div>
-        
       </div>
     </section>
   );
 }
-//In a matter of minutes, you can launch your next website.

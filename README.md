@@ -1,3 +1,6 @@
+## Dev ui - it is a collection of ui comoponents and templtes
+
+
 <div  align="center"><strong>TypeScript with Tailwind starter for Next.js</strong></div>
 
 <br />

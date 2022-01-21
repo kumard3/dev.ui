@@ -40,10 +40,7 @@ export default function Hero() {
         <div className="flex flex-col dark:text-white  justify-center p-6 text-center rounded-sm  ">
           
           <h1 className="hero-title text-[72px] font-bold leading-none "> dev.UI </h1>
-          {/* <h1 className="mt-6 mb-8 text-lg sm:mb-12 >
-            Dev UI is a free, open-source collection of UI components and
-            templates based on Tailwind CSS
-          </h1> */}
+        
           <h1 className="hero-title text-3xl font-semibold flex flex-col my-4 " > Collection of UI components <span> and templates  </span></h1>
           <div className="flex  items-center  justify-center ">
             <Link href="/components">

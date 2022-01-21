@@ -38,10 +38,7 @@ export default function Hero() {
       </div>
       <div className="container flex relative z-10 flex-col justify-center items-center p-6 mx-auto py-24 text-center">
         <div className="flex flex-col dark:text-white  justify-center p-6 text-center rounded-sm  ">
-          {/* <h1 className="text-5xl font-bold leading-none sm:text-6xl">
-            Kickstart your next
-            <span className="dark:text-indigo-400 mx-2">website</span>in minutes
-          </h1> */}
+          
           <h1 className="hero-title text-[72px] font-bold leading-none "> dev.UI </h1>
           {/* <h1 className="mt-6 mb-8 text-lg sm:mb-12 >
             Dev UI is a free, open-source collection of UI components and

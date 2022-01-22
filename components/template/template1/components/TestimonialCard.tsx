@@ -64,22 +64,3 @@ export default function TestimonialCard() {
     </section>
     )
 }
-
-{/*     <section className="">
-      <div className="container mx-auto">
-        <div className="flex  w-full justify-between">
-          <div className="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
-            <img src="/Awards 1.png" />
-          </div>
-          <div className="shadow-xl p-3 rounded-xl flex w-[200px] ">
-                <div className="bg-green-400 rounded-full p-3 items-center justify-center">
-                    <img src="/1.png" className="" />
-                </div>
-                <div> 
-                “Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur et pretium nunc, quis euismod et. Volutpat suspendisse sed in blandit condimentum. Sagittis nullam nec mauris, feugiat hendrerit aliquam cras. Dolor tortor gravida lobortis in ultricies enim vulputate non. Neque nibh donec quam lectus.”
-Sed arcu, enim eu adipiscing enim vulputate vulputate semper adipiscing. Customer
-                </div>
-          </div>
-        </div>
-      </div>
-    </section>*/}

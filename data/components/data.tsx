@@ -14,17 +14,16 @@ import { Feature1 } from "../../components/features/Features1";
 import TabSection from "../../components/nav/tab/TabSection";
 import VerticalTab from "../../components/nav/tab/VerticalTab";
 import Modal from "../../components/modal/Modal";
+import Card3 from "../../components/card/Card3";
 
-
-export const codeData= [
-  
+export const codeData = [
   {
-    url:"/components/",
-    title:"Modal",
-    store:[
+    url: "/components/",
+    title: "Modal",
+    store: [
       {
-        component:<Modal />,
-        jsx:`import { useState } from "react";
+        component: <Modal />,
+        jsx: `import { useState } from "react";
 
         export default function Modal() {
           const [isModalOpen, setModalOpen] = useState(false);
@@ -108,17 +107,17 @@ export const codeData= [
             </div>
           );
         }
-        ` 
-      }
-    ]
-  }
-  ,{
-    url:"/components/",
-    title:"Tab",
-    store:[
+        `,
+      },
+    ],
+  },
+  {
+    url: "/components/",
+    title: "Tab",
+    store: [
       {
-        component:<VerticalTab/>,
-        jsx:`'export default function VerticalTab(){
+        component: <VerticalTab />,
+        jsx: `'export default function VerticalTab(){
             const [tab, setTab] = React.useState("First");
             const data = [
               {
@@ -160,11 +159,11 @@ export const codeData= [
               </div>
             );
           }'
-          `
+          `,
       },
       {
-        component:<TabSection />,
-        jsx:` export default function TabSection() {
+        component: <TabSection />,
+        jsx: ` export default function TabSection() {
           const [tab, setTab] = useState("First");
           const data = [
             {
@@ -204,10 +203,11 @@ export const codeData= [
               </div>
             </div>
           )
-        }`
-      }
-    ]
-  },{
+        }`,
+      },
+    ],
+  },
+  {
     url: "/components/",
     title: "Card",
     store: [
@@ -252,6 +252,33 @@ export const codeData= [
             <button type="button" class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-indigo-400 dark:text-gray-900">Read more</button>
         </div>
       </div>`,
+      },
+      {
+        component: <Card3 />,
+        jsx: `export default function Card3() {
+          return (
+            <div className="w-[18rem] flex flex-col rounded-xl bg-slate-700 min-h-[19rem] ">
+              <div>
+                <img
+                  src="https://cdn.vox-cdn.com/thumbor/ZkmdkuJUTLgJh96_FWQ5zweGGxo=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
+                  alt="test"
+                  className="object-cover object-center rounded-t-xl"
+                />
+              </div>
+              <div className="flex flex-col py-3 px-3 pb-10">
+                <div className="flex justify-between ">
+                  <h1 className="font-bold ">Bored ape nft accidental</h1>
+                  <h1>Price</h1>
+                </div>
+                <div className="flex  justify-between">
+                  <p>#345</p>
+                  <p>0.01</p>
+                </div>
+              </div>
+            </div>
+          );
+        }
+        `,
       },
     ],
   },

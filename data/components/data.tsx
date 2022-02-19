@@ -11,8 +11,8 @@ import Nav1 from "../../components/nav/Nav1";
 import Nav2 from "../../components/nav/Nav2";
 import { Feature1 } from "../../components/features/Features1";
 
-import TabSection from "../../components/tab/TabSection";
-import VerticalTab from "../../components/tab/VerticalTab";
+import TabSection from "../../components/nav/tab/TabSection";
+import VerticalTab from "../../components/nav/tab/VerticalTab";
 import Modal from "../../components/modal/Modal";
 
 

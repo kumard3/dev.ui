@@ -5,17 +5,15 @@ import { useRouter } from "next/router";
 import { Componentbutton } from "../components/ComponentButton";
 import Footer from "../components/Footer";
 function MyApp({ Component, pageProps }: AppProps) {
-  
-    return (
-      <div className="bg-[#00091b] w-full min-h-screen text-white ">
-        <Nav />
-        <section className=" py-[50px]">
-          <Component {...pageProps} />
-        </section>
-        <Footer />
-      </div>
-    );
-
+  return (
+    <>
+      <Nav />
+      <section className=" py-[50px]">
+        <Component {...pageProps} />
+      </section>
+      <Footer />
+    </>
+  );
 }
 
 export default MyApp;

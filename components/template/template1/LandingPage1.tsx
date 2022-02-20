@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import Link from "next/link";
 import * as React from "react";
-import Card from "./components/Card";
 import ContactPage from "./components/ContactPage";
 import Features from "./components/Features";
 import Footer from "./components/Footer";

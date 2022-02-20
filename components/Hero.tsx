@@ -1297,7 +1297,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="flex  items-center  justify-between mx-auto container py-[2rem] z-50 ">
-        <div className="flex flex-col dark:text-white sm:text-center xl:text-left p-6  rounded-sm  ">
+        <div className="flex flex-col dark:text-white sm:text-center 2xl:text-left p-6  rounded-sm  ">
           <h1 className="hero-title text-[60px] font-bold leading-none ">
             Make <span className="gradientText"> beautiful</span> websites
             regardless of your design experience.
@@ -1306,7 +1306,7 @@ export default function Hero() {
           <h1 className="hero-title text-xl font-semibold flex flex-col my-4 ">
             Collection of UI components and templates
           </h1>
-          <div className="flex  items-center sm:justify-center xl:justify-start ">
+          <div className="flex  items-center sm:justify-center 2xl:justify-start ">
             <Link href="/components" passHref>
               <span className="px-8 py-3 min-h-[3rem]  active:scale-105 scale-110 active:transition-all text-lg font-bold rounded gradientbutton text-white ">
                 Components

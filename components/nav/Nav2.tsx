@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import useOnClickOutside from "../useOnClickOutside";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
 
 import Link from "next/link";
 

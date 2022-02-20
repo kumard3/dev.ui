@@ -2,8 +2,9 @@ import Link from "next/link";
 
 import { codeData } from "../../data/components/data";
 
-import { Componentbutton } from "../../components/ComponentButton";
-import CodeDisplay from "../../components/CodeDisplay";
+import { Componentbutton } from "../../website/components/ComponentButton";
+import CodeDisplay from "../../website/components/CodeDisplay";
+
 import { useRouter } from "next/router";
 
 
@@ -15,11 +16,11 @@ export default function Post() {
 
   return (
     <div className="min-h-screen container mx-auto sm:px-10">
-      <section className="dark:text-white container w-full mx-auto mt-3 ">
+      <section className="dark:text-white container w-full mx-auto mt-3  ">
         <h1 className="text-5xl font-bold px-2">
           <Link href="/components"> Components</Link>{" "}
         </h1>
-        <section className="dark:text-white text-dark flex flex-wrap justify-center items-center w-full my-4 ">
+        <section className="dark:text-white  text-dark flex flex-wrap justify-center items-center w-full my-4 ">
           {codeData.map((n, index) => {
             return (
               <div key={index}>

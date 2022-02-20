@@ -3,9 +3,9 @@ import Link from "next/link";
 
 import { showCode } from "../../data/templates/data";
 
-import { Componentbutton } from "../../components/ComponentButton";
-import CodeDisplay from "../../components/CodeDisplay";
 import { useRouter } from "next/router";
+import { Componentbutton } from "../../website/components/ComponentButton";
+import CodeDisplay from "../../website/components/CodeDisplay";
 
 
 export default function Post() {

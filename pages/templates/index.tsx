@@ -1,7 +1,7 @@
 
 import { showCode } from '../../data/templates/data';
-import { Componentbutton } from '../../components/ComponentButton';
 import Link from 'next/link'
+import { Componentbutton } from '../../website/components/ComponentButton';
 
   export default function Template() {
     return (

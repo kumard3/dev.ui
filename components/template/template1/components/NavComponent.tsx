@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
-import useOnClickOutside from "./useOnClickOutside";
 
 import Link from "next/link";
+import useOnClickOutside from "../../../../hooks/useOnClickOutside";
 
 const navData = [
   {

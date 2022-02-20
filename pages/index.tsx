@@ -1,8 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/link-passhref */
 import React from "react";
-import Hero from "../components/Hero";
-import Seo from "../components/Seo";
+import Hero from "../website/components/Hero";
+import SEO from "../website/components/Seo";
+// import Hero from "../components/Hero";
+// import Seo from "../components/Seo";
 
 
 export default function Home() {
@@ -11,7 +13,7 @@ export default function Home() {
 
   return (
     <div className="overflow-hidden">
-      <Seo
+      <SEO
         title={"Devui"}
         description={
           "Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"

@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { Componentbutton } from "../../components/ComponentButton";
+import { Componentbutton } from "../../website/components/ComponentButton";
 
 import { codeData } from "../../data/components/data";
 import Link from "next/link";

@@ -4,7 +4,8 @@ import { Drawer } from "@mantine/core";
 
 import Link from "next/link";
 import { useRouter, } from "next/router";
-import useScrollDirection from "./useScrollDirection";
+import useScrollDirection from "../../hooks/useScrollDirection";
+
 
 const navData = [
   {
@@ -18,24 +19,8 @@ const navData = [
 ];
 
 export default function Nav() {
-  const router = useRouter()
-  const [opened, setOpened] = useState(false);
-  const [show, setShow] = useState(true);
-  const scrollDirection = useScrollDirection('down');
-  const controlNavbar = () => {
-    if (window.scrollY > 100) {
-      setShow(false);
-    } else {
-      setShow(true);
-    }
-  };
 
-  useEffect(() => {
-    return () => {
-      window.removeEventListener("scroll", controlNavbar);
-   
-    };
-  }, []);
+  const [opened, setOpened] = useState(false);
   
 const button = `min-h-[3rem] px-4  active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`
   return (

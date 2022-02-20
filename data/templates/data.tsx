@@ -21,12 +21,14 @@ export const showCode =
       title: "Landing Page",
       url:'/templates/',
       store: [
+        // {
+        //   title: "Landing Page",
+        //   component: <LandingPage1 />,
+        //   jsx:"yoo",
+        //   html:"yoo",
+        // }, 
+        
         {
-          title: "Landing Page",
-          component: <LandingPage1 />,
-          jsx:"yoo",
-          html:"yoo",
-        },  {
           title: "Landing Page",
           component: <LandingPage2 />,
           jsx:"yoo",

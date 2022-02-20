@@ -5,10 +5,7 @@ import { Componentbutton } from "../../components/ComponentButton";
 import { codeData } from "../../data/components/data";
 import Link from "next/link";
 
-
-
 export default function Component() {
-
   return (
     <div className="min-h-screen container mx-auto sm:px-10">
       <section className="dark:text-white container w-full mx-auto mt-3 ">

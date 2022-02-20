@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/link-passhref */
-import Card3 from "../components/card/Card3";
 import Hero from "../components/Hero";
 import Seo from "../components/template/components/Seo";
 
@@ -16,8 +15,6 @@ export default function Home() {
         url={""}
       />
       <Hero />
-
-      {/* <Card3 /> */}
     </div>
   );
 }

@@ -1,11 +1,3 @@
-// export default function Title({}) {
-//     return (
-//         <div>
-
-//         </div>
-//     )
-// }
-
 import Link from "next/link";
 
 import { codeData } from "../../data/components/data";
@@ -20,8 +12,6 @@ export default function Post() {
   const route = router.query.title;
   const filterdata = codeData.filter((e) => e.title === route);
   const Filter = filterdata[0]?.store;
-
-  // console.log(filterdata);
 
   return (
     <div className="min-h-screen container mx-auto sm:px-10">

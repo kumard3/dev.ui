@@ -7,7 +7,11 @@ import Link from "next/link";
 
 export default function Component() {
   return (
+      <>
+      {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}
     <div className="min-h-screen container mx-auto sm:px-10">
+
+
       <section className="dark:text-white container w-full mx-auto mt-3 ">
         <h1 className="text-5xl font-bold px-2">
           <Link href="/components"> Components</Link>{" "}
@@ -31,5 +35,6 @@ export default function Component() {
         </div>
       
     </div>
+    </>
   );
 }

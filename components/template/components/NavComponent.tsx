@@ -25,7 +25,6 @@ const navData = [
 export default function NavComponent() {
   // Create a ref that we add to the element for which we want to detect outside clicks
   const ref = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLDivElement>(null);
 
   // State for our modal
   const [isModalOpen, setModalOpen] = useState(false);

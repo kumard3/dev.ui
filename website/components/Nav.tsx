@@ -3,8 +3,7 @@ import { useState ,useEffect} from "react";
 import { Drawer } from "@mantine/core";
 
 import Link from "next/link";
-import { useRouter, } from "next/router";
-import useScrollDirection from "../../hooks/useScrollDirection";
+
 
 
 const navData = [
@@ -25,7 +24,7 @@ export default function Nav() {
 const button = `min-h-[3rem] px-4  active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`
   return (
     <div
-      className={ ` w-full flex  backdrop-blur-sm text-xl font-bold drop-shadow-xl flex-none ease-in-out duration-300 0  lg:border-b lg:border-gray-900/10 `}>
+      className={ `sticky top-0 z-10 backdrop-blur-sm  w-full flex  text-xl font-bold drop-shadow-xl flex-none ease-in-out duration-300 0  lg:border-b lg:border-gray-900/10 `}>
       <div className="w-full container mx-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
@@ -80,7 +79,6 @@ const button = `min-h-[3rem] px-4  active:scale-105 scale-110 active:transition-
           aria-labelledby="drawer-title"
           aria-describedby="drawer-body"
           closeButtonLabel="Close drawer"
-          className="   "
           >
           <div className="mt-6 ">
             <nav className="grid gap-y-8">
@@ -95,10 +93,6 @@ const button = `min-h-[3rem] px-4  active:scale-105 scale-110 active:transition-
             </nav>
           </div>
         </Drawer>
-        {/* <Popover.Panel
-            focus
-            className="absolute top-0  inset-x-0 p-2 h-[100vh] transition transform origin-top-right md:hidden"
-          ></Popover.Panel> */}
       </div>
     </div>
   );

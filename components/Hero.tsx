@@ -29,8 +29,8 @@ const HeroCardData = [
 
 const HeroCard = ({ title, description }: herocard) => {
   return (
-    <div className=" glass m-2  h-[15rem]  max-w-[400px] p-5 rounded-xl">
-      <h1 className="font-bold text-2xl">{title}</h1>
+    <div className=" glass m-2  h-[15rem]  max-w-[400px] p-5 rounded-lg">
+      <h1 className="font-bold text-2lg">{title}</h1>
 
       <p className="text-lg py-3 text-gray-200">{description}</p>
     </div>
@@ -1296,17 +1296,17 @@ export default function Hero() {
           </svg>
         </div>
       </div>
-      <div className="flex  items-center  justify-between mx-auto container py-[2rem] z-50 ">
-        <div className="flex flex-col dark:text-white sm:text-center 2xl:text-left p-6  rounded-sm  ">
+      <div className="flex  justify-between mx-auto container py-[2rem] z-50 ">
+        <div className="flex mt-10 flex-col dark:text-white sm:text-center lg:max-w-3xl lg:text-left p-6  rounded-sm  ">
           <h1 className="hero-title text-[60px] font-bold leading-none ">
             Make <span className="gradientText"> beautiful</span> websites
             regardless of your design experience.
           </h1>
 
-          <h1 className="hero-title text-xl font-semibold flex flex-col my-4 ">
+          <h1 className="hero-title text-lg font-semibold flex flex-col my-4 ">
             Collection of UI components and templates
           </h1>
-          <div className="flex  items-center sm:justify-center 2xl:justify-start ">
+          <div className="flex  items-center sm:justify-center lg:justify-start ">
             <Link href="/components" passHref>
               <span className="px-8 py-3 min-h-[3rem]  active:scale-105 scale-110 active:transition-all text-lg font-bold rounded gradientbutton text-white ">
                 Components
@@ -1314,7 +1314,7 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div className="hidden 2xl:flex">
+        <div className="hidden lg:flex">
           <ShowCase />
         </div>
       </div>

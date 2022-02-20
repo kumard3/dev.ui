@@ -74,15 +74,35 @@ export default function ShowCase() {
   return (
     <div className="flex w-[400px] min-h-[40rem]">
       {" "}
-      <div className="absolute top-[30rem] right-[500px]" >
+      <div className="absolute top-[33rem] right-[300px]" >
         <ShowCaseProfile />
       </div>
-      <div className="absolute top-[10rem] right-[100px]">
+      <div className="absolute top-[8rem] right-[30px]">
         <ShowCaseCard />
       </div>
-      <div className="absolute  right-[500px]">
+      <div className="absolute  right-[350px]">
         <ShowCaseCard2 />
       </div>
     </div>
   );
+}
+
+{
+  /* export default function ShowCase() {
+  return (
+    <div className="flex w-[400px] min-h-[40rem]">
+      {" "}
+      <div className="absolute top-[28rem] right-[330px]" >
+        <ShowCaseProfile />
+      </div>
+      <div className="absolute top-[13rem] right-[30px]">
+        <ShowCaseCard />
+      </div>
+      <div className="absolute  right-[330px]">
+        <ShowCaseCard2 />
+      </div>
+    </div>
+  );
+}
+  */
 }

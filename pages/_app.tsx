@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Nav />
-      <section className=" py-[50px]">
+      <section className="py-[50px]">
         <Component {...pageProps} />
       </section>
       <Footer />

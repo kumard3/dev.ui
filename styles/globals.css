@@ -7,11 +7,18 @@
 @tailwind components;
 @tailwind utilities;
 
-*, ::before, ::after {
+*{
   box-sizing: border-box;
-  text-rendering: geometricprecision;
-  -webkit-tap-highlight-color: transparent;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(top, #ff8867, #ff52ff);
+  animation: gradient-animation 4s ease infinite;
+}
+
+/* Handle on hover */
 .glass{
   backdrop-filter: saturate(180%) blur(14px);
   background: rgba(255, 255, 255, 0.05);

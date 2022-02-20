@@ -1314,7 +1314,7 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div className=" hidden xl:flex">
+        <div className="hidden 2xl:flex">
           <ShowCase />
         </div>
       </div>

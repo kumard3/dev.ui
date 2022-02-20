@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/link-passhref */
 import Hero from "../components/Hero";
-import Seo from "../components/template/components/Seo";
+import Seo from "../components/Seo";
 
 export default function Home() {
   return (
@@ -11,11 +11,10 @@ export default function Home() {
         description={
           "Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
         }
-        image={""}
-        url={""}
+        image={"/WebSiteImage.png"}
+        url={"https://dev-ui.vercel.app/"}
       />
       <Hero />
-     
     </div>
   );
 }

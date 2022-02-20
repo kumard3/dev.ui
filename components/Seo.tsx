@@ -21,9 +21,9 @@ export default function SEO({ title, description, image,url }: Props) {
         property="og:description"
         content={description}
       />
-      <meta property="og:site_name" content="Kumar deepanshu Personal Portfolio" />
+      <meta property="og:site_name" content="" />
 
-      <meta name="twitter:card" content="It is my personal portfolio" />
+      <meta name="twitter:card" content="" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:site" content="@propernoun" />

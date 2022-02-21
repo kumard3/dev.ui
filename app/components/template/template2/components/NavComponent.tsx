@@ -1,7 +1,9 @@
 import React, { useRef, useState } from "react";
+// import useOnClickOutside from "../../../../hooks/useOnClickOutside";
+
 
 import Link from "next/link";
-import useOnClickOutside from "../../../../hooks/useOnClickOutside";
+import useOnClickOutside from "../../../../../hooks/useOnClickOutside";
 
 const navData = [
   {
@@ -24,19 +26,21 @@ const navData = [
 
 export default function NavComponent() {
   const ref = useRef<HTMLDivElement>(null);
+
   const [isModalOpen, setModalOpen] = useState(false);
+
   useOnClickOutside(ref, () => setModalOpen(false));
 
 
   return (
-    <div className=" text-xl font-bold flex-none transition-colors duration-500  ">
+    <div className="sticky top-0 z-10 backdrop-blur-sm  text-xl font-bold drop-shadow-xl flex-none transition-colors duration-500  ">
       <div className="w-full container mx-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               
               <Link href="#home">
-                <h1 className="h-10 text-[#7C76BB] ">UP BUSINESS</h1>
+                <h1 className="h-10 text-2xl">LOGO</h1>
               </Link>
             </div>
             <div className="-mr-2 -my-2 sm:hidden">
@@ -44,14 +48,14 @@ export default function NavComponent() {
                 {isModalOpen ? (
                   <div
                     ref={ref}
-                    className="fixed w-[20rem] right-0 top-0 p-2 h-[100vh]  transition transform md:hidden"
+                    className="fixed w-[20rem] right-0 top-0   p-2 h-[100vh]  transition transform md:hidden"
                   >
-                    <div className="rounded-lg shadow-lg  h-full  ring-opacity-5 bg-white border-[1px] border-red-100/20 text-black divide-y-2 divide-black/50">
+                    <div className="rounded-lg shadow-lg   h-full  bg-[#141628] border-[1px]  border-white/20 text-white">
                       <div className="pt-5 pb-6 px-5">
                         <div className="-mr-2 float-right mb-3">
                           <button
                             onClick={() => setModalOpen(!true)}
-                            className=" rounded-md p-2 inline-flex items-center justify-center  hover:text-gray-500 hover:bg-gray-100 "
+                            className=" rounded-md p-2 inline-flex items-center justify-center border-[1px]  border-white/20 "
                           >
                             <span className="sr-only">Close menu</span>
                             <svg
@@ -78,9 +82,9 @@ export default function NavComponent() {
                               <a
                                 key={item.name}
                                 href={item.href}
-                                className="-m-3 p-3 flex items-center rounded-md  border-[1px] "
+                                className="-m-3 p-3 flex items-center rounded-md hover:bg-black  border-[1px] border-white/20"
                               >
-                                <h1 className="my-3 ml-3 text-3xl font-bold text-[#7C76BB] ">
+                                <h1 className="my-3 ml-3 text-3xl font-bold ">
                                   {item.name}
                                 </h1>
                               </a>
@@ -94,7 +98,7 @@ export default function NavComponent() {
                   <div className=" rounded-md p-2 inline-flex items-center justify-center text-white hover:text-gray-500 ">
                     <button
                       onClick={() => setModalOpen(true)}
-                      className="inline-flex items-center lg:hidden text-black  focus-visible:ring   active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2"
+                      className="inline-flex items-center lg:hidden text-white  focus-visible:ring ring-indigo-300  active:text-gray-700 text-sm md:text-base font-semibold rounded-lg gap-2 px-2.5 py-2"
                     >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -119,9 +123,7 @@ export default function NavComponent() {
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href}>
-                    <span className="text-[#7C76BB] ">
                     {n.name}
-                    </span>
                   </Link>
                 );
               })}

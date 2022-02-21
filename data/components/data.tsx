@@ -1,20 +1,20 @@
-import Card1 from "../../components/card/Card1";
-import Card2 from "../../components/card/Card2";
+import Card1 from "../../app/components/card/Card1";
+import Card2 from "../../app/components/card/Card2";
 
-import Footer1 from "../../components/footer/Footer1";
-import Footer2 from "../../components/footer/Footer2";
-import Button1 from "../../components/button/Button1";
-import Button2 from "../../components/button/Button2";
-import Button3 from "../../components/button/Button3";
+import Footer1 from "../../app/components/footer/Footer1";
+import Footer2 from "../../app/components/footer/Footer2";
+import Button1 from "../../app/components/button/Button1";
+import Button2 from "../../app/components/button/Button2";
+import Button3 from "../../app/components/button/Button3";
 
-import Nav1 from "../../components/nav/Nav1";
-import Nav2 from "../../components/nav/Nav2";
-import { Feature1 } from "../../components/features/Features1";
+import Nav1 from "../../app/components/nav/Nav1";
+import Nav2 from "../../app/components/nav/Nav2";
+import { Feature1 } from "../../app/components/features/Features1";
 
-import TabSection from "../../components/nav/tab/TabSection";
-import VerticalTab from "../../components/nav/tab/VerticalTab";
-import Modal from "../../components/modal/Modal";
-import Card3 from "../../components/card/Card3";
+import TabSection from "../../app/components/nav/tab/TabSection";
+import VerticalTab from "../../app/components/nav/tab/VerticalTab";
+import Modal from "../../app/components/modal/Modal";
+import Card3 from "../../app/components/card/Card3";
 
 export const codeData = [
   {

@@ -14,7 +14,7 @@ const [toggleSidebar, setToggleSidebar] = useState(false);
     <AppLayout>
       {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}
       <>
-        <LayoutNav>
+        <LayoutNav toggleSidebar={toggleSidebar} setToggleSidebar={setToggleSidebar} >
           {" "}
           <section className="dark:text-white container w-full mx-auto mt-3  ">
             <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">
@@ -31,7 +31,10 @@ const [toggleSidebar, setToggleSidebar] = useState(false);
             </section>
           </section>
         </LayoutNav>
-        <LayoutBody>
+        <LayoutBody
+        toggleSidebar={toggleSidebar}
+        setToggleSidebar={setToggleSidebar}
+      >
           <div className="container flex items-center justify-center p-6 mx-auto mt-8 lg:my-16 h-80 sm:h-96 md:h-112 xl:h-128">
             <img
               src="/pc_guy.png"

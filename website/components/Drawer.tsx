@@ -68,7 +68,7 @@ export const Nav = ({children,toggleSidebar,setToggleSidebar}:any) => {
           </div>
         </div>
 
-        <nav className="mt-10">{children}</nav>
+        <nav className="w-full">{children}</nav>
       </div></>
   )
 }

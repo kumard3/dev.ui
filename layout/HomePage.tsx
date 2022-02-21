@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react";
+import type { AppProps } from "next/app";
 
-export default function HomePage() {
+import Footer from "../website/components/Footer";
+import Nav from "../website/components/Nav";
+
+export default function HomePage({ children }: any) {
   return (
-    <div>HomePage</div>
-  )
+    <>
+      <Nav />
+      <section className="py-[50px]">{children}</section>
+      <Footer />
+    </>
+  );
 }

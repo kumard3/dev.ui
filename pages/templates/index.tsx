@@ -1,24 +1,45 @@
+/* eslint-disable @next/next/no-img-element */
 
-import { showCode } from '../../data/templates/data';
-import Link from 'next/link'
-import { Componentbutton } from '../../website/components/ComponentButton';
+import { Componentbutton } from "../../website/components/ComponentButton";
 
-  export default function Template() {
-    return (
-      <div className="min-h-screen container mx-auto sm:px-10">
-        <section className="dark:text-white container w-full mx-auto mt-3 ">
-          <h1 className="text-5xl font-bold px-2"><Link href='/templates'> Template</Link> </h1>
-          <section className="dark:text-white text-dark flex flex-wrap justify-center items-center w-full my-4 ">
-            {showCode.map((n) => {
-              return (
-                <div key={n.title} >
-                  <Componentbutton title={n.title} data={n} url={n.url}/>
-                </div>
-              );
-            })}
+import { codeData } from "../../data/components/data";
+import Link from "next/link";
+// import NewLayout from "../NewLayout";
+import AppLayout, { LayoutBody, LayoutNav } from "../../layout/AppLayout";
+import { showCode } from "../../data/templates/data";
+
+export default function Component() {
+  return (
+    <AppLayout>
+      {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}
+      <>
+        <LayoutNav>
+          {" "}
+          <section className="dark:text-white container w-full mx-auto mt-3  ">
+            <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">
+              {showCode.map((n) => {
+                return (
+                  <div
+                    key={n.title}
+                    className="flex flex-wrap my-2 w-full text-left "
+                  >
+                    <Componentbutton title={n.title} url={n.url} />
+                  </div>
+                );
+              })}
+            </section>
           </section>
-        </section>
-      </div>
-    );
-  }
-  
+        </LayoutNav>
+        <LayoutBody>
+          <div className="container flex items-center justify-center p-6 mx-auto mt-8 lg:my-16 h-80 sm:h-96 md:h-112 xl:h-128">
+            <img
+              src="/pc_guy.png"
+              alt="pc_guy"
+              className="object-contain h-80 sm:h-96 md:h-112 xl:h-128"
+            />
+          </div>
+        </LayoutBody>
+      </>
+    </AppLayout>
+  );
+}

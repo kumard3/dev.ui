@@ -1,9 +1,17 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
-export const Componentbutton = ({ title,url,data }: any) => {
+export const Componentbutton = ({ title, url, data }: any) => {
+  const router = useRouter();
+  console.log(url + title);
+  console.log(router);
   return (
-    <Link href={`${url}${title}`}>
-      <button className=" py-2 px-4 my-[10px] md:my-0 active:scale-105 scale-125 active:transition-all mx-4    shadow  bg-gray-600 text-lg  rounded-xl ">
+    <Link href={`${url}${title}`} passHref>
+      <button
+        className={`${
+          router.asPath == `${url}${title}` ? "bg-gray-600" : ""
+        } py-2 px-4 shadow  text-left active: text-lg w-full rounded `}
+      >
         {title}
       </button>
     </Link>

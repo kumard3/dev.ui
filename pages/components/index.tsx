@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-
+import {useState} from "react"
 import { Componentbutton } from "../../website/components/ComponentButton";
 
 import { codeData } from "../../data/components/data";
@@ -8,6 +8,8 @@ import Link from "next/link";
 import AppLayout, { LayoutBody, LayoutNav } from "../../layout/AppLayout";
 
 export default function Component() {
+const [toggleSidebar, setToggleSidebar] = useState(false);
+
   return (
     <AppLayout>
       {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}

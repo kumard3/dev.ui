@@ -1308,8 +1308,13 @@ export default function Hero() {
           </h1>
           <div className="flex  items-center sm:justify-center lg:justify-start ">
             <Link href="/components" passHref>
-              <span className="px-8 py-3 min-h-[3rem]  active:scale-105 scale-110 active:transition-all text-lg font-bold rounded gradientbutton text-white ">
+              <span className="px-8 py-3 min-h-[3rem] mr-4 active:scale-105 scale-110 active:transition-all text-lg font-bold rounded gradientbutton text-white ">
                 Components
+              </span>
+            </Link>
+            <Link href="/templates" passHref>
+              <span className="px-8 py-3 min-h-[3rem] ml-4 active:scale-105 scale-110 active:transition-all text-lg font-bold rounded glass transition-colors duration-500 text-white ">
+              Templates
               </span>
             </Link>
           </div>

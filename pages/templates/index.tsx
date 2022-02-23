@@ -1,19 +1,23 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { Componentbutton } from "../../website/components/ComponentButton";
-
-import { codeData } from "../../data/components/data";
 import Link from "next/link";
-// import NewLayout from "../NewLayout";
+
 import AppLayout, { LayoutBody, LayoutNav } from "../../layout/AppLayout";
 import { showCode } from "../../data/templates/data";
+import { useState } from "react";
 
-export default function Component() {
+export default function Templates() {
+  const [toggleSidebar, setToggleSidebar] = useState(false);
+
   return (
     <AppLayout>
       {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}
       <>
-        <LayoutNav>
+        <LayoutNav
+          toggleSidebar={toggleSidebar}
+          setToggleSidebar={setToggleSidebar}
+        >
           {" "}
           <>
             <h1 className="text-4xl font-bold ">
@@ -33,7 +37,10 @@ export default function Component() {
             </section>
           </>
         </LayoutNav>
-        <LayoutBody>
+        <LayoutBody
+          toggleSidebar={toggleSidebar}
+          setToggleSidebar={setToggleSidebar}
+        >
           <div className="container flex items-center justify-center p-6 mx-auto mt-8 lg:my-16 h-80 sm:h-96 md:h-112 xl:h-128">
             <img
               src="/pc_guy.png"

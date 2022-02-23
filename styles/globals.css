@@ -101,9 +101,8 @@ input {
     100%  { width:100%; }
   }
   
-  .animate-this-element {
 
-  }
+
 /* a:link    { color: red }    unvisited links */
 /* a:visited { color: blue }   visited links   */
 /* a:hover   { color: yellow } user hovers     */
@@ -141,7 +140,7 @@ input {
 
 .mantine-Drawer-drawer{
 
-  background-color:#0A192F;
+  background-color:#000000;
   color:white;
 
 }

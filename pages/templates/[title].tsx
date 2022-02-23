@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Link from "next/link";
 
 import { showCode } from "../../data/templates/data";
@@ -7,11 +8,13 @@ import { Componentbutton } from "../../website/components/ComponentButton";
 import CodeDisplay from "../../website/components/CodeDisplay";
 
 import AppLayout, { LayoutBody, LayoutNav } from "../../layout/AppLayout";
+
 export default function Post() {
   const router = useRouter();
   const route = router.query.title;
   const filterdata = showCode.filter((e) => e.title === route);
   const Filter = filterdata[0]?.store;
+  const [toggleSidebar, setToggleSidebar] = useState(false);
 
   console.log(router);
 
@@ -19,7 +22,10 @@ export default function Post() {
     <AppLayout>
       {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}
       <>
-        <LayoutNav>
+        <LayoutNav
+          toggleSidebar={toggleSidebar}
+          setToggleSidebar={setToggleSidebar}
+        >
           {" "}
           <>
             <h1 className="text-4xl font-bold ">
@@ -39,7 +45,10 @@ export default function Post() {
             </section>
           </>
         </LayoutNav>
-        <LayoutBody>
+        <LayoutBody
+          toggleSidebar={toggleSidebar}
+          setToggleSidebar={setToggleSidebar}
+        >
           <div className="dark:text-white">
             <div className="container mx-auto flex w-full justify-center flex-col items-center">
               {Filter?.map((n) => {

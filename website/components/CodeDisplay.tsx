@@ -27,7 +27,7 @@ export default function CodeDisplay({ component, jsx }: any) {
 
   return (
     <div>
-      <section className="bg-[#1F2A37] mb-5 min-h-[10rem]  md:w-[70vw] w-[90vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
+      <section className="bg-[#111111] mb-5 min-h-[10rem]  md:w-[70vw] w-[90vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
         <section className="flex p-3 w-full justify-between">
           <div>
             {data.map((n, index) => {

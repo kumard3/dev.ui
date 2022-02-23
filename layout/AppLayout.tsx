@@ -27,13 +27,6 @@ export const LayoutNav = ({
       ></div>
 
       <div
-        // className="sidebarOpen ? 'block' : 'hidden'"
-        className={`fixed z-20 inset-0  bg-black  h-screen w-44 opacity-50 transition-opacity lg:hidden ${
-          toggleSidebar ? "block" : "hidden"
-        }`}
-        onClick={() => setToggleSidebar((prevState: any) => !prevState)}
-      ></div>
-      <div
         // className="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
         className={`fixed top-0 px-2  z-30 inset-y-0 left-0 w-[15rem]  overflow-y-auto transition duration-300 transform lg:translate-x-0 lg:static ${
           toggleSidebar
@@ -64,7 +57,7 @@ export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
           ></path>
         </svg>
       </button>
-      <div className="flex flex-col justify-center items-center w-full ">
+      <div className="flex flex-col  justify-center items-center w-full ">
         {children}
       </div>
     </div>
@@ -74,7 +67,7 @@ export default function AppLayout({ children }: Children) {
   return (
     <div className="flex flex-col">
       <Nav />
-      <div className="flex container mx-auto min-h-screen">{children}</div>
+      <div className="flex container mx-auto w-full min-h-screen">{children}</div>
       <Footer />
     </div>
   );

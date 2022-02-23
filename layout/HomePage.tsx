@@ -15,7 +15,7 @@ export default function HomePage({ children }: any) {
         url={"https://dev-ui.vercel.app/"}
       />
       <Nav />
-      <section className="py-[50px] overflow-hidden">{children}</section>
+      <div className="py-[50px] overflow-hidden">{children}</div>
       <Footer />
     </>
   );

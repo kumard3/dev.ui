@@ -16,7 +16,7 @@ export default function Post() {
   const Filter = filterdata[0]?.store;
   const [toggleSidebar, setToggleSidebar] = useState(false);
 
-  console.log(router);
+
 
   return (
     <AppLayout>

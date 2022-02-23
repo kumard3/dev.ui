@@ -3,7 +3,6 @@ import { useState } from "react";
 export default function Modal() {
   const [isModalOpen, setModalOpen] = useState(false);
 
-  console.log(isModalOpen);
   return (
     <div className=" flex flex-col">
       <button

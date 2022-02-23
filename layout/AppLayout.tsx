@@ -1,12 +1,17 @@
 import React from "react";
 import Footer from "../website/components/Footer";
 import Nav from "../website/components/Nav";
-
+// boolean
+interface Props {
+  children: React.ReactNode;
+  toggleSidebar: boolean;
+  setToggleSidebar: React.Dispatch<React.SetStateAction<boolean>>;
+}
 export const LayoutNav = ({
   children,
   toggleSidebar,
   setToggleSidebar,
-}: any) => {
+}: Props) => {
   return (
     <>
       <div
@@ -38,11 +43,7 @@ export const LayoutNav = ({
   );
 };
 
-export const LayoutBody = ({
-  children,
-  toggleSidebar,
-  setToggleSidebar,
-}: any) => {
+export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
   return (
     <div className="flex-1 flex flex-col  w-full lg:h-screen lg:overflow-y-scroll  ">
       <button

@@ -1323,11 +1323,13 @@ export default function Hero() {
           <ShowCase />
         </div>
       </div>
-      <section className="  flex flex-wrap w-full justify-center items-center">
-        {HeroCardData.map((n) => {
-          return <HeroCard title={n.title} description={n.description} />;
+      <div className=" flex flex-wrap w-full justify-center items-center">
+        {HeroCardData.map((n, index) => {
+          return (
+            <HeroCard title={n.title} description={n.description} key={index} />
+          );
         })}
-      </section>
+      </div>
     </div>
   );
 }

@@ -28,7 +28,6 @@ export const codeData = [
         export default function Modal() {
           const [isModalOpen, setModalOpen] = useState(false);
         
-          console.log(isModalOpen);
           return (
             <div className=" flex flex-col">
               <button
@@ -175,7 +174,6 @@ export const codeData = [
               data: "Second",
             },
           ];
-          console.log(tab);
         
           const filterdata = data.filter((e) => e.title === tab);
           const active = filterdata[0].title;

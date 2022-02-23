@@ -3,8 +3,7 @@ import { useRouter } from "next/router";
 
 export const Componentbutton = ({ title, url, data }: any) => {
   const router = useRouter();
-  console.log(url + title);
-  console.log(router);
+
   return (
     <Link href={`${url}${title}`} passHref>
       <button

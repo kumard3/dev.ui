@@ -18,7 +18,7 @@ export const showCode =
         },
       ],
     },{
-      title: "Landing Page",
+      title: "LandingPage",
       url:'/templates/',
       store: [
         // {

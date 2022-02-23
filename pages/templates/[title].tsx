@@ -58,6 +58,7 @@ export default function Post() {
                     key={n.component}
                     jsx={n.jsx}
                     html={n.html}
+                    display="hidden"
                   />
                 );
               })}

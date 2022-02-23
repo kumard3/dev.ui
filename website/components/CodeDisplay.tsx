@@ -5,7 +5,7 @@ import { useState } from "react";
 import { Prism } from "@mantine/prism";
 import { Modal } from "@mantine/core";
 
-export default function CodeDisplay({ component, jsx }: any) {
+export default function CodeDisplay({ component, jsx, display }: any) {
   const [opened, setOpened] = useState(false);
   const [tab, setTab] = useState("Preview");
   const data = [
@@ -16,12 +16,10 @@ export default function CodeDisplay({ component, jsx }: any) {
     },
     {
       title: "Jsx",
-
       data: "",
       code: jsx,
     },
   ];
-  console.log(tab);
 
   const filterdata = data.filter((e) => e.title === tab);
 
@@ -30,17 +28,30 @@ export default function CodeDisplay({ component, jsx }: any) {
       <section className="bg-[#111111] mb-5 min-h-[10rem]  md:w-[70vw] w-[90vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
         <section className="flex p-3 w-full justify-between">
           <div>
-            {data.map((n, index) => {
-              return (
-                <button
-                  onClick={() => setTab(n.title)}
-                  className="p-3 "
-                  key={index}
-                >
-                  {n.title}
+            {display === "hidden" ? (
+              <>
+                {" "}
+                <button onClick={() => setTab(data[0].title)} className="p-3 ">
+                  {data[0].title}
                 </button>
-              );
-            })}
+              </>
+            ) : (
+              <>
+                {data.map((n, index) => {
+                  return (
+                    <>
+                      <button
+                        onClick={() => setTab(n.title)}
+                        className="p-3 "
+                        key={index}
+                      >
+                        {n.title}
+                      </button>
+                    </>
+                  );
+                })}
+              </>
+            )}
           </div>
           <button type="button" onClick={() => setOpened(true)} className="   ">
             <svg
@@ -63,7 +74,7 @@ export default function CodeDisplay({ component, jsx }: any) {
                   {n.data === "" ? (
                     ""
                   ) : (
-                    <div className="max-h-[50rem] overflow-scroll">
+                    <div className=" max-h-[50rem] overflow-scroll">
                       <section className=" p-3 flex flex-col items-center justify-center w-full ">
                         {n.data}
                       </section>
@@ -73,7 +84,7 @@ export default function CodeDisplay({ component, jsx }: any) {
                   {n.code === "" ? (
                     ""
                   ) : (
-                    <div className="max-h-[20rem] overflow-scroll">
+                    <div className={`${display} max-h-[20rem] overflow-scroll`}>
                       <Prism
                         colorScheme="dark"
                         language="jsx"

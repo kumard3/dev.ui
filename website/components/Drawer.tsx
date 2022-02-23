@@ -23,28 +23,27 @@ export const Body = ({ children, setToggleSidebar }: any) => {
           </button>
         </div>
       </header>
-      {/* <div  dangerouslySetInnerHTML={component} /> */}
-      <div className='flex flex-col justify-center items-center w-full h-full'>
-
-      {children}
+      <div className="flex flex-col justify-center items-center w-full h-full">
+        {children}
       </div>
-      {/* main content */}
     </div>
   );
 };
 
-export const Nav = ({children,toggleSidebar,setToggleSidebar}:any) => {
-  return(
-    <><div
-      // className="sidebarOpen ? 'block' : 'hidden'"
-      className={`fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden ${toggleSidebar ? "block" : "hidden"}`}
-      onClick={() => setToggleSidebar((prevState: any) => !prevState)}
-    ></div><div
-      // className="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
-      className={`fixed z-30 inset-y-0 left-0 w-64 bg-gray-900 overflow-y-auto transition duration-300 transform lg:translate-x-0 lg:static lg:inset-0 ${toggleSidebar
-          ? "translate-x-0 ease-out"
-          : "-translate-x-full ease-in"}`}
-    >
+export const Nav = ({ children, toggleSidebar, setToggleSidebar }: any) => {
+  return (
+    <>
+      <div
+        className={`fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden ${
+          toggleSidebar ? "block" : "hidden"
+        }`}
+        onClick={() => setToggleSidebar((prevState: any) => !prevState)}
+      ></div>
+      <div
+        className={`fixed z-30 inset-y-0 left-0 w-64 bg-gray-900 overflow-y-auto transition duration-300 transform lg:translate-x-0 lg:static lg:inset-0 ${
+          toggleSidebar ? "translate-x-0 ease-out" : "-translate-x-full ease-in"
+        }`}
+      >
         <div className="flex flex-row items-center justify-center mt-8">
           <div className="flex items-center">
             <svg className="h-12 w-12" viewBox="0 0 512 512" fill="none">
@@ -69,9 +68,10 @@ export const Nav = ({children,toggleSidebar,setToggleSidebar}:any) => {
         </div>
 
         <nav className="w-full">{children}</nav>
-      </div></>
-  )
-}
+      </div>
+    </>
+  );
+};
 
 export default function DrawerComponent({ children }: any) {
   return (
@@ -80,7 +80,7 @@ export default function DrawerComponent({ children }: any) {
         <div className="flex h-screen ">
           {/*  div dgn onCLick, biar bisa keluar dari toggle sidebar */}
           {/* @click="sidebarOpen = false" */}
-{children}
+          {children}
 
           {/* <Body setToggleSidebar={setToggleSidebar} /> */}
         </div>

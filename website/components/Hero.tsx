@@ -1314,7 +1314,7 @@ export default function Hero() {
             </Link>
             <Link href="/templates" passHref>
               <span className="px-8 py-3 min-h-[3rem] ml-4 active:scale-105 scale-110 active:transition-all text-lg font-bold rounded glass transition-colors duration-500 text-white ">
-              Templates
+                Templates
               </span>
             </Link>
           </div>

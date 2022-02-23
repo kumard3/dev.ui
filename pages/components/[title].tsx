@@ -14,7 +14,7 @@ export default function Post() {
   const filterdata = codeData.filter((e) => e.title === route);
   const Filter = filterdata[0]?.store;
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
-
+  console.log(route);
   return (
     <AppLayout>
       <LayoutNav
@@ -46,9 +46,13 @@ export default function Post() {
         <div className="dark:text-white">
           <div className="container mx-auto flex w-full justify-center flex-col items-center">
             {Filter?.map((n, index) => {
-
               return (
-                <CodeDisplay component={n.component} key={index} jsx={n.jsx} />
+                <CodeDisplay
+                  component={n.component}
+                  key={index}
+                  jsx={n.jsx}
+                  title={route}
+                ></CodeDisplay>
               );
             })}
           </div>

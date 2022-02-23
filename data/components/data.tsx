@@ -16,6 +16,9 @@ import VerticalTab from "../../app/components/nav/tab/VerticalTab";
 import Modal from "../../app/components/modal/Modal";
 import Card3 from "../../app/components/card/Card3";
 
+import { SquareAvatar, ContentAvatar,CircleAvatar } from "../../app/components/avatar/index";
+
+
 export const codeData = [
   {
     url: "/components/",
@@ -797,6 +800,59 @@ export const codeData = [
             </button>
         </div>
     </header>`,
+      },
+    ],
+  },
+  {
+    url: "/components/",
+    title: "Avatar",
+    store: [
+      {
+     
+        component: <SquareAvatar />,
+        jsx: `
+        export const SquareAvatar = () => {
+          return (
+            <img
+              src="https://source.unsplash.com/120x120/?portrait"
+              className="rounded-lg w-32"
+              alt="Avatar"
+            />
+          );
+        };`,
+      },
+      {
+  
+        component: <CircleAvatar />,
+        jsx: `export const CircleAvatar = () => {
+          return (
+            <div className="flex flex-wrap justify-center">
+              <div className="w-6/12 sm:w-4/12 px-4">
+                <img
+                  src="https://images.unsplash.com/photo-1645491223603-218aa69dcec5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=729&q=80"
+                  alt="image"
+                  className="shadow rounded-full max-w-full h-auto align-middle border-none"
+                />
+              </div>
+            </div>
+          );
+        }`,
+      },
+      {
+        component: <ContentAvatar />,
+        jsx: `export const ContentAvatar = () => {
+          return (
+            <div className="text-center">
+              <img
+                src="https://source.unsplash.com/120x120/?portrait"
+                className="rounded-full w-32 mb-4 mx-auto"
+                alt="Avatar"
+              />
+              <h5 className="text-xl font-medium leading-tight mb-2">John Doe</h5>
+              <p className="text-gray-500">Web designer</p>
+            </div>
+          );
+        };`,
       },
     ],
   },

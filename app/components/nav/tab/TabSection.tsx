@@ -24,8 +24,8 @@ export default function TabSection() {
             <button
               onClick={() => setTab(n.title)}
               className={`${
-                active === n.title ? "text-blue-400 bg-white/10 rounded-t-xl" : ""
-              } p-3  `}
+                active === n.title ? "text-blue-400 bg-white/10 rounded-lg " : ""
+              } px-10 py-3  `}
               key={index}
             >
               {n.title}
@@ -33,8 +33,8 @@ export default function TabSection() {
           );
         })}
       </div>
-      <hr/>
-      <div>
+
+      <div className="flex justify-center mt-4">
         {filterdata.map((n, index) => {
           return <div key={index}>{n.data}</div>;
         })}

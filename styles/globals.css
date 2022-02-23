@@ -7,6 +7,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.testingg::before {
+  content: "";
+  flex-basis: 4px;
+  flex-shrink: 0;
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgb(153, 153, 153);
+  margin-right: 16px;
+}
+
 *{
   box-sizing: border-box;
 }

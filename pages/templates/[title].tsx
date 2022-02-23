@@ -21,7 +21,10 @@ export default function Post() {
       <>
         <LayoutNav>
           {" "}
-          <section className="dark:text-white container w-full mx-auto mt-3  ">
+          <>
+            <h1 className="text-4xl font-bold ">
+              <Link href="/templates"> Templates</Link>{" "}
+            </h1>
             <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">
               {showCode.map((n) => {
                 return (
@@ -34,7 +37,7 @@ export default function Post() {
                 );
               })}
             </section>
-          </section>
+          </>
         </LayoutNav>
         <LayoutBody>
           <div className="dark:text-white">

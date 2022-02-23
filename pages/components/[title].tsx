@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { codeData } from "../../data/components/data";
 
 import { Componentbutton } from "../../website/components/ComponentButton";
@@ -8,6 +6,7 @@ import CodeDisplay from "../../website/components/CodeDisplay";
 import { useRouter } from "next/router";
 import AppLayout, { LayoutBody, LayoutNav } from "../../layout/AppLayout";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Post() {
   const router = useRouter();
@@ -22,18 +21,23 @@ export default function Post() {
         toggleSidebar={toggleSidebar}
         setToggleSidebar={setToggleSidebar}
       >
-        <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">
-          {codeData.map((n) => {
-            return (
-              <div
-                key={n.title}
-                className="flex flex-wrap my-2 w-full text-left "
-              >
-                <Componentbutton title={n.title} url={n.url} />
-              </div>
-            );
-          })}
-        </section>
+        <>
+          <h1 className="text-4xl font-bold ">
+            <Link href="/components"> Components</Link>{" "}
+          </h1>
+          <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">
+            {codeData.map((n) => {
+              return (
+                <div
+                  key={n.title}
+                  className="flex flex-wrap my-2 w-full text-left "
+                >
+                  <Componentbutton title={n.title} url={n.url} />
+                </div>
+              );
+            })}
+          </section>
+        </>
       </LayoutNav>
       <LayoutBody
         toggleSidebar={toggleSidebar}

@@ -71,7 +71,7 @@ export default function AppLayout({ children }: any) {
   return (
     <div className="flex flex-col">
       <Nav />
-      <div className="flex container mx-auto">{children}</div>
+      <div className="flex container mx-auto min-h-screen">{children}</div>
 
       <Footer />
     </div>

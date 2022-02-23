@@ -19,7 +19,7 @@ export default function Post() {
 
 
   return (
-    <AppLayout>
+    <AppLayout >
       {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}
       <>
         <LayoutNav

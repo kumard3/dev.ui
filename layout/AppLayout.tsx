@@ -1,12 +1,16 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Footer from "../website/components/Footer";
 import Nav from "../website/components/Nav";
-// boolean
+
 interface Props {
   children: React.ReactNode;
   toggleSidebar: boolean;
   setToggleSidebar: React.Dispatch<React.SetStateAction<boolean>>;
 }
+interface Children {
+  children: ReactNode;
+}
+
 export const LayoutNav = ({
   children,
   toggleSidebar,
@@ -24,7 +28,7 @@ export const LayoutNav = ({
 
       <div
         // className="sidebarOpen ? 'block' : 'hidden'"
-        className={`fixed z-20 inset-0  bg-black border-2  h-screen w-44 opacity-50 transition-opacity lg:hidden ${
+        className={`fixed z-20 inset-0  bg-black  h-screen w-44 opacity-50 transition-opacity lg:hidden ${
           toggleSidebar ? "block" : "hidden"
         }`}
         onClick={() => setToggleSidebar((prevState: any) => !prevState)}
@@ -47,7 +51,7 @@ export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
   return (
     <div className="flex-1 flex flex-col  w-full lg:h-screen lg:overflow-y-scroll  ">
       <button
-        className="  transition fixed z-[100000] flex items-center justify-center w-16 h-16 text-white bg-white  rounded-full  bottom-4 right-4 lg:hidden focus:outline-none focus-visible:ring bg-opacity-20 backdrop-filter backdrop-blur"
+        className="  transition fixed z-50 flex items-center justify-center w-16 h-16 text-white bg-white  rounded-full  bottom-4 right-4 lg:hidden focus:outline-none focus-visible:ring bg-opacity-20 backdrop-filter backdrop-blur"
         onClick={() => setToggleSidebar((prevState: any) => !prevState)}
       >
         <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">
@@ -60,20 +64,17 @@ export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
           ></path>
         </svg>
       </button>
-      {/* <div  dangerouslySetInnerHTML={component} /> */}
       <div className="flex flex-col justify-center items-center w-full ">
         {children}
       </div>
-      {/* main content */}
     </div>
   );
 };
-export default function AppLayout({ children }: any) {
+export default function AppLayout({ children }: Children) {
   return (
     <div className="flex flex-col">
       <Nav />
       <div className="flex container mx-auto min-h-screen">{children}</div>
-
       <Footer />
     </div>
   );

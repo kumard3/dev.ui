@@ -7,20 +7,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.testingg::before {
-  content: "";
-  flex-basis: 4px;
-  flex-shrink: 0;
-  display: block;
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: rgb(153, 153, 153);
-  margin-right: 16px;
-}
-
 *{
   box-sizing: border-box;
+}
+.body {
+  font-family: 'Playfair Display', serif;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -28,6 +19,10 @@
 ::-webkit-scrollbar-thumb {
   background: -webkit-linear-gradient(top, #ff8867, #ff52ff);
   animation: gradient-animation 4s ease infinite;
+}
+
+button {
+  cursor: pointer;
 }
 
 /* Handle on hover */
@@ -42,9 +37,6 @@ input:checked ~ .dot {
   background-color: #48bb78;
 } 
 
-.body {
-  font-family: 'Playfair Display', serif;
-}
 .gradientText {
   background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
   background-clip: text;

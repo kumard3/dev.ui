@@ -74,24 +74,19 @@ export default function Nav() {
           </div>
         </div>
       </div>
-      <div className="">
+
+      <div className="sm:hidden ">
         <DrawerNav
           toggleSidebar={toggleSidebar}
           setToggleSidebar={setToggleSidebar}
         >
-          <div className="mt-6">
-            <nav className="grid gap-y-8">
-              {navData.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  className="-m-3 p-3 flex items-center rounded-md hover:bg-white/10 hover:backdrop-blur-sm "
-                >
-                  <h1 className="my-3 ml-3 text-3xl font-bold ">{item.name}</h1>
-                </a>
-              ))}
-            </nav>
-          </div>
+          {navData.map((item) => (
+            <Link key={item.name} href={item.href} passHref>
+              <h1 className="mt-10 mx-3 p-3 flex items-center text-3xl font-bold w-[13rem] rounded-md hover:bg-white/10 hover:backdrop-blur-sm  ">
+                {item.name}
+              </h1>
+            </Link>
+          ))}
         </DrawerNav>
       </div>
     </>

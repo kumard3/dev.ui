@@ -1,12 +1,13 @@
 import { codeData } from "../../data/components/data";
 
 import { Componentbutton } from "../../website/components/ComponentButton";
-import CodeDisplay from "../../website/components/CodeDisplay";
+// import CodeDisplay from "../../website/components/CodeDisplay/CodeDisplay";
 
 import { useRouter } from "next/router";
 import AppLayout, { LayoutBody, LayoutNav } from "../../layout/AppLayout";
 import { useState } from "react";
 import Link from "next/link";
+import CodeDisplay from "../../website/codeDisplay/CodeDisplay";
 
 export default function Post() {
   const router = useRouter();
@@ -51,7 +52,6 @@ export default function Post() {
                   component={n.component}
                   key={index}
                   jsx={n.jsx}
-                  display={""}
                 />
               );
             })}

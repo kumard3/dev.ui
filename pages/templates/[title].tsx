@@ -5,9 +5,11 @@ import { showCode } from "../../data/templates/data";
 
 import { useRouter } from "next/router";
 import { Componentbutton } from "../../website/components/ComponentButton";
-import CodeDisplay from "../../website/components/CodeDisplay";
+// import CodeDisplay from "../../website/components/CodeDisplay";
 
 import AppLayout, { LayoutBody, LayoutNav } from "../../layout/AppLayout";
+import CodeDisplay from "../../website/codeDisplay/CodeDisplay";
+import TemplateDisplay from "../../website/codeDisplay/TemplateDisplay";
 
 export default function Post() {
   const router = useRouter();
@@ -50,11 +52,11 @@ export default function Post() {
             <div className="container mx-auto flex w-full justify-center flex-col items-center">
               {Filter?.map((n, index) => {
                 return (
-                  <CodeDisplay
+                  <TemplateDisplay
                     component={n.component}
                     key={index}
-                    jsx={n.jsx}
-                    display="hidden"
+                    Weburl={n.Weburl}
+                    github={n.github}
                   />
                 );
               })}

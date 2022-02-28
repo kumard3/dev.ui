@@ -1,16 +1,16 @@
 /* eslint-disable @next/next/no-sync-scripts */
 
-import { useState,ReactNode } from "react";
+import { useState, ReactNode } from "react";
 
+import { Prism } from "@mantine/prism";
 import { Modal } from "@mantine/core";
 
 interface Props {
-  component?:ReactNode;
+  component?: ReactNode;
   jsx?: ReactNode;
-  display:string
 }
 
-export default function CodeDisplay({ component, jsx, display }: Props) {
+export default function CodeDisplay({ component, jsx }: Props) {
   const [opened, setOpened] = useState(false);
   const [tab, setTab] = useState("Preview");
   const data = [
@@ -33,30 +33,19 @@ export default function CodeDisplay({ component, jsx, display }: Props) {
       <section className="bg-[#111111] mb-5 min-h-[10rem] w-[90vw] lg:max-w-[65vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
         <section className="flex p-3 w-full justify-between">
           <div>
-            {display === "hidden" ? (
-              <>
-                {" "}
-                <button onClick={() => setTab(data[0].title)} className="p-3 ">
-                  {data[0].title}
-                </button>
-              </>
-            ) : (
-              <>
-                {data.map((n, index) => {
-                  return (
-                    <>
-                      <button
-                        onClick={() => setTab(n.title)}
-                        className="p-3 "
-                        key={index}
-                      >
-                        {n.title}
-                      </button>
-                    </>
-                  );
-                })}
-              </>
-            )}
+            {data.map((n, index) => {
+              return (
+                <>
+                  <button
+                    onClick={() => setTab(n.title)}
+                    className="p-3 "
+                    key={index}
+                  >
+                    {n.title}
+                  </button>
+                </>
+              );
+            })}
           </div>
 
           <button type="button" onClick={() => setOpened(true)} className="   ">
@@ -83,8 +72,23 @@ export default function CodeDisplay({ component, jsx, display }: Props) {
                     <div className=" max-h-[50rem] overflow-scroll">
                       <section className=" p-3 flex flex-col items-center justify-center w-full ">
                         {n.data}
-                        
                       </section>
+                    </div>
+                  )}
+
+                  {n.code === "" ? (
+                    ""
+                  ) : (
+                    <div className={`max-h-[20rem] overflow-scroll`}>
+                      <Prism
+                        colorScheme="dark"
+                        language="jsx"
+                        copyLabel="Copy code to clipboard"
+                        copiedLabel="Code copied to clipboard"
+                        withLineNumbers={true}
+                      >
+                        {n.code}
+                      </Prism>
                     </div>
                   )}
                 </>

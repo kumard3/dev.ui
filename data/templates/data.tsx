@@ -1,7 +1,3 @@
-import Portfolio1 from "../../app/components/template/Portfolio1";
-import LandingPage1 from "../../app/components/template/template1/LandingPage1";
-import LandingPage2 from "../../app/components/template/template2/LandingPage2";
-
 export const showCode = [
   {
     title: "Portfolio",

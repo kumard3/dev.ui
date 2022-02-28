@@ -1,7 +1,12 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export const Componentbutton = ({ title, url, data }: any) => {
+interface Props {
+  title: string;
+  url: string;
+}
+
+export const Componentbutton = ({ title, url }: Props) => {
   const router = useRouter();
 
   return (
@@ -17,9 +22,7 @@ export const Componentbutton = ({ title, url, data }: any) => {
       >
         <span
           className={`${
-            router.asPath == `${url}${title}`
-              ? "bg-white"
-              : "bg-slate-500"
+            router.asPath == `${url}${title}` ? "bg-white" : "bg-slate-500"
           } min-w-[4px] min-h-[4px] block rounded-[50%] mr-3 `}
         ></span>
         {title}

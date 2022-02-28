@@ -1,11 +1,17 @@
 /* eslint-disable @next/next/no-sync-scripts */
 
-import { useState } from "react";
+import { useState,ReactNode } from "react";
 
 import { Prism } from "@mantine/prism";
 import { Modal } from "@mantine/core";
 
-export default function CodeDisplay({ component, jsx, display }: any) {
+interface Props {
+  component?:ReactNode;
+  jsx?: ReactNode;
+  display:string
+}
+
+export default function CodeDisplay({ component, jsx, display }: Props) {
   const [opened, setOpened] = useState(false);
   const [tab, setTab] = useState("Preview");
   const data = [

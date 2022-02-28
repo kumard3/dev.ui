@@ -94,11 +94,7 @@ input {
   }
   
 
-
-/* a:link    { color: red }    unvisited links */
-/* a:visited { color: blue }   visited links   */
-/* a:hover   { color: yellow } user hovers     */
-/* a:active  { color: lime }  */
+  
 .bg-hero {
   background: linear-gradient(269deg, #28313B , #485461);
   background-size: 400% 400%;

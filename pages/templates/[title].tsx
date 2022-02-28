@@ -16,11 +16,8 @@ export default function Post() {
   const Filter = filterdata[0]?.store;
   const [toggleSidebar, setToggleSidebar] = useState(false);
 
-
-
   return (
-    <AppLayout >
-      {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}
+    <AppLayout>
       <>
         <LayoutNav
           toggleSidebar={toggleSidebar}
@@ -51,13 +48,12 @@ export default function Post() {
         >
           <div className="dark:text-white">
             <div className="container mx-auto flex w-full justify-center flex-col items-center">
-              {Filter?.map((n) => {
+              {Filter?.map((n, index) => {
                 return (
                   <CodeDisplay
                     component={n.component}
-                    key={n.component}
+                    key={index}
                     jsx={n.jsx}
-                    html={n.html}
                     display="hidden"
                   />
                 );

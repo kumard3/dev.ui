@@ -4,11 +4,10 @@ import { Componentbutton } from "../../website/components/ComponentButton";
 
 import { codeData } from "../../data/components/data";
 import Link from "next/link";
-// import NewLayout from "../NewLayout";
 import AppLayout, { LayoutBody, LayoutNav } from "../../layout/AppLayout";
 
 export default function Component() {
-  const [toggleSidebar, setToggleSidebar] = useState(false);
+  const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
 
   return (
     <AppLayout>

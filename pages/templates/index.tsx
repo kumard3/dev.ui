@@ -8,7 +8,7 @@ import { showCode } from "../../data/templates/data";
 import { useState } from "react";
 
 export default function Templates() {
-  const [toggleSidebar, setToggleSidebar] = useState(false);
+  const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
 
   return (
     <AppLayout>

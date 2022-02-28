@@ -2,23 +2,17 @@
 
 import { useState, ReactNode } from "react";
 
-import { Prism } from "@mantine/prism";
-import { Modal } from "@mantine/core";
 
 interface Props {
   component?: ReactNode;
-  jsx?: ReactNode;
   Weburl?: string;
   github?: string;
 }
 
-export default function TemplateDisplay({ component, Weburl, github }: Props) {
-  const [opened, setOpened] = useState(false);
-  const [tab, setTab] = useState("Preview");
+export default function TemplateDisplay({ Weburl, github }: Props) {
   const data = [
     {
       title: "Preview",
-      data: component,
       Weburl: Weburl,
       github: github,
     },

@@ -9,7 +9,6 @@ export const showCode = [
     store: [
       {
         title: "Portfolio",
-        component: <Portfolio1 />,
         Weburl: "https://zealous-curran-3560b0.netlify.app/",
         github:
           "https://github.com/kumard3/dev-ui-templates/tree/main/template-2",
@@ -22,7 +21,6 @@ export const showCode = [
     store: [
       {
         title: "Landing Page",
-        component: <LandingPage2 />,
         Weburl: "https://nifty-meninsky-f9c1ca.netlify.app/",
         github:
           "https://github.com/kumard3/dev-ui-templates/tree/main/template-1",

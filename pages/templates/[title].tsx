@@ -5,10 +5,9 @@ import { showCode } from "../../data/templates/data";
 
 import { useRouter } from "next/router";
 import { Componentbutton } from "../../website/components/ComponentButton";
-// import CodeDisplay from "../../website/components/CodeDisplay";
+
 
 import AppLayout, { LayoutBody, LayoutNav } from "../../layout/AppLayout";
-import CodeDisplay from "../../website/codeDisplay/CodeDisplay";
 import TemplateDisplay from "../../website/codeDisplay/TemplateDisplay";
 
 export default function Post() {
@@ -25,7 +24,6 @@ export default function Post() {
           toggleSidebar={toggleSidebar}
           setToggleSidebar={setToggleSidebar}
         >
-          {" "}
           <>
             <h1 className="text-4xl font-bold ">
               <Link href="/templates"> Templates</Link>{" "}
@@ -53,7 +51,6 @@ export default function Post() {
               {Filter?.map((n, index) => {
                 return (
                   <TemplateDisplay
-                    component={n.component}
                     key={index}
                     Weburl={n.Weburl}
                     github={n.github}

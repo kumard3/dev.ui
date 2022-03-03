@@ -8,6 +8,12 @@ export const showCode = [
         Weburl: "https://zealous-curran-3560b0.netlify.app/",
         github:
           "https://github.com/kumard3/dev-ui-templates/tree/main/template-2",
+      },     
+       {
+        title: "Portfolio",
+        Weburl: "https://boring-lamarr-42ae45.netlify.app/",
+        github:
+          "https://github.com/kumard3/dev-ui-templates/tree/main/template-3",
       },
     ],
   },

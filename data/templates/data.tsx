@@ -30,7 +30,7 @@ export const showCode = [
     ],
   },
   {
-    title: "NFT Landing Page",
+    title: "nftlandingpage",
     url: "/templates/",
     store: [
       {

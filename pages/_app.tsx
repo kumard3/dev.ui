@@ -1,15 +1,15 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import Analytics from "../website/analytics";
+import '../styles/globals.css'
+
+import type { AppProps } from 'next/app'
+
+import Analytics from '../website/analytics'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Analytics />
-      <>
-        <Component {...pageProps} />
-      </>
+      <Component {...pageProps} />
     </>
-  );
+  )
 }
-export default MyApp;
+export default MyApp

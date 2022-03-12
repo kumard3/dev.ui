@@ -1,8 +1,6 @@
-import Script from "next/script";
+import Script from 'next/script'
 
-
-const googleAnalyticsID = "G-DCNSHTYLMQ";
-
+const googleAnalyticsID = 'G-DCNSHTYLMQ'
 const GAScript = () => {
   return (
     <>
@@ -22,16 +20,17 @@ const GAScript = () => {
         `}
       </Script>
     </>
-  );
-};
+  )
+}
 
-export default GAScript;
+export default GAScript
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/events
-export const logEvent = (action, category, label, value) => {
-  window.gtag?.("event", action, {
+export const logEvent = (action: any, category: any, label: any, value: any) => {
+  //@ts-ignore
+  window.gtag?.('event', action, {
     event_category: category,
     event_label: label,
     value: value,
-  });
-};
+  })
+}

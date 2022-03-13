@@ -2,14 +2,11 @@
   "name": "devui",
   "version": "1.0.0",
   "author": "kumard3",
-  "engines": {
-    "node": ">=14"
-  },
   "scripts": {
     "dev": "next dev",
     "start": "next start",
     "export": "next export",
-    "build": "next build && next export",
+    "build": "next build",
     "lint": "next lint --fix --dir pages --dir components --dir lib --dir layouts --dir scripts",
     "prepare": "husky install",
     "lint.fix": "next lint --fix"

@@ -1,28 +1,27 @@
-import Card1 from "../../app/components/card/Card1";
-import Card2 from "../../app/components/card/Card2";
+import Card1 from '../../app/components/card/Card1'
+import Card2 from '../../app/components/card/Card2'
 
-import Footer1 from "../../app/components/footer/Footer1";
-import Footer2 from "../../app/components/footer/Footer2";
-import Button1 from "../../app/components/button/Button1";
-import Button2 from "../../app/components/button/Button2";
-import Button3 from "../../app/components/button/Button3";
+import Footer1 from '../../app/components/footer/Footer1'
+import Footer2 from '../../app/components/footer/Footer2'
+import Button1 from '../../app/components/button/Button1'
+import Button2 from '../../app/components/button/Button2'
+import Button3 from '../../app/components/button/Button3'
 
-import Nav1 from "../../app/components/nav/Nav1";
-import Nav2 from "../../app/components/nav/Nav2";
-import { Feature1 } from "../../app/components/features/Features1";
+import Nav1 from '../../app/components/nav/Nav1'
+import Nav2 from '../../app/components/nav/Nav2'
+import { Feature1 } from '../../app/components/features/Features1'
 
-import TabSection from "../../app/components/nav/tab/TabSection";
-import VerticalTab from "../../app/components/nav/tab/VerticalTab";
-import Modal from "../../app/components/modal/Modal";
-import Card3 from "../../app/components/card/Card3";
+import TabSection from '../../app/components/nav/tab/TabSection'
+import VerticalTab from '../../app/components/nav/tab/VerticalTab'
+import Modal from '../../app/components/modal/Modal'
+import Card3 from '../../app/components/card/Card3'
 
-import { SquareAvatar, ContentAvatar,CircleAvatar } from "../../app/components/avatar/index";
-
+import { SquareAvatar, ContentAvatar, CircleAvatar } from '../../app/components/avatar/index'
 
 export const codeData = [
   {
-    url: "/components/",
-    title: "Modal",
+    url: '/components/',
+    title: 'Modal',
     store: [
       {
         component: <Modal />,
@@ -114,8 +113,8 @@ export const codeData = [
     ],
   },
   {
-    url: "/components/",
-    title: "Tab",
+    url: '/components/',
+    title: 'Tab',
     store: [
       {
         component: <VerticalTab />,
@@ -209,8 +208,8 @@ export const codeData = [
     ],
   },
   {
-    url: "/components/",
-    title: "Card",
+    url: '/components/',
+    title: 'Card',
     store: [
       {
         component: <Card1 />,
@@ -284,8 +283,8 @@ export const codeData = [
     ],
   },
   {
-    url: "/components/",
-    title: "Feature",
+    url: '/components/',
+    title: 'Feature',
     store: [
       {
         component: <Feature1 />,
@@ -357,8 +356,8 @@ export const codeData = [
     ],
   },
   {
-    url: "/components/",
-    title: "Footer",
+    url: '/components/',
+    title: 'Footer',
     store: [
       {
         component: <Footer1 />,
@@ -595,8 +594,8 @@ export const codeData = [
     ],
   },
   {
-    url: "/components/",
-    title: "Button",
+    url: '/components/',
+    title: 'Button',
     store: [
       {
         component: <Button1 />,
@@ -616,8 +615,8 @@ export const codeData = [
     ],
   },
   {
-    url: "/components/",
-    title: "Nav",
+    url: '/components/',
+    title: 'Nav',
     store: [
       {
         component: <Nav1 />,
@@ -804,11 +803,10 @@ export const codeData = [
     ],
   },
   {
-    url: "/components/",
-    title: "Avatar",
+    url: '/components/',
+    title: 'Avatar',
     store: [
       {
-     
         component: <SquareAvatar />,
         jsx: `
         export const SquareAvatar = () => {
@@ -822,7 +820,6 @@ export const codeData = [
         };`,
       },
       {
-  
         component: <CircleAvatar />,
         jsx: `export const CircleAvatar = () => {
           return (
@@ -856,4 +853,4 @@ export const codeData = [
       },
     ],
   },
-];
+]

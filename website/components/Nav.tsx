@@ -1,39 +1,37 @@
-import { useState } from "react";
+import { useState } from 'react'
 
-import Link from "next/link";
+import Link from 'next/link'
 
-import { DrawerNav } from "./Drawer";
+import { DrawerNav } from './Drawer'
 
 const navData = [
   {
-    name: "Component",
-    href: "/components",
+    name: 'Component',
+    href: '/components',
   },
   {
-    name: "Templates",
-    href: "/templates",
+    name: 'Templates',
+    href: '/templates',
   },
-];
+]
 
 export default function Nav() {
-  const [toggleSidebar, setToggleSidebar] = useState(false);
+  const [toggleSidebar, setToggleSidebar] = useState(false)
 
   // const [opened, setOpened] = useState(false);
 
-  const button = `min-h-[3rem] px-4  active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`;
+  const button = `min-h-[3rem] px-4  active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`
   return (
     <>
       <div className=" w-full flex  text-xl font-bold drop-shadow-xl flex-none ease-in-out duration-300 0  lg:border-b lg:border-gray-900/10 ">
         <div className="w-full container mx-auto">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
+          <div className="x-auto px-4 sm:px-6 ">
             <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
               <div className="flex justify-start lg:w-0 lg:flex-1">
                 <Link href="/" passHref>
-                  <h1
-                    className={`gradientText hero-title text-[50px] font-bold leading-none `}
-                  >
-                    {" "}
-                    dev.UI{" "}
+                  <h1 className={`gradientText hero-title text-[50px] font-bold leading-none `}>
+                    {' '}
+                    dev.UI{' '}
                   </h1>
                 </Link>
               </div>
@@ -67,7 +65,7 @@ export default function Nav() {
                     <Link key={n.name} href={n.href} passHref>
                       <span className={`${button} text-[25px]`}>{n.name}</span>
                     </Link>
-                  );
+                  )
                 })}
               </nav>
             </div>
@@ -76,10 +74,7 @@ export default function Nav() {
       </div>
 
       <div className="sm:hidden ">
-        <DrawerNav
-          toggleSidebar={toggleSidebar}
-          setToggleSidebar={setToggleSidebar}
-        >
+        <DrawerNav toggleSidebar={toggleSidebar} setToggleSidebar={setToggleSidebar}>
           {navData.map((item) => (
             <Link key={item.name} href={item.href} passHref>
               <h1 className="mt-10 mx-3 p-3 flex items-center text-3xl font-bold w-[13rem] rounded-md hover:bg-white/10 hover:backdrop-blur-sm  ">
@@ -90,7 +85,7 @@ export default function Nav() {
         </DrawerNav>
       </div>
     </>
-  );
+  )
 }
 
 // bg-[#EF404A]

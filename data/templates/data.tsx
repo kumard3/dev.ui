@@ -35,6 +35,11 @@ export const showCode = [
         Weburl: 'https://youthful-swartz-a170a5.netlify.app/',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-4',
       },
+      {
+        title: 'OceanNFT Landing Page',
+        Weburl: 'https://oceannft-landingpage.pages.dev/',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-5',
+      },
     ],
   },
 ]

@@ -1,32 +1,32 @@
 /* eslint-disable @next/next/no-sync-scripts */
 
-import { useState, ReactNode } from "react";
+import { useState, ReactNode } from 'react'
 
-import { Prism } from "@mantine/prism";
-import { Modal } from "@mantine/core";
+import { Prism } from '@mantine/prism'
+import { Modal } from '@mantine/core'
 
 interface Props {
-  component?: ReactNode;
-  jsx?: ReactNode;
+  component?: ReactNode
+  jsx?: ReactNode
 }
 
 export default function CodeDisplay({ component, jsx }: Props) {
-  const [opened, setOpened] = useState(false);
-  const [tab, setTab] = useState("Preview");
+  const [opened, setOpened] = useState(false)
+  const [tab, setTab] = useState('Preview')
   const data = [
     {
-      title: "Preview",
+      title: 'Preview',
       data: component,
-      code: "",
+      code: '',
     },
     {
-      title: "Jsx",
-      data: "",
+      title: 'Jsx',
+      data: '',
       code: jsx,
     },
-  ];
+  ]
 
-  const filterdata = data.filter((e) => e.title === tab);
+  const filterdata = data.filter((e) => e.title === tab)
 
   return (
     <>
@@ -36,15 +36,11 @@ export default function CodeDisplay({ component, jsx }: Props) {
             {data.map((n, index) => {
               return (
                 <>
-                  <button
-                    onClick={() => setTab(n.title)}
-                    className="p-3 "
-                    key={index}
-                  >
+                  <button onClick={() => setTab(n.title)} className="p-3 " key={index}>
                     {n.title}
                   </button>
                 </>
-              );
+              )
             })}
           </div>
 
@@ -66,8 +62,8 @@ export default function CodeDisplay({ component, jsx }: Props) {
             {filterdata.map((n) => {
               return (
                 <>
-                  {n.data === "" ? (
-                    ""
+                  {n.data === '' ? (
+                    ''
                   ) : (
                     <div className=" max-h-[50rem] overflow-scroll">
                       <section className=" p-3 flex flex-col items-center justify-center w-full ">
@@ -76,8 +72,8 @@ export default function CodeDisplay({ component, jsx }: Props) {
                     </div>
                   )}
 
-                  {n.code === "" ? (
-                    ""
+                  {n.code === '' ? (
+                    ''
                   ) : (
                     <div className={`max-h-[20rem] overflow-scroll`}>
                       <Prism
@@ -92,23 +88,18 @@ export default function CodeDisplay({ component, jsx }: Props) {
                     </div>
                   )}
                 </>
-              );
+              )
             })}
           </div>
         </div>
         <section>
           <div>
-            <Modal
-              overflow="inside"
-              opened={opened}
-              onClose={() => setOpened(false)}
-              size="100%"
-            >
+            <Modal overflow="inside" opened={opened} onClose={() => setOpened(false)} size="100%">
               {component}
             </Modal>
           </div>
         </section>
       </section>
     </>
-  );
+  )
 }

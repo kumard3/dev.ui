@@ -22,6 +22,7 @@ export const codeData = [
   {
     url: '/components/',
     title: 'Modal',
+    urlTitle: 'modal',
     store: [
       {
         component: <Modal />,
@@ -115,6 +116,7 @@ export const codeData = [
   {
     url: '/components/',
     title: 'Tab',
+    urlTitle: 'Tab',
     store: [
       {
         component: <VerticalTab />,
@@ -210,6 +212,7 @@ export const codeData = [
   {
     url: '/components/',
     title: 'Card',
+    urlTitle: 'card',
     store: [
       {
         component: <Card1 />,
@@ -284,7 +287,8 @@ export const codeData = [
   },
   {
     url: '/components/',
-    title: 'Feature',
+    title: 'Features',
+    urlTitle: 'features',
     store: [
       {
         component: <Feature1 />,
@@ -358,6 +362,7 @@ export const codeData = [
   {
     url: '/components/',
     title: 'Footer',
+    urlTitle: 'footer',
     store: [
       {
         component: <Footer1 />,
@@ -596,6 +601,7 @@ export const codeData = [
   {
     url: '/components/',
     title: 'Button',
+    urlTitle: 'button',
     store: [
       {
         component: <Button1 />,
@@ -617,6 +623,7 @@ export const codeData = [
   {
     url: '/components/',
     title: 'Nav',
+    urlTitle: 'nav',
     store: [
       {
         component: <Nav1 />,
@@ -805,6 +812,7 @@ export const codeData = [
   {
     url: '/components/',
     title: 'Avatar',
+    urlTitle: 'avatar',
     store: [
       {
         component: <SquareAvatar />,

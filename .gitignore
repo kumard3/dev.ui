@@ -4,6 +4,8 @@
 /node_modules
 /.pnp
 .pnp.js
+.husky
+yarn.lock*
 
 # testing
 /coverage

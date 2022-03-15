@@ -2,30 +2,30 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable jsx-a11y/alt-text */
-import Link from "next/link";
-import ShowCase from "./ShowCase";
+import Link from 'next/link'
+import ShowCase from './ShowCase'
 
 interface herocard {
-  title: string;
-  description: string;
+  title: string
+  description: string
 }
 const HeroCardData = [
   {
-    title: "Easy to use UI elements based on Tailwind CSS " as string,
+    title: 'Easy to use UI elements based on Tailwind CSS ' as string,
     description:
-      "dev.UI is a toolkit for developers and designers to make creating interfaces easier. Everything is modular and customizable to fit your brand.",
+      'dev.UI is a toolkit for developers and designers to make creating interfaces easier. Everything is modular and customizable to fit your brand.',
   },
   {
-    title: "Get the essentials in one place    ",
+    title: 'Get the essentials in one place    ',
     description:
       "We know it's frustrating to find an UI kit with all the right components and then find out that each element costs money, so we're offering 100+ building blocks for free. And there are many more on the way!    ",
   },
   {
-    title: "Stop wasting time with CSS",
+    title: 'Stop wasting time with CSS',
     description:
       "You don't have to be a professional designer or developer to create something beautiful.Just copy-paste the code from dev.UI into your project, add your own content and hit publish.  ",
   },
-];
+]
 
 const HeroCard = ({ title, description }: herocard) => {
   return (
@@ -34,8 +34,8 @@ const HeroCard = ({ title, description }: herocard) => {
 
       <p className="text-lg py-3 text-gray-200">{description}</p>
     </div>
-  );
-};
+  )
+}
 
 export default function Hero() {
   return (
@@ -1298,24 +1298,24 @@ export default function Hero() {
       </div>
       <div className="flex  justify-between mx-auto container py-[2rem] z-50 ">
         <div className="flex mt-10 flex-col dark:text-white sm:text-center lg:max-w-3xl lg:text-left p-6  rounded-sm  ">
-          <h1 className="hero-title text-[60px] font-bold leading-none ">
-            Make <span className="gradientText"> beautiful</span> websites
-            regardless of your design experience.
+          <h1 className="hero-title text-5xl sm:text-[60px] font-bold leading-none ">
+            Make <span className="gradientText"> beautiful</span> websites regardless of your design
+            experience.
           </h1>
 
           <h1 className="hero-title text-lg font-semibold flex flex-col my-4 ">
             Collection of UI components and templates
           </h1>
-          <div className="flex  items-center sm:justify-center lg:justify-start ">
+          <div className="flex   items-center sm:justify-center lg:justify-start ">
             <Link href="/components" passHref>
-              <span className="px-8 py-3 min-h-[3rem] mr-4 active:scale-105 scale-110 active:transition-all text-lg font-bold rounded gradientbutton text-white ">
+              <h1 className="px-6 sm:px-8 py-3 min-h-[3rem] mr-4 active:scale-105 scale-110 active:transition-all text-lg font-bold rounded gradientbutton text-white ">
                 Components
-              </span>
+              </h1>
             </Link>
             <Link href="/templates" passHref>
-              <span className="px-8 py-3 min-h-[3rem] ml-4 active:scale-105 scale-110 active:transition-all text-lg font-bold rounded glass transition-colors duration-500 text-white ">
+              <h1 className=" px-6 sm:px-8 py-3  min-h-[3rem] ml-4 active:scale-105 scale-110 active:transition-all text-lg font-bold rounded glass transition-colors duration-500 text-white ">
                 Templates
-              </span>
+              </h1>
             </Link>
           </div>
         </div>
@@ -1325,11 +1325,9 @@ export default function Hero() {
       </div>
       <div className=" flex flex-wrap w-full justify-center items-center">
         {HeroCardData.map((n, index) => {
-          return (
-            <HeroCard title={n.title} description={n.description} key={index} />
-          );
+          return <HeroCard title={n.title} description={n.description} key={index} />
         })}
       </div>
     </div>
-  );
+  )
 }

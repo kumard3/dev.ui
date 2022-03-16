@@ -1,6 +1,7 @@
 export const showCode = [
   {
     title: 'Portfolio',
+    urlTitle: 'portfolio',
     url: '/templates/',
     store: [
       {
@@ -16,7 +17,8 @@ export const showCode = [
     ],
   },
   {
-    title: 'LandingPage',
+    title: 'Landing Page',
+    urlTitle: 'landingpage',
     url: '/templates/',
     store: [
       {
@@ -27,7 +29,8 @@ export const showCode = [
     ],
   },
   {
-    title: 'nftlandingpage',
+    title: 'NFT landingpage',
+    urlTitle: 'nftlandingpage',
     url: '/templates/',
     store: [
       {

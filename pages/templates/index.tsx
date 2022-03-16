@@ -20,7 +20,12 @@ export default function Templates() {
           <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">
             {showCode.map((n) => (
               <div className="flex flex-wrap my-2 w-full text-left " key={n.title}>
-                <Componentbutton title={n.title} url={n.url} />
+                <Componentbutton
+                  title={n.title}
+                  urlTitle={n.urlTitle}
+                  url={n.url}
+                  length={n.store.length}
+                />
               </div>
             ))}
           </section>

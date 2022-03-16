@@ -3,7 +3,6 @@
 import { useState, ReactNode, useEffect } from 'react'
 
 import { Prism } from '@mantine/prism'
-import { Modal } from '@mantine/core'
 
 interface Props {
   component?: ReactNode

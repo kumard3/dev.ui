@@ -27,7 +27,7 @@ export const ContentAvatar = () => {
 export const CircleAvatar = () => {
   return (
     <div className="flex flex-wrap justify-center">
-      <div className="">
+      <div>
         <img
           src="https://source.unsplash.com/100x100/?portrait"
           alt="image"

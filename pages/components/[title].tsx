@@ -37,12 +37,10 @@ export default function Post() {
         </>
       </LayoutNav>
       <LayoutBody setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>
-        <div className="dark:text-white">
-          <div className="container mx-auto flex w-full justify-center flex-col items-center">
-            {Filter?.map((n, index) => (
-              <CodeDisplay component={n.component} jsx={n.jsx} key={index} />
-            ))}
-          </div>
+        <div className=" flex w-full justify-center flex-col items-center">
+          {Filter?.map((n, index) => (
+            <CodeDisplay component={n.component} jsx={n.jsx} key={index} />
+          ))}
         </div>
       </LayoutBody>
     </AppLayout>

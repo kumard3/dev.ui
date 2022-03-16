@@ -1,6 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-
 export default function Card3() {
   return (
     <div className="w-[18rem] flex flex-col rounded-xl bg-slate-700 min-h-[19rem] ">
@@ -22,5 +20,5 @@ export default function Card3() {
         </div>
       </div>
     </div>
-  );
+  )
 }

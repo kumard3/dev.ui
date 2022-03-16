@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-sync-scripts */
 
-import { useState, ReactNode } from 'react'
+import { useState, ReactNode, useEffect } from 'react'
 
 import { Prism } from '@mantine/prism'
 import { Modal } from '@mantine/core'
@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function CodeDisplay({ component, jsx }: Props) {
-  const [opened, setOpened] = useState(false)
+  const [opened, setOpened] = useState('100%')
   const [tab, setTab] = useState('Preview')
   const data = [
     {
@@ -26,12 +26,35 @@ export default function CodeDisplay({ component, jsx }: Props) {
     },
   ]
 
+  const widths = [
+    {
+      width: '640px',
+      title: 'Mobile',
+    },
+    {
+      width: '768px',
+      title: 'Small',
+    },
+    {
+      width: '1024px',
+      title: 'Medium',
+    },
+    {
+      width: '1280px',
+      title: 'Large',
+    },
+    {
+      width: '100%',
+      title: 'Full',
+    },
+  ]
+
   const filterdata = data.filter((e) => e.title === tab)
 
   return (
     <>
-      <section className="bg-[#111111] mb-5 min-h-[10rem] w-[90vw] lg:max-w-[65vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
-        <section className="flex p-3 w-full justify-between">
+      <section className="bg-[#111111] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
+        <section className="flex p-3 justify-center items-center lg:justify-between">
           <div>
             {data.map((n, index) => {
               return (
@@ -43,29 +66,43 @@ export default function CodeDisplay({ component, jsx }: Props) {
               )
             })}
           </div>
-
-          <button type="button" onClick={() => setOpened(true)} className="   ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              fill="currentColor"
-              className="w-4 h-4 my-3 mx-4 "
-            >
-              <polygon points="208 48 208 16 16 16 16 208 48 208 48 70.627 208.687 231.313 231.313 208.687 70.627 48 208 48"></polygon>
-              <polygon points="464 304 464 441.373 299.313 276.687 276.687 299.313 441.373 464 304 464 304 496 496 496 496 304 464 304"></polygon>
-            </svg>
-          </button>
+          <div className="lg:flex justify-between hidden ">
+            {widths.map((n, index) => {
+              return (
+                <>
+                  <button
+                    key={index}
+                    onClick={() => setOpened(n.width)}
+                    className="px-5 py-2  mx-1 rounded-xl border "
+                  >
+                    {n.title}
+                  </button>
+                </>
+              )
+            })}
+          </div>
         </section>
         <hr />
+
         <div>
-          <div>
+          <style jsx>{`
+            .widthTest {
+              width: ${opened};
+            }
+            @media (max-width: 1025px) {
+              .widthTest {
+                width: 100%;
+              }
+            }
+          `}</style>
+          <>
             {filterdata.map((n) => {
               return (
                 <>
                   {n.data === '' ? (
                     ''
                   ) : (
-                    <div className=" max-h-[50rem] overflow-scroll">
+                    <div className={` max-h-[50rem] overflow-scroll bg-black widthTest`}>
                       <section className=" p-3 flex flex-col items-center justify-center w-full ">
                         {n.data}
                       </section>
@@ -75,7 +112,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
                   {n.code === '' ? (
                     ''
                   ) : (
-                    <div className={`max-h-[20rem] overflow-scroll`}>
+                    <div className={`max-h-[20rem] overflow-scroll `}>
                       <Prism
                         colorScheme="dark"
                         language="jsx"
@@ -90,15 +127,8 @@ export default function CodeDisplay({ component, jsx }: Props) {
                 </>
               )
             })}
-          </div>
+          </>
         </div>
-        <section>
-          <div>
-            <Modal overflow="inside" opened={opened} onClose={() => setOpened(false)} size="100%">
-              {component}
-            </Modal>
-          </div>
-        </section>
       </section>
     </>
   )

@@ -13,7 +13,7 @@ interface Children {
 
 export const LayoutNav = ({ children, toggleSidebar, setToggleSidebar }: Props) => {
   return (
-    <>
+    <div className="float-left">
       <div
         // className="sidebarOpen ? 'block' : 'hidden'"
         className={`fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden ${
@@ -30,13 +30,13 @@ export const LayoutNav = ({ children, toggleSidebar, setToggleSidebar }: Props) 
       >
         <nav className="mt-10">{children}</nav>
       </div>
-    </>
+    </div>
   )
 }
 
 export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
   return (
-    <div className="flex-1 flex flex-col  w-full lg:h-screen lg:overflow-y-scroll  ">
+    <div className="max-w-7xl float-right w-full lg:h-screen lg:overflow-y-scroll ">
       <button
         className="  transition fixed z-50 flex items-center justify-center w-16 h-16 text-white bg-white  rounded-full  bottom-4 right-4 lg:hidden focus:outline-none focus-visible:ring bg-opacity-20 backdrop-filter backdrop-blur"
         onClick={() => setToggleSidebar((prevState: any) => !prevState)}
@@ -59,7 +59,7 @@ export default function AppLayout({ children }: Children) {
   return (
     <div className="flex flex-col">
       <Nav />
-      <div className="flex container mx-auto w-full min-h-screen">{children}</div>
+      <div className="container mx-auto  min-h-screen">{children}</div>
       <Footer />
     </div>
   )

@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function CodeDisplay({ component, jsx }: Props) {
-  const [opened, setOpened] = useState(false)
+  const [opened, setOpened] = useState('')
   const [tab, setTab] = useState('Preview')
   const data = [
     {
@@ -26,12 +26,30 @@ export default function CodeDisplay({ component, jsx }: Props) {
     },
   ]
 
-  const filterdata = data.filter((e) => e.title === tab)
+  const widths = [
+    {
+      width: 'sm',
+    },
+    {
+      width: 'md',
+    },
+    {
+      width: 'lg',
+    },
+    {
+      width: 'xl',
+    },
+    {
+      width: '100%',
+    },
+  ]
 
+  const filterdata = data.filter((e) => e.title === tab)
+  console.log(opened)
   return (
     <>
       <section className="bg-[#111111] mb-5 min-h-[10rem] w-[90vw] lg:max-w-[65vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
-        <section className="flex p-3 w-full justify-between">
+        <section className="flex p-3  justify-between">
           <div>
             {data.map((n, index) => {
               return (
@@ -43,29 +61,33 @@ export default function CodeDisplay({ component, jsx }: Props) {
               )
             })}
           </div>
-
-          <button type="button" onClick={() => setOpened(true)} className="   ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              fill="currentColor"
-              className="w-4 h-4 my-3 mx-4 "
-            >
-              <polygon points="208 48 208 16 16 16 16 208 48 208 48 70.627 208.687 231.313 231.313 208.687 70.627 48 208 48"></polygon>
-              <polygon points="464 304 464 441.373 299.313 276.687 276.687 299.313 441.373 464 304 464 304 496 496 496 496 304 464 304"></polygon>
-            </svg>
-          </button>
+          <div className="lg:flex justify-between w-1/2 hidden ">
+            {widths.map((n, index) => {
+              return (
+                <>
+                  <button
+                    key={index}
+                    onClick={() => setOpened(n.width)}
+                    className="px-7 rounded-xl border "
+                  >
+                    {n.width}
+                  </button>
+                </>
+              )
+            })}
+          </div>
         </section>
         <hr />
+
         <div>
-          <div>
+          <>
             {filterdata.map((n) => {
               return (
                 <>
                   {n.data === '' ? (
                     ''
                   ) : (
-                    <div className=" max-h-[50rem] overflow-scroll">
+                    <div className={` max-h-[50rem] overflow-scroll bg-black max-w-${opened}`}>
                       <section className=" p-3 flex flex-col items-center justify-center w-full ">
                         {n.data}
                       </section>
@@ -75,7 +97,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
                   {n.code === '' ? (
                     ''
                   ) : (
-                    <div className={`max-h-[20rem] overflow-scroll`}>
+                    <div className={`max-h-[20rem] overflow-scroll `}>
                       <Prism
                         colorScheme="dark"
                         language="jsx"
@@ -90,15 +112,8 @@ export default function CodeDisplay({ component, jsx }: Props) {
                 </>
               )
             })}
-          </div>
+          </>
         </div>
-        <section>
-          <div>
-            <Modal overflow="inside" opened={opened} onClose={() => setOpened(false)} size="100%">
-              {component}
-            </Modal>
-          </div>
-        </section>
       </section>
     </>
   )

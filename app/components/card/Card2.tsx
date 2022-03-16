@@ -9,11 +9,11 @@ export default function Card2() {
       />
       <div className="flex flex-col justify-between p-6 space-y-8">
         <div className="space-y-2">
-          <h2 className="text-3xl font-semibold tracking-wide">
-		  Lorem
-          </h2>
+          <h2 className="text-3xl font-semibold tracking-wide">Lorem</h2>
           <p className="dark:text-gray-100">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio tempora ipsum soluta amet corporis accusantium aliquid consectetur eaque! Beatae quis natus voluptas amet fugiat quam nulla voluptatum quod, impedit neque?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio tempora ipsum
+            soluta amet corporis accusantium aliquid consectetur eaque! Beatae quis natus voluptas
+            amet fugiat quam nulla voluptatum quod, impedit neque?
           </p>
         </div>
         <button
@@ -24,5 +24,5 @@ export default function Card2() {
         </button>
       </div>
     </div>
-  );
+  )
 }

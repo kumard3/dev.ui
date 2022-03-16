@@ -10,14 +10,12 @@ export default function Card1() {
         <span className="block text-xs font-medium tracking-widest uppercase dark:text-indigo-400">
           Title
         </span>
-        <h2 className="text-xl font-semibold tracking-wide">
-        Lorem ipsum dolor
-        </h2>
+        <h2 className="text-xl font-semibold tracking-wide">Lorem ipsum dolor</h2>
       </div>
       <p className="dark:text-gray-100">
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio tempora ipsum soluta amet corporis accusantium aliquid consectetur eaque!
-
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio tempora ipsum soluta
+        amet corporis accusantium aliquid consectetur eaque!
       </p>
     </div>
-  );
+  )
 }

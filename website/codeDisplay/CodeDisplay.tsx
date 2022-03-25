@@ -52,8 +52,8 @@ export default function CodeDisplay({ component, jsx }: Props) {
 
   return (
     <>
-      <section className="bg-[#111111] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
-        <section className="flex p-3 justify-center items-center lg:justify-between">
+      <section className=" mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
+        <section className="flex bg-[#111111] p-3 justify-center items-center lg:justify-between">
           <div>
             {data.map((n, index) => {
               return (
@@ -101,7 +101,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
                   {n.data === '' ? (
                     ''
                   ) : (
-                    <div className={` max-h-[50rem] overflow-scroll bg-black widthTest`}>
+                    <div className="max-h-[50rem] overflow-scroll bg-[#151515] backdrop-blur-xl widthTest">
                       <section className=" p-3 flex flex-col items-center justify-center w-full ">
                         {n.data}
                       </section>
@@ -111,7 +111,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
                   {n.code === '' ? (
                     ''
                   ) : (
-                    <div className={`max-h-[20rem] overflow-scroll `}>
+                    <div className="max-h-[50rem] overflow-scroll">
                       <Prism
                         colorScheme="dark"
                         language="jsx"

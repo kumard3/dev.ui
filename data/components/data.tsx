@@ -1,5 +1,9 @@
 import Card1 from '../../app/components/card/Card1'
 import Card2 from '../../app/components/card/Card2'
+import Card3 from '../../app/components/card/Card3'
+import Card4 from '../../app/components/card/Card4'
+import Card5 from '../../app/components/card/Card5'
+import Card6 from '../../app/components/card/Card6'
 
 import Footer1 from '../../app/components/footer/Footer1'
 import Footer2 from '../../app/components/footer/Footer2'
@@ -14,7 +18,6 @@ import { Feature1 } from '../../app/components/features/Features1'
 import TabSection from '../../app/components/nav/tab/TabSection'
 import VerticalTab from '../../app/components/nav/tab/VerticalTab'
 import Modal from '../../app/components/modal/Modal'
-import Card3 from '../../app/components/card/Card3'
 
 import { SquareAvatar, ContentAvatar, CircleAvatar } from '../../app/components/avatar/index'
 
@@ -216,72 +219,130 @@ export const codeData = [
     store: [
       {
         component: <Card1 />,
-        jsx: `<div className="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
-            <img src="https://source.unsplash.com/300x300/?random" alt="" className="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500"/>
-            <div className="mt-6 mb-2">
-                <span className="block text-xs font-medium tracking-widest uppercase dark:text-indigo-400">Quisque</span>
-                <h2 className="text-xl font-semibold tracking-wide">Nam maximus purus</h2>
-            </div>
-            <p className="dark:text-gray-100">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
-        </div>`,
-        html: `<div class="max-w-xs p-6 rounded-md shadow-md dark:bg-gray-900 dark:text-gray-50">
-        <img src="https://source.unsplash.com/300x300/?random" alt="" class="object-cover object-center w-full rounded-md h-72 dark:bg-gray-500">
-        <div class="mt-6 mb-2">
-            <span class="block text-xs font-medium tracking-widest uppercase dark:text-indigo-400">Quisque</span>
-            <h2 class="text-xl font-semibold tracking-wide">Nam maximus purus</h2>
+        jsx: `<div className="max-w-xs p-6 rounded-md shadow-md bg-black">
+        <img
+          src="https://source.unsplash.com/300x300/?random"
+          alt=""
+          className="object-cover object-center w-full rounded-md h-72 bg-gray-500"
+        />
+        <div className="mt-6 mb-2">
+          <span className="block text-sm font-medium font-mono tracking-widest uppercase text-indigo-400">
+            Title
+          </span>
+          <h2 className="text-xl font-semibold tracking-wide">Lorem ipsum dolor</h2>
         </div>
-        <p class="dark:text-gray-100">Mauris et lorem at elit tristique dignissim et ullamcorper elit. In sed feugiat mi. Etiam ut lacinia dui.</p>
+        <p className="text-gray-300">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio tempora ipsum soluta
+          amet
+        </p>
       </div>`,
       },
       {
         component: <Card2 />,
-        jsx: `<div className="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
-            <img src="https://source.unsplash.com/301x301/?random" alt="" className="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500"/>
-            <div className="flex flex-col justify-between p-6 space-y-8">
-                <div className="space-y-2">
-                    <h2 className="text-3xl font-semibold tracking-wide">Donec lectus leo</h2>
-                    <p className="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-                </div>
-                <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-indigo-400 dark:text-gray-900">Read more</button>
-            </div>
-        </div>`,
-        html: `<div class="max-w-xs rounded-md shadow-md dark:bg-gray-900 dark:text-gray-100">
-        <img src="https://source.unsplash.com/301x301/?random" alt="" class="object-cover object-center w-full rounded-t-md h-72 dark:bg-gray-500">
-        <div class="flex flex-col justify-between p-6 space-y-8">
-            <div class="space-y-2">
-                <h2 class="text-3xl font-semibold tracking-wide">Donec lectus leo</h2>
-                <p class="dark:text-gray-100">Curabitur luctus erat nunc, sed ullamcorper erat vestibulum eget.</p>
-            </div>
-            <button type="button" class="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md dark:bg-indigo-400 dark:text-gray-900">Read more</button>
+        jsx: `<div className="max-w-xs rounded-md shadow-md bg-black text-gray-100">
+        <img
+          src="https://source.unsplash.com/301x301/?random"
+          alt=""
+          className="object-cover object-center w-full rounded-t-md h-72 bg-gray-500"
+        />
+        <div className="flex flex-col justify-between p-6 space-y-8">
+          <div className="space-y-2">
+            <h2 className="text-3xl font-semibold tracking-wide">Lorem</h2>
+            <p className="text-gray-400">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio tempora ipsum
+              soluta amet corporis accusantium aliquid consectetur eaque!
+            </p>
+          </div>
+          <button
+            type="button"
+            className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-gray-800 text-gray-200"
+          >
+            Read more
+          </button>
         </div>
       </div>`,
       },
       {
         component: <Card3 />,
-        jsx: `export default function Card3() {
-          return (
-            <div className="w-[18rem] flex flex-col rounded-xl bg-slate-700 min-h-[19rem] ">
-              <div>
-                <img
-                  src="https://cdn.vox-cdn.com/thumbor/ZkmdkuJUTLgJh96_FWQ5zweGGxo=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
-                  alt="test"
-                  className="object-cover object-center rounded-t-xl"
-                />
-              </div>
-              <div className="flex flex-col py-3 px-3 pb-10">
-                <div className="flex justify-between ">
-                  <h1 className="font-bold ">Bored ape nft accidental</h1>
-                  <h1>Price</h1>
-                </div>
-                <div className="flex  justify-between">
-                  <p>#345</p>
-                  <p>0.01</p>
-                </div>
-              </div>
-            </div>
-          );
-        }
+        jsx: ` <div className="w-60 flex flex-col rounded-xl bg-black min-h-[19rem] ">
+        <div>
+          <img
+            src="https://cdn.vox-cdn.com/thumbor/ZkmdkuJUTLgJh96_FWQ5zweGGxo=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/23084330/bored_ape_nft_accidental_.jpg"
+            alt="test"
+            className="object-cover object-center rounded-t-xl"
+          />
+        </div>
+        <div className="flex flex-col py-3 px-3 pb-10">
+          <div className="flex justify-between ">
+            <h1 className="font-bold ">Bored ape nft accidental</h1>
+            <h1>Price</h1>
+          </div>
+          <div className="flex  justify-between">
+            <p>#345</p>
+            <p>0.01</p>
+          </div>
+        </div>
+      </div>
         `,
+      },
+      {
+        component: <Card4 />,
+        jsx: `    <div className="relative max-w-lg p-8 border bg-black border-gray-100 shadow-xl rounded-xl">
+        <span className="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
+          4.3
+        </span>
+  
+        <div className="mt-4 text-gray-200 sm:pr-8">
+          <svg
+            className="w-8 h-8 sm:w-10 sm:h-10"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+            ></path>
+          </svg>
+  
+          <h5 className="mt-4 text-xl font-bold text-gray-300">Science of Chemstry</h5>
+  
+          <p className="mt-2 text-sm">
+            You can manage phone, email and chat conversations all from a single mailbox.
+          </p>
+        </div>
+      </div>
+        `,
+      },
+      {
+        component: <Card5 />,
+        jsx: `<div className="p-1 shadow-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl">
+          <div className=" bg-black sm:p-10 p-6 rounded-xl">
+            <div className="">
+              <h5 className="text-xl font-bold text-gray-200">Science of Chemistry</h5>
+    
+              <p className="mt-2 text-sm text-gray-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, adipisci.
+              </p>
+            </div>
+          </div>
+        </div>`,
+      },
+      {
+        component: <Card6 />,
+        jsx: ` <div className="relative block group  ">
+        <span className="absolute inset-0 border-2 border-white border-dashed rounded-lg"></span>
+        <div className="transition bg-black border-2 border-white rounded-lg group-hover:-translate-x-2 group-hover:-translate-y-2">
+          <div className="p-6 ">
+            <p className="mt-4 text-lg font-medium">Lorem ipsum dolor</p>
+            <p className="mt-1 text-xs">ipsum dolor</p>
+          </div>
+        </div>
+      </div>
+    `,
       },
     ],
   },

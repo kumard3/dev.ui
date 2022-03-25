@@ -1,5 +1,4 @@
 import React, { ReactNode } from 'react'
-import Footer from '../website/components/Footer'
 import Nav from '../website/components/Nav'
 
 interface Props {
@@ -15,7 +14,6 @@ export const LayoutNav = ({ children, toggleSidebar, setToggleSidebar }: Props) 
   return (
     <>
       <div
-        // className="sidebarOpen ? 'block' : 'hidden'"
         className={`fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden ${
           toggleSidebar ? 'block' : 'hidden'
         }`}
@@ -23,7 +21,6 @@ export const LayoutNav = ({ children, toggleSidebar, setToggleSidebar }: Props) 
       ></div>
 
       <div
-        // className="sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'"
         className={`fixed top-0 px-2  z-30 inset-y-0 left-0 w-[15rem]  overflow-y-auto transition duration-300 transform lg:translate-x-0 lg:static ${
           toggleSidebar ? 'translate-x-0 ease-out h-full bg-black' : '-translate-x-full ease-in  '
         }`}
@@ -60,7 +57,6 @@ export default function AppLayout({ children }: Children) {
     <div className="flex flex-col">
       <Nav />
       <div className="flex container mx-auto w-full min-h-screen">{children}</div>
-      <Footer />
     </div>
   )
 }

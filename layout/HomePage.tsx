@@ -1,5 +1,5 @@
 import React from 'react'
-import Footer from '../website/components/Footer'
+
 import Nav from '../website/components/Nav'
 import SEO from '../website/components/Seo'
 
@@ -16,7 +16,6 @@ export default function HomePage({ children }: any) {
       />
       <Nav />
       <div className="py-[50px] overflow-hidden">{children}</div>
-      <Footer />
     </>
   )
 }

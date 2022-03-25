@@ -12,7 +12,7 @@ const navData = [
 ]
 
 export default function Nav() {
-  const button = `min-h-[3rem] px-4  active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`
+  const button = `min-h-[3rem] px-4 active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`
   return (
     <>
       <div className=" w-full flex  text-xl font-bold border-b-2 border-gray-600 ">
@@ -30,7 +30,7 @@ export default function Nav() {
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href} passHref>
-                    <span className={`${button} text-[25px]`}>{n.name}</span>
+                    <h1 className={`${button} text-[25px] cursor-pointer`}>{n.name}</h1>
                   </Link>
                 )
               })}
@@ -53,7 +53,7 @@ export default function Nav() {
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href} passHref>
-                    <span className={`${button} text-[25px]`}>{n.name}</span>
+                    <h1 className={`${button} text-[25px] cursor-pointer`}>{n.name}</h1>
                   </Link>
                 )
               })}

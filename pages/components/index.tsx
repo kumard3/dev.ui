@@ -10,7 +10,7 @@ export default function Component() {
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false)
 
   return (
-    <AppLayout>
+    <AppLayout title="Components">
       {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}
       <>
         <LayoutNav setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>

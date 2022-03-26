@@ -11,7 +11,7 @@ export default function Templates() {
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false)
   console.log(showCode[1].store.length)
   return (
-    <AppLayout>
+    <AppLayout title="Templates">
       <LayoutNav setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>
         <>
           <h1 className="text-4xl font-bold ">

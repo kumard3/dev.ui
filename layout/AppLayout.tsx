@@ -1,3 +1,4 @@
+import { NextSeo } from 'next-seo'
 import React, { ReactNode } from 'react'
 import Nav from '../website/components/Nav'
 
@@ -8,6 +9,7 @@ interface Props {
 }
 interface Children {
   children: ReactNode
+  title: string
 }
 
 export const LayoutNav = ({ children, toggleSidebar, setToggleSidebar }: Props) => {
@@ -52,9 +54,13 @@ export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
     </div>
   )
 }
-export default function AppLayout({ children }: Children) {
+export default function AppLayout({ children,title }: Children) {
   return (
     <div className="flex flex-col">
+      <NextSeo
+        title={`Dev.ui | ${title}`}
+        description="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
+      />
       <Nav />
       <div className="flex container mx-auto w-full min-h-screen">{children}</div>
     </div>

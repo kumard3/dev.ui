@@ -1,14 +1,15 @@
 /* eslint-disable @next/next/no-sync-scripts */
 
 import { ReactNode } from 'react'
-
+import Image from 'next/image'
 interface Props {
   component?: ReactNode
   Weburl?: string
   github?: string
+  images?: string
 }
 
-export default function TemplateDisplay({ Weburl, github }: Props) {
+export default function TemplateDisplay({ Weburl, github, images }: Props) {
   const data = [
     {
       title: 'Preview',
@@ -18,55 +19,70 @@ export default function TemplateDisplay({ Weburl, github }: Props) {
   ]
 
   return (
-    <>
-      <section className="bg-[#111111] mb-5 min-h-[10rem] w-[90vw] lg:max-w-[65vw] flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
-        <section className="flex p-3 w-full justify-between">
-          <>
-            <div>
-              {data.map((n, index) => {
-                return (
-                  <div key={index} className="flex">
-                    <div className="p-3 ">{n.title}</div>
-                    <a className="p-3 " href={n.github} target="_blank" rel="noreferrer">
-                      GitHub
-                    </a>
-                  </div>
-                )
-              })}
-            </div>
-          </>
-
-          <a href={Weburl} target="_blank" rel="noreferrer">
-            <svg
-              stroke="currentColor"
-              fill="none"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="w-4 h-4 my-3 mx-4 "
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <line x1="7" y1="17" x2="17" y2="7"></line>
-              <polyline points="7 7 17 7 17 17"></polyline>
-            </svg>
-          </a>
-        </section>
-        <hr />
-        <div>
-          <div className=" max-h-[50rem] overflow-scroll">
-            <section className=" p-3 flex flex-col items-center justify-center w-full ">
-              <iframe
-                title="template"
-                src={Weburl}
-                width="100%"
-                height="100%"
-                className="h-[40rem]"
-              />
-            </section>
-          </div>
+    <section className="container bg-[#111111] mx-auto max-w-lg 2xl:max-w-xl overflow-hidden  scrollbar-none my-5 ">
+      <div className=" mx-1 flex flex-col   border-gray-500  border relative rounded">
+        <div className="flex-1 flex justify-center items-center overflow-hidden p-2  ">
+          <img src={images} loading="lazy" alt="Template" width="100%" height="100%" className="rounded" />
         </div>
-      </section>
-    </>
+        <div className="h-12 flex justify-end items-center shrink-0   border-gray-500  border-t">
+          <nav className="flex shrink-0 divide-x border-gray-500  border-l">
+            <a
+              href={Weburl}
+              target="_blank"
+              rel="noreferrer"
+              title="Display preview "
+              className="action focus-on-key flex justify-center items-center w-12 h-12 border-gray-500  border-b hover:text-sky-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                className="w-5 h-auto"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              href={github}
+              target="_blank"
+              rel="noreferrer"
+              title="Display code"
+              className="action focus-on-key flex justify-center items-center w-12 h-12 border-gray-500  border-b hover:text-violet-400"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                className="w-5 h-auto"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                ></path>
+              </svg>
+            </a>
+          </nav>
+        </div>
+      </div>
+    </section>
   )
 }

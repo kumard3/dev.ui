@@ -7,11 +7,13 @@ export const showCode = [
       {
         title: 'Portfolio',
         Weburl: 'https://zealous-curran-3560b0.netlify.app/',
+        image: '/template1.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-2',
       },
       {
         title: 'Portfolio',
         Weburl: 'https://boring-lamarr-42ae45.netlify.app/',
+        image: '/template2.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-3',
       },
     ],
@@ -24,6 +26,7 @@ export const showCode = [
       {
         title: 'Landing Page',
         Weburl: 'https://nifty-meninsky-f9c1ca.netlify.app/',
+        image: '/template3.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-1',
       },
     ],
@@ -36,11 +39,13 @@ export const showCode = [
       {
         title: 'NFT Landing Page',
         Weburl: 'https://youthful-swartz-a170a5.netlify.app/',
+        image: '/template4.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-4',
       },
       {
         title: 'OceanNFT Landing Page',
         Weburl: 'https://oceannft-landingpage.pages.dev/',
+        image: '/template5.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-5',
       },
     ],

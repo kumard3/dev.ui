@@ -22,6 +22,7 @@ import VerticalTab from '../../app/components/nav/tab/VerticalTab'
 import Modal from '../../app/components/modal/Modal'
 
 import { SquareAvatar, ContentAvatar, CircleAvatar } from '../../app/components/avatar/index'
+import Button5 from '../../app/components/button/Button5'
 
 export const codeData = [
   {
@@ -555,7 +556,15 @@ export const codeData = [
       {
         component: <Button4 />,
         jsx: `
-        <button className="relative rounded bg-[#6c757d] px-10 py-2 shadow-[0_5px_#495057] duration-300 ease-in-out hover:top-[1px] hover:shadow-[0_3px_#495057] active:shadow-[#495057]">
+      <button className="relative rounded bg-[#6c757d] px-10 py-2 shadow-[0_5px_#495057] duration-300 ease-in-out hover:top-[1px] hover:shadow-[0_3px_#495057] active:shadow-[#495057]">
+        Button
+      </button>
+      `,
+      },
+      {
+        component: <Button5 />,
+        jsx: `
+      <button className="relative z-0 rounded bg-[#0b0b0b] px-10 py-3 transition-[all_0.3s_ease] after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-0 after:rounded after:bg-gray-700 after:transition-[all_0.3s_ease]  hover:after:w-full ">
         Button
       </button>
       `,

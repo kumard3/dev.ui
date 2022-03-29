@@ -12,6 +12,7 @@ import Button1 from '../../app/components/button/Button1'
 import Button2 from '../../app/components/button/Button2'
 import Button3 from '../../app/components/button/Button3'
 import Button4 from '../../app/components/button/Button4'
+import Button5 from '../../app/components/button/Button5'
 
 import Nav1 from '../../app/components/nav/Nav1'
 import Nav2 from '../../app/components/nav/Nav2'
@@ -22,7 +23,6 @@ import VerticalTab from '../../app/components/nav/tab/VerticalTab'
 import Modal from '../../app/components/modal/Modal'
 
 import { SquareAvatar, ContentAvatar, CircleAvatar } from '../../app/components/avatar/index'
-import Button5 from '../../app/components/button/Button5'
 
 export const codeData = [
   {
@@ -564,9 +564,9 @@ export const codeData = [
       {
         component: <Button5 />,
         jsx: `
-      <button className="relative z-0 rounded bg-[#0b0b0b] px-10 py-3 transition-[all_0.3s_ease] after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-0 after:rounded after:bg-gray-700 after:transition-[all_0.3s_ease]  hover:after:w-full ">
-        Button
-      </button>
+  <button className="relative z-0 rounded bg-[#151212] px-10 py-3 transition-[all_0.3s_ease] after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-0 after:rounded after:bg-[#262626] after:transition-[all_0.3s_ease]  hover:after:w-full ">
+    Button
+  </button>
       `,
       },
       {

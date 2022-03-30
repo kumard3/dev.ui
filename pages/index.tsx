@@ -8,8 +8,6 @@ export default function Home() {
   return (
     <HomePage>
       <Hero />
-      <Button5 />
-
     </HomePage>
   )
 }

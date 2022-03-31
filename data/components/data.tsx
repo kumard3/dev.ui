@@ -23,7 +23,9 @@ import VerticalTab from '../../app/components/nav/tab/VerticalTab'
 import Modal from '../../app/components/modal/Modal'
 
 import { SquareAvatar, ContentAvatar, CircleAvatar } from '../../app/components/avatar/index'
+
 import HeroSection from '../../app/components/Hero/HeroSection'
+import HeroSection2 from '../../app/components/Hero/HeroSection2'
 
 export const codeData = [
   {
@@ -31,6 +33,83 @@ export const codeData = [
     title: 'Hero',
     urlTitle: 'hero',
     store: [
+      {
+        component: <HeroSection2 />,
+        jsx: ` import Image from 'next/image'
+        export default function HeroSection2() {
+          return (
+            <div className="relative min-h-screen">
+              <div className="absolute inset-0 -z-0 opacity-90">
+                {' '}
+                <Image src="/background.png" layout="fill" alt="Background" />
+              </div>
+        
+              <div className=" relative z-10 flex h-full w-full justify-between px-10  py-10 ">
+                <section className="flex   flex-col items-center justify-center">
+                  <div className="relative w-full max-w-2xl">
+                    <h1 className="joyride flex flex-col text-left font-mono text-6xl font-bold">
+                      NFT that are Out of this{' '}
+                      <span className="flex items-center">
+                        world
+                        <div className="">
+                          <Image src="/KEEPSMILING.png" width="60" height="60" alt="keep" />
+                        </div>{' '}
+                      </span>{' '}
+                    </h1>
+                  </div>
+                  <div className="max-w-xl">
+                    <p className="outerSans py-12 text-left">
+                      {' '}
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit nostrum, ab
+                      perspiciatis, illo laudantium libero quo praesentium eveniet quae saepe deserunt
+                      aliquid ducimus quibusdam. Veniam earum perspiciatis laudantium rem cupiditate.{' '}
+                    </p>
+                  </div>
+                  <div className="outerSans relative flex w-full justify-around">
+                    <button className="relative flex h-10 w-32 items-center justify-center ">
+                      <div className=" absolute  h-16 w-48 skew-x-[23deg] items-center justify-center  bg-gradient-to-r from-[#B1D26F]  to-[#60E7CE]	"></div>
+                      <h1 className="absolute z-10  text-2xl font-bold text-black ">Explore</h1>
+                    </button>
+                    <button className=" text-2xl font-bold ">Learn more</button>
+                  </div>
+                </section>
+                <div className="relative hidden flex-col items-center lg:flex">
+                  <div className="relative">
+                    <Image src="/nft.png" width="600" height="600" alt="nft" />
+                  </div>
+                  <div className=" absolute bottom-20 flex  h-20  items-center rounded bg-black/60 filter backdrop-blur-md lg:px-3 xl:px-6 ">
+                    <div className="mx-4">
+                      <div className="outerSans grid grid-cols-2">
+                        <h1>Current Bid</h1>
+                        <h1>Ends In</h1>
+                      </div>
+                      <div className="joyride grid grid-cols-2">
+                        <h1>0.99eth</h1>
+                        <h1>25 HRS</h1>
+                      </div>
+                    </div>
+                    <button className="outerSans  rounded bg-gradient-to-r  from-[#B1D26F] to-[#60E7CE] px-7 py-3 text-black">
+                      {' '}
+                      Start Bid
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="container relative z-50 mx-auto flex flex-col py-10">
+                <h1 className="joyride text-3xl">Our Partners</h1>
+                <div className="flex flex-wrap items-center justify-center py-4">
+                  <img src="binance 1.svg" className="px-5" />
+                  <img src="bitmex 1.svg" className="px-5" />
+                  <img src="blockport 1.svg" className="px-5" />
+                  <img src="coinbase 1.svg" className="px-5" />
+                </div>
+              </div>
+            </div>
+          )
+        }
+        
+        `,
+      },
       {
         component: <HeroSection />,
         jsx: ` <div className="container mx-auto flex flex-col items-center justify-center rounded-md bg-white">
@@ -62,100 +141,6 @@ export const codeData = [
           />
         </div>
       </div>
-        `,
-      },
-    ],
-  },
-  {
-    url: '/components/',
-    title: 'Modal',
-    urlTitle: 'modal',
-    store: [
-      {
-        component: <Modal />,
-        jsx: `import { useState } from "react";
-
-        export default function Modal() {
-          const [isModalOpen, setModalOpen] = useState(false);
-        
-          return (
-            <div className=" flex flex-col">
-              <button
-                className="bg-white/20 p-3 rounded-xl"
-                onClick={() => setModalOpen(true)}
-              >
-                click me
-              </button>
-              <>
-                {isModalOpen ? (
-                  <div
-                    className="fixed z-10 inset-0 overflow-y-auto"
-                    aria-labelledby="modal-title"
-                    role="model"
-                    aria-modal="true"
-                  >
-                    <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                      <div
-                        className="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
-                        aria-hidden="true"
-                      ></div>
-        
-                      <span
-                        className="hidden sm:inline-block sm:align-middle sm:h-screen"
-                        aria-hidden="true"
-                      >
-                        &#8203;
-                      </span>
-        
-                      <div className="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-                        <div className="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                          <div className="sm:flex sm:items-start">
-                            
-                            <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                              <h3
-                                className="text-lg leading-6 font-medium text-gray-900"
-                                id="modal-title"
-                              >
-                                Lorem ipsum
-                              </h3>
-                              <div className="mt-2">
-                                <p className="text-sm text-gray-500">
-                                  dolor sit amet consectetur adipisicing elit. Corporis
-                                  atque beatae exercitationem. Eligendi sit excepturi
-                                  harum necessitatibus. Veritatis sequi nemo corporis,
-                                  autem, itaque quae debitis error laboriosam recusandae
-                                  optio ea!
-                                </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                          <button
-                            type="button"
-                            onClick={() => setModalOpen(!true)}
-                            className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 sm:ml-3 sm:w-auto sm:text-sm"
-                          >
-                            Accept
-                          </button>
-                          <button
-                            type="button"
-                            onClick={() => setModalOpen(!true)}
-                            className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                          >
-                            Cancel
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ) : (
-                  ""
-                )}
-              </>
-            </div>
-          );
-        }
         `,
       },
     ],

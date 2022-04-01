@@ -14,9 +14,9 @@ export default function Templates() {
     <AppLayout title="Templates">
       <LayoutNav setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>
         <>
-          <h1 className="text-4xl font-bold ">
-            <Link href="/templates"> Templates</Link>{' '}
-          </h1>
+          <Link href="/templates">
+            <h1 className="text-4xl font-bold outerSans">Templates</h1>
+          </Link>{' '}
           <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">
             {showCode.map((n) => (
               <div className="flex flex-wrap my-2 w-full text-left " key={n.title}>

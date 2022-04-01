@@ -162,7 +162,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
 
   const widths = [
     {
-      width: '340px',
+      width: '400px',
       title: 'Mobile',
     },
     {
@@ -193,14 +193,18 @@ export default function CodeDisplay({ component, jsx }: Props) {
             {data.map((n, index) => {
               return (
                 <>
-                  <button onClick={() => setTab(n.title)} className="p-3 " key={index}>
+                  <button
+                    onClick={() => setTab(n.title)}
+                    className="p-3 text-xl outerSans"
+                    key={index}
+                  >
                     {n.title}
                   </button>
                 </>
               )
             })}
           </div>
-          <div className="lg:flex justify-between hidden ">
+          {/* <div className="lg:flex justify-between hidden ">
             {widths.map((n, index) => {
               return (
                 <>
@@ -214,21 +218,21 @@ export default function CodeDisplay({ component, jsx }: Props) {
                 </>
               )
             })}
-          </div>
+          </div> */}
         </section>
         <hr />
 
         <div>
-          <style jsx>{`
+          {/* <style jsx>{`
             .widthTest {
-              width: ${opened};
+              max-width: ${opened};
             }
             @media (max-width: 1025px) {
               .widthTest {
                 width: 100%;
               }
             }
-          `}</style>
+          `}</style> */}
           <>
             {filterdata.map((n) => {
               return (
@@ -236,7 +240,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
                   {n.data === '' ? (
                     ''
                   ) : (
-                    <div className={` max-h-[50rem] overflow-scroll bg-[#181818] widthTest`}>
+                    <div className={` max-h-[50rem] overflow-scroll bg-[#181818] `}>
                       <section className=" p-3 flex flex-col items-center justify-center w-full ">
                         {n.data}
                       </section>

@@ -23,9 +23,9 @@ export const Componentbutton = ({ title, url, urlTitle, length }: Props) => {
             router.asPath == `${url}${title}` ? 'bg-white' : 'bg-slate-500'
           } min-w-[4px] min-h-[4px] block rounded-[50%] mr-3 `}
         ></span>
-        <div className="flex justify-between w-full">
+        <div className="flex justify-between w-full outerSans">
           {title}
-          <span className="text-right">{length}</span>
+          <span className="text-right ">{length}</span>
         </div>
       </button>
     </Link>

@@ -56,7 +56,7 @@ export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
 }
 export default function AppLayout({ children,title }: Children) {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       <NextSeo
         title={`Dev.ui | ${title}`}
         description="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"

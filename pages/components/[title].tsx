@@ -19,7 +19,7 @@ export default function Post() {
     <AppLayout title="Components">
       <LayoutNav setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>
         <>
-          <h1 className="text-4xl font-bold ">
+          <h1 className="text-4xl font-bold outerSans">
             <Link href="/components"> Components</Link>
           </h1>
           <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">

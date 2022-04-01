@@ -11,14 +11,13 @@ export default function Component() {
 
   return (
     <AppLayout title="Components">
-      {/* <div className="bg-slate-700 min-h-screen max-w-sm"> </div> */}
       <>
         <LayoutNav setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>
           {' '}
           <>
-            <h1 className="text-4xl font-bold ">
-              <Link href="/components"> Components</Link>{' '}
-            </h1>
+            <Link href="/components">
+              <h1 className="text-4xl font-bold outerSans">Components</h1>
+            </Link>{' '}
             <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">
               {codeData.map((n) => (
                 <div className="flex flex-wrap my-2 w-full text-left " key={n.title}>

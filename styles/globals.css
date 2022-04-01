@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@font-face {
+  font-family: joyride;
+  src: url(/fonts/Joyride-Round.otf);
+}@font-face {
+  font-family: outerSans;
+  src: url(/fonts/MADE-Outer-Sans.otf);
+}
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: joyride;
-  src: url(../fonts/Joyride-Round.otf);
-}@font-face {
-  font-family: outerSans;
-  src: url(../fonts/MADE-Outer-Sans.otf);
-}
 
 .joyride{
   font-family: joyride;

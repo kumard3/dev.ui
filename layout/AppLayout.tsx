@@ -23,7 +23,7 @@ export const LayoutNav = ({ children, toggleSidebar, setToggleSidebar }: Props) 
       ></div>
 
       <div
-        className={`fixed top-0 px-2  z-30 inset-y-0 left-0 w-[15rem]  overflow-y-auto transition duration-300 transform lg:translate-x-0 lg:static ${
+        className={`fixed top-0 px-2  z-30 inset-y-0 left-0 min-w-[16rem]  overflow-y-auto transition duration-300 transform lg:translate-x-0 lg:static ${
           toggleSidebar ? 'translate-x-0 ease-out h-full bg-black' : '-translate-x-full ease-in  '
         }`}
       >
@@ -62,7 +62,7 @@ export default function AppLayout({ children,title }: Children) {
         description="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
       />
       <Nav />
-      <div className="flex container mx-auto w-full min-h-screen">{children}</div>
+      <div className="flex px-5 w-full min-h-screen">{children}</div>
     </div>
   )
 }

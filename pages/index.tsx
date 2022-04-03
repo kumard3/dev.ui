@@ -9,7 +9,6 @@ export default function Home() {
   return (
     <HomePage>
       <Hero />
-      <HeroSection2 />
     </HomePage>
   )
 }

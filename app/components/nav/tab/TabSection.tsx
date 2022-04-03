@@ -1,44 +1,46 @@
-import { useState } from "react";
+import { useState } from 'react'
 
 export default function TabSection() {
-  const [tab, setTab] = useState("First");
   const data = [
     {
-      title: "First",
-      data: "first",
+      title: 'Item One',
+      data: 'lorem ipsum dolor sit amet, consectetur adip',
     },
     {
-      title: "Second",
-      data: "Second",
+      title: 'Item two',
+      data: 'lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip',
     },
-  ];
+  ]
+  const [tab, setTab] = useState(data[0].title)
 
-  const filterdata = data.filter((e) => e.title === tab);
-  const active = filterdata[0].title;
+  const filterdata = data.filter((e) => e.title === tab)
+  const active = filterdata[0].title
 
   return (
-    <div>
-      <div>
+    <div className="h-60 bg-black max-w-sm rounded-xl">
+      <div className=" px-10">
         {data.map((n, index) => {
           return (
             <button
               onClick={() => setTab(n.title)}
               className={`${
-                active === n.title ? "text-blue-400 bg-white/10 rounded-lg " : ""
+                active === n.title
+                  ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'
+                  : ''
               } px-10 py-3  `}
               key={index}
             >
               {n.title}
             </button>
-          );
+          )
         })}
       </div>
 
-      <div className="flex justify-center mt-4">
+      <div className=" pt-4 px-4">
         {filterdata.map((n, index) => {
-          return <div key={index}>{n.data}</div>;
+          return <div key={index}>{n.data}</div>
         })}
       </div>
     </div>
-  );
+  )
 }

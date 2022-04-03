@@ -10,45 +10,15 @@ interface Props {
 }
 
 export default function CodeDisplay({ component, jsx }: Props) {
-  const [opened, setOpened] = useState('100%')
   const [tab, setTab] = useState('Preview')
   const data = [
     {
       title: 'Preview',
-      data: component,
-      code: '',
     },
     {
       title: 'Jsx',
-      data: '',
-      code: jsx,
     },
   ]
-
-  const widths = [
-    {
-      width: '400px',
-      title: 'Mobile',
-    },
-    {
-      width: '640px',
-      title: 'Small',
-    },
-    {
-      width: '768px',
-      title: 'Medium',
-    },
-    {
-      width: '1024px',
-      title: 'Large',
-    },
-    {
-      width: '100%',
-      title: 'Full',
-    },
-  ]
-
-  const filterdata = data.filter((e) => e.title === tab)
 
   return (
     <>
@@ -69,67 +39,30 @@ export default function CodeDisplay({ component, jsx }: Props) {
               )
             })}
           </div>
-          {/* <div className="lg:flex justify-between hidden ">
-            {widths.map((n, index) => {
-              return (
-                <>
-                  <button
-                    key={index}
-                    onClick={() => setOpened(n.width)}
-                    className="px-5 py-2  mx-1 rounded-xl border "
-                  >
-                    {n.title}
-                  </button>
-                </>
-              )
-            })}
-          </div> */}
         </section>
         <hr />
 
         <div>
-          <style jsx>{`
-            .widthTest {
-              max-width: ${opened};
-            }
-            @media (max-width: 1025px) {
-              .widthTest {
-                width: 100%;
-              }
-            }
-          `}</style>
           <>
-            {filterdata.map((n) => {
-              return (
-                <>
-                  {n.data === '' ? (
-                    ''
-                  ) : (
-                    <div className={` max-h-[50rem] overflow-scroll bg-[#181818] `}>
-                      <section className=" p-3 flex flex-col items-center justify-center w-full ">
-                        {n.data}
-                      </section>
-                    </div>
-                  )}
-
-                  {n.code === '' ? (
-                    ''
-                  ) : (
-                    <div className={`max-h-[20rem] overflow-scroll `}>
-                      <Prism
-                        colorScheme="dark"
-                        language="jsx"
-                        copyLabel="Copy code to clipboard"
-                        copiedLabel="Code copied to clipboard"
-                        withLineNumbers={true}
-                      >
-                        {n.code}
-                      </Prism>
-                    </div>
-                  )}
-                </>
-              )
-            })}
+            {tab === 'Preview' ? (
+              <div className="max-h-[50rem] overflow-scroll bg-[#181818]  ">
+                <section className="min-h-[5rem] py-2 flex flex-col justify-center items-center  w-full ">
+                  {component}
+                </section>
+              </div>
+            ) : (
+              <div className="max-h-[50rem] overflow-scroll ">
+                <Prism
+                  colorScheme="dark"
+                  language="jsx"
+                  copyLabel="Copy code to clipboard"
+                  copiedLabel="Code copied to clipboard"
+                  withLineNumbers={true}
+                >
+                  {jsx}
+                </Prism>
+              </div>
+            )}
           </>
         </div>
       </section>

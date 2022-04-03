@@ -1,11 +1,9 @@
-import React from 'react'
-import Image from 'next/image'
 export default function HeroSection2() {
   return (
     <div className="relative min-h-screen w-full ">
-      <div className="absolute inset-0 -z-0 opacity-90">
+      <div className="absolute inset-0 -z-0 opacity-90 w-full min-h-screen">
         {' '}
-        <Image src="/background.png" layout="fill" alt="Background" />
+        <img src="/background.png" className="object-cover w-full h-full"   alt="Background" />
       </div>
 
       <div className=" relative z-10 flex h-full w-full justify-between px-10  py-10 ">

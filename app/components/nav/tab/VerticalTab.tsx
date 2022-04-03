@@ -43,34 +43,3 @@ export default function VerticalTab() {
     </div>
   )
 }
-{
-  /* 
-
- <div className="h-60 bg-black max-w-sm rounded-xl">
-      <div className=" px-10">
-        {data.map((n, index) => {
-          return (
-            <button
-              onClick={() => setTab(n.title)}
-              className={`${
-                active === n.title
-                  ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'
-                  : ''
-              } px-10 py-3  `}
-              key={index}
-            >
-              {n.title}
-            </button>
-          )
-        })}
-      </div>
-
-      <div className=" pt-4 px-4">
-        {filterdata.map((n, index) => {
-          return <div key={index}>{n.data}</div>
-        })}
-      </div>
-    </div>
-
-*/
-}

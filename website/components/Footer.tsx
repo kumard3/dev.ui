@@ -8,7 +8,7 @@ export default function Footer() {
         </div>
         <ul className="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
           <li>
-            <a href="https://github.com/kumard3/dev.ui" target="_blank" rel="noreferrer">
+            <a href="https://github.com/kumard3/dev.ui" target="_blank" rel="noreferrer" aria-label="Github">
               {' '}
               Github
             </a>

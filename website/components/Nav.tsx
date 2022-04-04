@@ -36,7 +36,12 @@ export default function Nav() {
               })}
             </nav>
 
-            <a href="https://github.com/kumard3/dev.ui" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/kumard3/dev.ui"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Github"
+            >
               <svg
                 fill="white"
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,4 +1,3 @@
-import { NextSeo } from 'next-seo'
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 
 class MyDocument extends Document {

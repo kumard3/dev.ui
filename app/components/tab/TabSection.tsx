@@ -17,8 +17,8 @@ export default function TabSection() {
   const active = filterdata[0].title
 
   return (
-    <div className="h-60 bg-black max-w-sm rounded-xl">
-      <div className=" px-10">
+    <div className="h-60 bg-black max-w-xs mx-2 sm:w-[20rem] rounded-xl">
+      <div className="px-10 flex justify-between">
         {data.map((n, index) => {
           return (
             <button
@@ -27,7 +27,7 @@ export default function TabSection() {
                 active === n.title
                   ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'
                   : ''
-              } px-10 py-3  `}
+              } w-[110px] py-2 `}
               key={index}
             >
               {n.title}
@@ -36,7 +36,7 @@ export default function TabSection() {
         })}
       </div>
 
-      <div className=" pt-4 px-4">
+      <div className="pt-4 px-4">
         {filterdata.map((n, index) => {
           return <div key={index}>{n.data}</div>
         })}

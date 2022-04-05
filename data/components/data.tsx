@@ -18,9 +18,8 @@ import Nav1 from '../../app/components/nav/Nav1'
 import Nav2 from '../../app/components/nav/Nav2'
 import { Feature1 } from '../../app/components/features/Features1'
 
-import TabSection from '../../app/components/nav/tab/TabSection'
-import VerticalTab from '../../app/components/nav/tab/VerticalTab'
-import Modal from '../../app/components/modal/Modal'
+import TabSection from '../../app/components/tab/TabSection'
+import VerticalTab from '../../app/components/tab/VerticalTab'
 
 import { SquareAvatar, ContentAvatar, CircleAvatar } from '../../app/components/avatar/index'
 
@@ -214,32 +213,32 @@ export const codeData = [
           const active = filterdata[0].title
         
           return (
-            <div className="h-60 bg-black max-w-sm rounded-xl">
-              <div className=" px-10">
-                {data.map((n, index) => {
-                  return (
-                    <button
-                      onClick={() => setTab(n.title)}
-                      className={
-                        $ {
-                        active === n.title
-                          ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'
-                          : ''
-                      } px-10 py-3  }
-                      key={index}
-                    >
-                      {n.title}
-                    </button>
-                  )
-                })}
-              </div>
-        
-              <div className=" pt-4 px-4">
-                {filterdata.map((n, index) => {
-                  return <div key={index}>{n.data}</div>
-                })}
-              </div>
-            </div>
+            <div className="h-60 bg-black max-w-xs mx-2 sm:w-[20rem] rounded-xl">
+      <div className="px-10 flex justify-between">
+        {data.map((n, index) => {
+          return (
+            <button
+              onClick={() => setTab(n.title)}
+              className={ $ {
+                active === n.title
+                  ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'
+                  : ''
+              } w-[110px] py-2 }
+              key={index}
+            >
+              {n.title}
+            </button>
+          )
+        })}
+      </div>
+
+      <div className="pt-4 px-4">
+        {filterdata.map((n, index) => {
+          return <div key={index}>{n.data}</div>
+        })}
+      </div>
+    </div>
+
           )
         }
         `,

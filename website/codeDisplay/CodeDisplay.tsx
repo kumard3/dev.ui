@@ -1,8 +1,8 @@
 /* eslint-disable @next/next/no-sync-scripts */
-
 import { useState, ReactNode } from 'react'
-
-import { Prism } from '@mantine/prism'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+//@ts-ignore
+import { stackoverflowDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
 
 interface Props {
   component?: ReactNode
@@ -19,7 +19,6 @@ export default function CodeDisplay({ component, jsx }: Props) {
       title: 'Jsx',
     },
   ]
-
   return (
     <>
       <section className="bg-[#120e0e] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
@@ -51,16 +50,10 @@ export default function CodeDisplay({ component, jsx }: Props) {
                 </section>
               </div>
             ) : (
-              <div className="max-h-[50rem] overflow-scroll ">
-                <Prism
-                  colorScheme="dark"
-                  language="jsx"
-                  copyLabel="Copy code to clipboard"
-                  copiedLabel="Code copied to clipboard"
-                  withLineNumbers={true}
-                >
+              <div className="max-h-[50rem] overflow-scroll  ">
+                <SyntaxHighlighter language="javascript" style={stackoverflowDark}>
                   {jsx}
-                </Prism>
+                </SyntaxHighlighter>
               </div>
             )}
           </>

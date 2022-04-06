@@ -72,7 +72,7 @@ input:checked ~ .dot {
   animation: gradient-animation 4s ease infinite;
 }
 pre{
-    background-color:#101827 !important;
+    background-color:#101827  ;
 }
 body ::-webkit-scrollbar {
   display: none;

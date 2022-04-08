@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-sync-scripts */
 import { useState, ReactNode, useEffect } from 'react'
+//@ts-ignore
 import SyntaxHighlighter from 'react-syntax-highlighter'
 //@ts-ignore
 import { stackoverflowDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
@@ -27,11 +28,11 @@ export default function CodeDisplay({ component, jsx }: Props) {
 
   const router = useRouter()
 
-  // useEffect(() => {
-  //   if (router.asPath.slice(12).toString() === router.query.title) {
-  //     setTab('Preview')
-  //   }
-  // }, [router.asPath])
+  useEffect(() => {
+    if (router.asPath.slice(12).toString() === router.query.title) {
+      setTab('Preview')
+    }
+  }, [router.asPath])
 
   function handleCopy(e: any) {
     e.preventDefault()

@@ -10,7 +10,7 @@ import { useRouter } from 'next/router'
 
 interface Props {
   component?: ReactNode
-  jsx?: ReactNode
+  jsx?: string
 }
 
 export default function CodeDisplay({ component, jsx }: Props) {

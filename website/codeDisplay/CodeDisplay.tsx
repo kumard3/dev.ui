@@ -3,7 +3,8 @@ import { useState, ReactNode, useEffect } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 //@ts-ignore
 import { stackoverflowDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import useCopyToClipboard from '../../hooks/useCopytoClipBoard'
+import useCopyToClipboard from './useCopyToClipboard'
+
 import { useRouter } from 'next/router'
 
 interface Props {
@@ -12,6 +13,7 @@ interface Props {
 }
 
 export default function CodeDisplay({ component, jsx }: Props) {
+  const [value, copy] = useCopyToClipboard()
   const [tab, setTab] = useState('Preview')
   const [CopiedText, setCopiedText] = useState(false)
   const data = [
@@ -22,7 +24,6 @@ export default function CodeDisplay({ component, jsx }: Props) {
       title: 'Jsx',
     },
   ]
-  const [value, copy] = useCopyToClipboard()
 
   const router = useRouter()
 

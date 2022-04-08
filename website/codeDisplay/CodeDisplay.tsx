@@ -1,8 +1,10 @@
 /* eslint-disable @next/next/no-sync-scripts */
-import { useState, ReactNode } from 'react'
+import { useState, ReactNode, useEffect } from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 //@ts-ignore
 import { stackoverflowDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import useCopyToClipboard from '../../hooks/useCopytoClipBoard'
+import { useRouter } from 'next/router'
 
 interface Props {
   component?: ReactNode
@@ -11,6 +13,7 @@ interface Props {
 
 export default function CodeDisplay({ component, jsx }: Props) {
   const [tab, setTab] = useState('Preview')
+  const [CopiedText, setCopiedText] = useState(false)
   const data = [
     {
       title: 'Preview',
@@ -19,6 +22,25 @@ export default function CodeDisplay({ component, jsx }: Props) {
       title: 'Jsx',
     },
   ]
+  const [value, copy] = useCopyToClipboard()
+
+  const router = useRouter()
+
+  useEffect(() => {
+    if (router.asPath.slice(12).toString() === router.query.title) {
+      setTab('Preview')
+    }
+  }, [router.asPath])
+
+  function handleCopy(e: any) {
+    e.preventDefault()
+    copy(`${jsx}`)
+    setCopiedText(true)
+    setTimeout(() => {
+      setCopiedText(false)
+    }, 3000)
+  }
+
   return (
     <>
       <section className="bg-[#120e0e] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
@@ -50,7 +72,19 @@ export default function CodeDisplay({ component, jsx }: Props) {
                 </section>
               </div>
             ) : (
-              <div className="max-h-[50rem] overflow-scroll  ">
+              <div className="max-h-[50rem] overflow-scroll relative ">
+                <div className="sticky right-2 top-2">
+                  <button
+                    onClick={(e) => handleCopy(e)}
+                    className="absolute right-2 top-2 bg-white/10 backdrop-blur-xl backdrop-filter filter w-40 h-10 rounded-md "
+                  >
+                    {CopiedText ? (
+                      <span className="text-green-400">Copied</span>
+                    ) : (
+                      <span className="text-white">Copy</span>
+                    )}
+                  </button>
+                </div>
                 <SyntaxHighlighter language="javascript" style={stackoverflowDark}>
                   {jsx}
                 </SyntaxHighlighter>

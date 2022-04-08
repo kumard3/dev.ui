@@ -27,11 +27,11 @@ export default function CodeDisplay({ component, jsx }: Props) {
 
   const router = useRouter()
 
-  useEffect(() => {
-    if (router.asPath.slice(12).toString() === router.query.title) {
-      setTab('Preview')
-    }
-  }, [router.asPath])
+  // useEffect(() => {
+  //   if (router.asPath.slice(12).toString() === router.query.title) {
+  //     setTab('Preview')
+  //   }
+  // }, [router.asPath])
 
   function handleCopy(e: any) {
     e.preventDefault()

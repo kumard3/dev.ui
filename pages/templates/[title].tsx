@@ -15,7 +15,7 @@ export default function Post() {
   const [toggleSidebar, setToggleSidebar] = useState(false)
 
   return (
-    <AppLayout title="Templates">
+    <AppLayout title="Templates" url="templates">
       <>
         <LayoutNav setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>
           <>

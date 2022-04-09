@@ -11,7 +11,7 @@ export default function Templates() {
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false)
   console.log(showCode[1].store.length)
   return (
-    <AppLayout title="Templates">
+    <AppLayout title="Templates" url="templates">
       <LayoutNav setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>
         <>
           <Link href="/templates">

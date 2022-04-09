@@ -10,7 +10,8 @@ export default function Component() {
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false)
 
   return (
-    <AppLayout title="Components">
+    <AppLayout title="Components" url="components">
+
       <>
         <LayoutNav setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>
           {' '}

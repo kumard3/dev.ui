@@ -33,8 +33,7 @@ export default function HomePage({ children }: any) {
           images: [
             {
               url: 'https://dev-ui.vercel.app/WebSiteImage.png',
-              width: 1906,
-              height: 963,
+     
               alt: 'dev.ui',
               type: 'image/png',
             },

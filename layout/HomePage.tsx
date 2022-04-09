@@ -22,8 +22,26 @@ export default function HomePage({ children }: any) {
           {
             rel: 'manifest',
             href: '/manifest.json',
-          }
+          },
         ]}
+        canonical="https://dev-ui.vercel.app/"
+        openGraph={{
+          url: 'https://dev-ui.vercel.app/',
+          title: 'Dev.Ui',
+          description:
+            'Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS',
+          images: [
+            {
+              url: 'https://dev-ui.vercel.app/WebSiteImage.png',
+              width: 1906,
+              height: 963,
+              alt: 'dev.ui',
+              type: 'image/png',
+            },
+          ],
+          site_name: 'Dev.Ui',
+        }}
+        
       />
 
       <Nav />

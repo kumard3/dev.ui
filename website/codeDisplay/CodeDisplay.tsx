@@ -42,7 +42,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
       setCopiedText(false)
     }, 3000)
   }
-
+console.log(component)
   return (
     <>
       <section className="bg-[#120e0e] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">

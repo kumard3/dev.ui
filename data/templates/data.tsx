@@ -47,6 +47,12 @@ export const showCode = [
         Weburl: 'https://oceannft-landingpage.pages.dev/',
         image: '/template5.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-5',
+      },  
+        {
+        title: 'Circle Chain Landing Page',
+        Weburl: 'https://circle-chain-web3.pages.dev/',
+        image: '/template6.webp',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-6',
       },
     ],
   },

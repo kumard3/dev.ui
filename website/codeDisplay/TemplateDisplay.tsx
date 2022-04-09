@@ -7,9 +7,10 @@ interface Props {
   Weburl?: string
   github?: string
   images?: string
+  title?: string
 }
 
-export default function TemplateDisplay({ Weburl, github, images }: Props) {
+export default function TemplateDisplay({ Weburl, github, images, title }: Props) {
   const data = [
     {
       title: 'Preview',
@@ -22,9 +23,18 @@ export default function TemplateDisplay({ Weburl, github, images }: Props) {
     <section className="container bg-[#111111] mx-auto max-w-lg 2xl:max-w-xl overflow-hidden  scrollbar-none my-5 ">
       <div className=" mx-1 flex flex-col   border-gray-500  border relative rounded">
         <div className="flex-1 flex justify-center items-center overflow-hidden p-2  ">
-          <img src={images} loading="lazy" alt="Template" width="100%" height="100%" className="rounded" />
+          <img
+            src={images}
+            loading="lazy"
+            alt="Template"
+            width="100%"
+            height="100%"
+            className="rounded"
+          />
         </div>
-        <div className="h-12 flex justify-end items-center shrink-0   border-gray-500  border-t">
+
+        <div className="h-12 flex justify-between items-center shrink-0  border-gray-500  border-t">
+          <h1 className="text-xl font-bold ml-10 ">{title} </h1>
           <nav className="flex shrink-0 divide-x border-gray-500  border-l">
             <a
               href={Weburl}

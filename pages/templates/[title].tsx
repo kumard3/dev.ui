@@ -37,10 +37,10 @@ export default function Post() {
           </>
         </LayoutNav>
         <LayoutBody setToggleSidebar={setToggleSidebar} toggleSidebar={toggleSidebar}>
-          <div className="dark:text-white">
+          <div className="pb-10">
             <div className="container mx-auto flex flex-col flex-wrap md:flex-row justify-center items-center">
               {Filter?.map((n, index) => (
-                <TemplateDisplay Weburl={n.Weburl} github={n.github} images={n.image} key={index} />
+                <TemplateDisplay Weburl={n.Weburl} github={n.github} images={n.image} key={index} title={n.title} />
               ))}
             </div>
           </div>

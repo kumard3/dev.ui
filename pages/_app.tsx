@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         target="_blank"
         rel="noreferrer"
         aria-label="Github"
-        className="text-center w-full font-mono pt-1 flex items-center justify-center gradientbg "
+        className="text-center w-full font-mono pt-1  flex items-center justify-center gradientbg "
       >
         ⭐️ Star DevUI on GitHub ⭐️
       </a>

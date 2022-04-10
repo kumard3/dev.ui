@@ -62,22 +62,7 @@ export default function AppLayout({ children, title, url }: Children) {
         title={`Dev.ui|${title}`}
         description="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
         canonical="https://dev-ui.vercel.app/"
-        openGraph={{
-          url: `https://dev-ui.vercel.app/${url}`,
-          title: 'Dev.Ui',
-          description:
-            'Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS',
-          images: [
-            {
-              url: 'https://dev-ui.vercel.app/WebSiteImage.png',
-              width: 1906,
-              height: 963,
-              alt: 'dev.ui',
-              type: 'image/png',
-            },
-          ],
-          site_name: 'Dev.Ui',
-        }}
+     
       />
       <Nav />
       <div className="flex px-5 w-full min-h-screen">{children}</div>

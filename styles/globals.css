@@ -9,19 +9,9 @@
   font-family: outerSans;
   src: url(/fonts/MADE-Outer-Sans.otf);
 }
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-.joyride{
-  font-family: joyride;
-}
-.outerSans{
-  font-family: outerSans;
-}
 
 *{
   box-sizing: border-box;
@@ -44,21 +34,48 @@
   background: -webkit-linear-gradient(top, #ff8867, #ff52ff);
   animation: gradient-animation 4s ease infinite;
 }
-
-button {
-  cursor: pointer;
+pre{
+  background-color:#101827  ;
+}
+body ::-webkit-scrollbar {
+display: none;
 }
 
-.glass{
-  backdrop-filter: saturate(180%) blur(14px);
-  background: rgba(255, 255, 255, 0.05);
-border: 1px solid rgba( 255, 255, 255, 0.18 );
+body {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+}
+
+
+input {
+max-width: 100%;
+}
+button {
+  cursor: pointer;
 }
 
 input:checked ~ .dot {
   transform: translateX(100%);
   background-color: #48bb78;
 } 
+
+.joyride{
+  font-family: joyride;
+}
+.outerSans{
+  font-family: outerSans;
+}
+
+.hero-title{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.glass{
+  backdrop-filter: saturate(180%) blur(14px);
+  background: rgba(255, 255, 255, 0.05);
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 
 .gradientText {
   background: -webkit-linear-gradient(left, #ff8867, #ff52ff);
@@ -73,60 +90,8 @@ input:checked ~ .dot {
   background-size: 200% 200%;
   animation: gradient-animation 4s ease infinite;
 }
-pre{
-    background-color:#101827  ;
-}
-body ::-webkit-scrollbar {
-  display: none;
-}
-
-body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
 
 
-input {
-  max-width: 100%;
-}
-
-.test{
-  color:red;
-}
-.mockup-window{
-  padding-top:1.25rem;
-  border-radius:var(--rounded-box, 1rem);
-  animation: mockup-window 5s infinite;
-}
-.mockup-window:before{
-    content:"";
-    border-radius:9999px;
-    display:block;
-    height:.75rem;
-    margin-bottom:1rem;
-    opacity:.3;
-    width:.75rem;
-    box-shadow:1.4em 0,2.8em 0,4.2em 0;
-  }
-
-  @keyframes mockup-window {
-    0%    { width:50%; }
-    20%   { width:60%; }
-    80%   { width:70%; background-color:black; color:white; }
-    100%  { width:100%; }
-  }
-  
-
-  
-.bg-hero {
-  background: linear-gradient(269deg, #28313B , #485461);
-  background-size: 400% 400%;
-
-  -webkit-animation: AnimationName 20s ease infinite;
-  -moz-animation: AnimationName 20s ease infinite;
-  -o-animation: AnimationName 20s ease infinite;
-  animation: AnimationName 20s ease infinite;
-}
 
 @-webkit-keyframes AnimationName {
   0%{background-position:0% 42%}
@@ -149,57 +114,6 @@ input {
   100%{background-position:0% 42%}
 }
 
-.mantine-Drawer-drawer{
-
-  background-color:#000000;
-  color:white;
-
-}
-
-
-.hero-title{
-  font-family: 'Montserrat', sans-serif;
-}
-.div{
-  width: 100px;
-  height: 100px;
-  margin: 0 1rem;
-  overflow: auto;
-}
-.div{
-  resize: both;
-  background: #EF476F;
-}
-
-.mantine-5ygtff {
-background-color: #1F2A37;
-}
-
-.tabs-titles{
-  list-style: none;
-  padding: 0px;
-  margin: 0;
-}
-
-.tab-title{
-  background-color: #fff;
-  display: inline-block;
-  padding: 10px;
-  color: #c7c6c2;
-  cursor: pointer;
-  margin-left:1px;
-}
-
-.tab-title--active {
-  background-color: #f5f5f5;
-  color: #00070a;
-}
-
-.tab-content{
-  background-color: #f5f5f5;
-  padding: 5px;
-  margin: 0;
-}
 
 @-moz-keyframes gradient-animation {
   0% {

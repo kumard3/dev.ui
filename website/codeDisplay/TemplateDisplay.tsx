@@ -34,7 +34,7 @@ export default function TemplateDisplay({ Weburl, github, images, title }: Props
         </div>
 
         <div className="h-12 flex justify-between items-center shrink-0  border-gray-500  border-t">
-          <h1 className="text-xl font-bold ml-10 ">{title} </h1>
+          <h1 className=" md:text-xl font-bold ml-10 ">{title} </h1>
           <nav className="flex shrink-0 divide-x border-gray-500  border-l">
             <a
               href={Weburl}

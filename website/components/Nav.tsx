@@ -3,11 +3,11 @@ import Link from 'next/link'
 const navData = [
   {
     name: 'Component',
-    href: '/components',
+    href: '/components/hero',
   },
   {
     name: 'Templates',
-    href: '/templates',
+    href: '/templates/nftlandingpage',
   },
 ]
 
@@ -20,10 +20,10 @@ export default function Nav() {
           <div className="flex justify-between items-center px-4 pt-6 md:pb-6">
             <div className="flex ">
               <Link href="/" passHref>
-                <h1 className={`gradientText hero-title text-[50px] font-bold leading-none `}>
+                <button className={`gradientText hero-title text-[50px] font-bold leading-none `}>
                   {' '}
                   dev.UI{' '}
-                </h1>
+                </button>
               </Link>
             </div>
             <nav className="hidden md:flex space-x-10 items-center">
@@ -37,6 +37,7 @@ export default function Nav() {
             </nav>
 
             <a
+              title="Github link Dev.Ui"
               href="https://github.com/kumard3/dev.ui"
               target="_blank"
               rel="noreferrer"

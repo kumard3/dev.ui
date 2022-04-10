@@ -53,6 +53,11 @@ export const showCode = [
         Weburl: 'https://nifty-meninsky-f9c1ca.netlify.app/',
         image: '/template3.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-1',
+      },      {
+        title: 'Pixi-World Landing Page',
+        Weburl: 'https://pixi-world-landing-page.pages.dev/',
+        image: '/template7.png',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-7',
       },
     ],
   },

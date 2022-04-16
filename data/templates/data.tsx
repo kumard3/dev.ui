@@ -40,6 +40,12 @@ export const showCode = [
         Weburl: 'https://boring-lamarr-42ae45.netlify.app/',
         image: '/template2.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-3',
+      },     
+     {
+        title: 'Portfolio',
+        Weburl: 'https://portfolio-templte.pages.dev/',
+        image: '/template8.png',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-8',
       },
     ],
   },

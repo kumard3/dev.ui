@@ -47,26 +47,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
   console.log(component)
   return (
     <>
-      <Head>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="description"
-          content="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
-        />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dev.ui|component" />
-        <meta
-          property="og:description"
-          content="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
-        />
-        <meta property="og:url" content="https://dev-ui.vercel.app/" />
-        <meta property="og:site_name" content="Dev.ui|component" />
-        <meta property="og:image" content="https://dev-ui.vercel.app/preview.png" />
-        <meta property="og:image:secure_url" content="https://dev-ui.vercel.app/" />
-        <meta property="og:image:width" content="1440" />
-        <meta property="og:image:height" content="800" />
-      </Head>
+      
       <section className="bg-[#120e0e] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
         <section className="flex p-3 bg-[#111111] justify-center items-center lg:justify-between">
           <div>

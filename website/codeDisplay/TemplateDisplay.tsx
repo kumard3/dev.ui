@@ -22,27 +22,6 @@ export default function TemplateDisplay({ Weburl, github, images, title }: Props
 
   return (
     <>
-    <Head>
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-          name="description"
-          content="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
-        />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Dev.ui|component" />
-        <meta
-          property="og:description"
-          content="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
-        />
-        <meta property="og:url" content="https://dev-ui.vercel.app/" />
-        <meta property="og:site_name" content="Dev.ui|component" />
-        <meta property="og:image" content="https://dev-ui.vercel.app/preview.png" />
-        <meta property="og:image:secure_url" content="https://dev-ui.vercel.app/" />
-        <meta property="og:image:width" content="1440" />
-        <meta property="og:image:height" content="800" />
-      </Head>
-
       <section className="container bg-[#111111] mx-auto max-w-lg 2xl:max-w-xl overflow-hidden  scrollbar-none my-5 ">
         <div className=" mx-1 flex flex-col   border-gray-500  border relative rounded">
           <div className="flex-1 flex justify-center items-center overflow-hidden p-2  ">

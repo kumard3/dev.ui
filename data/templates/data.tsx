@@ -7,19 +7,19 @@ export const showCode = [
       {
         title: 'NFT Landing Page',
         Weburl: 'https://youthful-swartz-a170a5.netlify.app/',
-        image: '/template4.png',
+        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175277/template4_hnw95f.jpg',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-4',
       },
       {
         title: 'OceanNFT Landing Page',
         Weburl: 'https://oceannft-landingpage.pages.dev/',
-        image: '/template5.png',
+        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175277/template5_uryszj.jpg',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-5',
       },
       {
         title: 'Circle Chain Landing Page',
         Weburl: 'https://circle-chain-web3.pages.dev/',
-        image: '/template6.webp',
+        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175277/template6_kigh4f.webp',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-6',
       },
     ],
@@ -31,21 +31,22 @@ export const showCode = [
     store: [
       {
         title: 'Portfolio',
-        Weburl: 'https://zealous-curran-3560b0.netlify.app/',
-        image: '/template1.png',
-        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-2',
+        Weburl: 'https://portfolio-templte.pages.dev/',
+        image:
+          'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175148/template-8-min_x2ynj2.jpg',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-8',
       },
       {
         title: 'Portfolio',
         Weburl: 'https://boring-lamarr-42ae45.netlify.app/',
-        image: '/template2.png',
+        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175277/template2_vpell3.jpg',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-3',
-      },     
-     {
+      },
+      {
         title: 'Portfolio',
-        Weburl: 'https://portfolio-templte.pages.dev/',
-        image: '/template8.png',
-        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-8',
+        Weburl: 'https://zealous-curran-3560b0.netlify.app/',
+        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175276/template1_x0eqp8.jpg',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-2',
       },
     ],
   },
@@ -57,12 +58,13 @@ export const showCode = [
       {
         title: 'Landing Page',
         Weburl: 'https://nifty-meninsky-f9c1ca.netlify.app/',
-        image: '/template3.png',
+        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175277/template3_leuhah.jpg',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-1',
-      },      {
+      },
+      {
         title: 'Pixi-World Landing Page',
         Weburl: 'https://pixi-world-landing-page.pages.dev/',
-        image: '/template7.png',
+        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175279/template7_svpa1y.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-7',
       },
     ],

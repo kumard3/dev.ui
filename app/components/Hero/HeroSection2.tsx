@@ -3,7 +3,11 @@ export default function HeroSection2() {
     <div className="relative min-h-screen w-full ">
       <div className="absolute inset-0 -z-0 opacity-90 w-full min-h-screen">
         {' '}
-        <img src="/background.png" className="object-cover w-full h-full"   alt="Background" />
+        <img
+          src="https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650305343/background_ebzfkk.jpg"
+          className="object-cover w-full h-full"
+          alt="Background"
+        />
       </div>
 
       <div className=" relative z-10 flex h-full w-full justify-between px-10  py-10 ">

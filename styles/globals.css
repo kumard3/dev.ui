@@ -9,9 +9,25 @@
   font-family: outerSans;
   src: url(/fonts/MADE-Outer-Sans.otf);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* @font-face {
+  font-family: 'Joyride';
+  src: url(../fonts/Joyride-Round.otf) format('opentype');
+} */
+
+.Readex{
+  font-family: 'Readex Pro', sans-serif;
+}
+
+
+
+
 
 *{
   box-sizing: border-box;

@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<a target="_blank" href="https://nuro.dev">
+<a target="_blank" href="https://dev-ui.vercel.app">
    <img width="1437" alt="Website" src="https://user-images.githubusercontent.com/62591080/158015344-c5a65490-f618-4ee5-9642-52f29e488c1a.png">
 </a>
 

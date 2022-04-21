@@ -11,6 +11,9 @@
 
 </div>
 
+## Dev.Ui is a component and Templates library that aims to be fully accessible and customizable for your project.
+
+
 ## 🛠 Development
 
 Clone the repository

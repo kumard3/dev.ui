@@ -17,6 +17,11 @@ export const showCode = [
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-5',
       },
       {
+        title: 'Nft Marker Place Landing Page',
+        Weburl: 'https://dev-ui-templates.pages.dev/',
+        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650561206/Screenshot_2022-04-21_at_10.42.32_PM_osafid.png',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-9',
+      },      {
         title: 'Circle Chain Landing Page',
         Weburl: 'https://circle-chain-web3.pages.dev/',
         image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175277/template6_kigh4f.webp',

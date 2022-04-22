@@ -11,8 +11,7 @@
 
 </div>
 
-## Dev.Ui is a component and Templates library that aims to be fully accessible and customizable for your project.
-
+## DevUI is a free and open source developer toolkit. It is a set of React Components and Templates that aim to be fully accessible and customizable in order to speed up the development process.
 
 ## 🛠 Development
 

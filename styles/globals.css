@@ -9,6 +9,18 @@
   font-family: outerSans;
   src: url(/fonts/MADE-Outer-Sans.otf);
 }
+@font-face {
+  font-family: Rubik-Bold;
+  src: url(/fonts/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: Rubik-Medium;
+  src: url(/fonts/Rubik-Medium.ttf);
+}
+@font-face {
+  font-family: Rubik-SemiBold;
+  src: url(/fonts/Rubik-SemiBold.ttf);
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
@@ -18,13 +30,22 @@
 
 /* @font-face {
   font-family: 'Joyride';
-  src: url(../fonts/Joyride-Round.otf) format('opentype');
+  src: url(/fonts/Joyride-Round.otf) format('opentype');
 } */
 
 .Readex{
   font-family: 'Readex Pro', sans-serif;
 }
 
+.Rubik-SemiBold {
+  font-family:  Rubik-SemiBold;
+}
+.Rubik-Medium {
+  font-family:  Rubik-Medium;
+}
+.Rubik-Bold {
+  font-family:  Rubik-Bold;
+}
 
 
 

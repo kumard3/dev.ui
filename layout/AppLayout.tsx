@@ -58,11 +58,6 @@ export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
 export default function AppLayout({ children, title, url }: Children) {
   return (
     <div className="flex flex-col ">
-      {/* <NextSeo
-        title={`Dev.ui|${title}`}
-        description="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
-     
-      /> */}
       <Head>
         <meta name="twitter:card" content="summary_large_image" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />

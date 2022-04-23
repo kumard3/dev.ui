@@ -59,10 +59,8 @@ export default function AppLayout({ children, title, url }: Children) {
   return (
     <div className="flex flex-col ">
       <Head>
+        <title>{`Dev.ui|${title}`}</title>
         <meta name="twitter:card" content="summary_large_image" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta
           name="description"
           content="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"

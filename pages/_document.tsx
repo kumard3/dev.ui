@@ -15,7 +15,6 @@ class MyDocument extends Document {
             name="google-site-verification"
             content="ojrNbpH_TNGvB76f7GhW14IFc9z24nOduorPB2SOdYc"
           />
-          <meta charSet="utf-8" />
         </Head>
         <body className="bg-black w-full min-h-screen text-white ">
           <Main />

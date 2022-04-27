@@ -6,7 +6,7 @@ export default function HeroSection6() {
   return (
     <div className="relative max-h-screen overflow-hidden w-full ">
       <div className="absolute inset-0 -z-0 opacity-90 w-full min-h-screen">
-        <img src="/space.png" className="object-cover w-full h-full" alt="Background" />
+        <img src="/SPACE.png" className="object-cover w-full h-full" alt="Background" />
       </div>
       <div className="absolute -top-[700px] -left-[100px]">
         <img src="/Gradient3.svg" className="relative " />

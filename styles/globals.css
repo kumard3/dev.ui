@@ -21,6 +21,18 @@
   font-family: Rubik-SemiBold;
   src: url(/fonts/Rubik-SemiBold.ttf);
 }
+@font-face {
+  font-family: aberMono;
+  src: url(/fonts/Aber-Mono-Bold.otf);
+}
+@font-face {
+  font-family: raleway;
+  src: url(/fonts/Raleway-Medium.ttf);
+}
+@font-face {
+  font-family: ralewayRegular;
+  src: url(/fonts/Raleway-Regular.ttf);
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
@@ -48,7 +60,22 @@
 }
 
 
+.rubikmedium  {
+  font-family:  rubikMedium;
+}
+.rubikbold {
+  font-family:  rubikBold;
+}
 
+.AberMono{
+  font-family:  aberMono;
+}
+.Raleway-Medium{
+  font-family:  raleway;
+}
+.Raleway-Regular{
+  font-family:  ralewayRegular;
+}
 
 *{
   box-sizing: border-box;

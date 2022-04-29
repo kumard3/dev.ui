@@ -19,12 +19,15 @@ export const showCode = [
       {
         title: 'Nft Marker Place Landing Page',
         Weburl: 'https://dev-ui-templates.pages.dev/',
-        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650561206/Screenshot_2022-04-21_at_10.42.32_PM_osafid.png',
+        image:
+          'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650561206/Screenshot_2022-04-21_at_10.42.32_PM_osafid.png',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-9',
-      },      {
+      },
+      {
         title: 'Circle Chain Landing Page',
         Weburl: 'https://circle-chain-web3.pages.dev/',
-        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175277/template6_kigh4f.webp',
+        image:
+          'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175277/template6_kigh4f.webp',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-6',
       },
     ],
@@ -60,6 +63,13 @@ export const showCode = [
     urlTitle: 'landingpage',
     url: '/templates/',
     store: [
+      {
+        title: 'Agency Landing Page',
+        Weburl: 'https://agency-landing-page.pages.dev/',
+        image:
+          'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1651261814/Screenshot_2022-04-29_at_10.36.56_PM_flqix8.jpg',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-10',
+      },
       {
         title: 'Landing Page',
         Weburl: 'https://nifty-meninsky-f9c1ca.netlify.app/',

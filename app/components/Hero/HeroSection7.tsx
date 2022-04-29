@@ -57,8 +57,8 @@ const Nav = () => {
 const Header = () => {
   return (
     <div className="flex pt-24 w-full  xl:pt-0 justify-around min-h-screen items-center flex-wrap overflow-hidden px-5">
-      <div className="max-w-xl text-black ">
-        <h1 className="font-jostBold text-[58px] leading-[50px] sm:text-7xl">
+      <div className="max-w-lg 2xl:max-w-xl text-black ">
+        <h1 className="font-jostBold text-[58px] leading-[50px] sm:text-6xl">
           Marketing is The Key of Business Sucess.
         </h1>
         <p className="font-jostRegular text-xl py-10 text-gray-600">

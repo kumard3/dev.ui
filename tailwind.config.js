@@ -23,6 +23,11 @@ module.exports = {
           },
         },
       },
+      fontFamily: {
+        jostRegular: ['jostregular', 'sans-serif'],
+        jostMedium: ['jostmedium', 'sans-serif'],
+        jostBold: ['jostbold', 'sans-serif'],
+      },
     },
   },
   plugins: [],

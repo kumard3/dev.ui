@@ -33,6 +33,18 @@
   font-family: ralewayRegular;
   src: url(/fonts/Raleway-Regular.ttf);
 }
+@font-face {
+  font-family: jostregular;
+  src: url(/fonts/Jost-Regular.ttf);
+}
+@font-face {
+  font-family: jostmedium;
+  src: url(/fonts/Jost-Medium.ttf);
+}
+@font-face {
+  font-family: jostbold;
+  src: url(/fonts/Jost-Bold.ttf);
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 

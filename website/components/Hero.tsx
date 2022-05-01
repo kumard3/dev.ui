@@ -1297,7 +1297,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="flex  justify-between mx-auto container py-[2rem] z-50 ">
-        <div className="flex mt-10 flex-col dark:text-white sm:text-center lg:max-w-3xl lg:text-left p-6  rounded-sm  ">
+        <div className="flex mt-10 flex-col dark:text-white  lg:max-w-3xl lg:text-left p-6  rounded-sm  ">
           <h1 className="hero-title text-5xl sm:text-[60px] font-bold leading-none ">
             Make <span className="gradientText"> beautiful</span> websites regardless of your design
             experience.
@@ -1319,7 +1319,7 @@ export default function Hero() {
             </Link>
           </div>
         </div>
-        <div className="hidden lg:flex">
+        <div className="hidden lg:flex relative w-full right-0 top-0 ">
           <ShowCase />
         </div>
       </div>

@@ -74,7 +74,7 @@ export default function AppLayout({ children, title, url }: Children) {
         />
         <meta property="og:url" content="https://dev-ui.vercel.app/" />
         <meta property="og:site_name" content={`Dev.ui|${title}`} />
-        <meta property="og:image" content="https://dev-ui.vercel.app/preview.png" />
+        <meta property="og:image" content="https://dev-ui.vercel.app/dev-ui.gif" />
         <meta property="og:image:secure_url" content="https://dev-ui.vercel.app/" />
         <meta property="og:image:width" content="1440" />
         <meta property="og:image:height" content="800" />

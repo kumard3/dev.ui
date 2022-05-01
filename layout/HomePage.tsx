@@ -24,7 +24,7 @@ export default function HomePage({ children }: any) {
         />
         <meta property="og:url" content="https://dev-ui.vercel.app/" />
         <meta property="og:site_name" content="Dev.ui" />
-        <meta property="og:image" content="https://dev-ui.vercel.app/preview.png" />
+        <meta property="og:image" content="https://dev-ui.vercel.app/dev-ui.gif" />
         <meta property="og:image:secure_url" content="https://dev-ui.vercel.app/" />
         <meta property="og:image:width" content="1440" />
         <meta property="og:image:height" content="800" />
@@ -44,7 +44,7 @@ export default function HomePage({ children }: any) {
           property="og:description"
           content="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
         />
-        <meta property="og:image" content="https://dev-ui.vercel.app/preview.png" />
+        <meta property="og:image" content="https://dev-ui.vercel.app/dev-ui.gif" />
 
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://dev-ui.vercel.app/" />
@@ -53,7 +53,7 @@ export default function HomePage({ children }: any) {
           property="twitter:description"
           content="Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS"
         />
-        <meta property="twitter:image" content="https://dev-ui.vercel.app/preview.png" />
+        <meta property="twitter:image" content="https://dev-ui.vercel.app/dev-ui.gif" />
       </Head>
 
       <Nav />

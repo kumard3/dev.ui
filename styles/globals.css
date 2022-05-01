@@ -45,7 +45,17 @@
   font-family: jostbold;
   src: url(/fonts/Jost-Bold.ttf);
 }
-
+@font-face {
+  font-family: IBMPlexMonoBold;
+  src: url(/fonts/IBMPlexMono-Bold.ttf);
+}@font-face {
+  font-family: IBMPlexMonoSemiBold;
+  src: url(/fonts/IBMPlexMono-SemiBold.ttf);
+}
+@font-face {
+  font-family: IBMPlexMonoRegular;
+  src: url(/fonts/IBMPlexMono-Regular.ttf);
+}
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 @tailwind base;

@@ -4,7 +4,7 @@ export default function HeroSection8() {
   const data = ['HOME', 'GALLERY', 'BLOG', 'KNET']
 
   return (
-    <div className="relative bg-[#060707] w-full min-h-screen">
+    <div className="relative bg-[#060707] w-full h-[90vh]">
       <nav className=" relative  flex justify-between z-10 items-center px-5 py-5 w-full ">
         <div className="text-4xl font-IBMPlexBold">Koala.</div>
         <div className="flex font-IBMPlexBold">
@@ -17,7 +17,7 @@ export default function HeroSection8() {
           })}
         </div>
       </nav>
-      <div className=" items-center  flex justify-around h-screen relative flex-wrap px-5">
+      <div className=" items-center bg-[#060707] flex justify-around pt-20  max-h-screen   relative flex-wrap px-5">
         <div className="bg-[#15d98bfd] h-[362px] w-[362px] absolute rounded-full blur-[120px] filter -top-[100px]  -left-20 opacity-75"></div>
         <div className="max-w-lg relative">
           <h1 className="font-IBMPlexBold text-6xl max-w-md text-left uppercase">
@@ -177,10 +177,10 @@ export default function HeroSection8() {
             </svg>
           </div>
         </div>
-        <div>
+        <div className="py-6 sm:py-0">
           <img
-            width="400"
-            height="400"
+            width="500"
+            height="500"
             alt="bg-image"
             src="https://res.cloudinary.com/ddcg0rzlo/image/upload/v1651418249/new-nft_tlfisy.png"
           />

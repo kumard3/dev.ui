@@ -24,7 +24,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
       title: 'Preview',
     },
     {
-      title: 'Jsx',
+      title: 'Code',
     },
   ]
 

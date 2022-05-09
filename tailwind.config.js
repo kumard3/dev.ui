@@ -42,6 +42,8 @@ module.exports = {
         IBMPlexRegular: ['IBMPlexMonoRegular', 'sans-serif'],
         IBMPlexMedium: ['IBMPlexMonoMedium', 'sans-serif'],
         IBMPlexSemiBold: ['IBMPlexMonoSemiBold', 'sans-serif'],
+        Manrope: ['Manrope', 'sans-serif'],
+
       },
     },
   },

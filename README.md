@@ -16,7 +16,7 @@
 
 ## Contributing
 
-This is now only a hobby project for me, and there aren't many users, so I update and maintain the project in my spare time.
+This is now only a hobby project for me, so I update and maintain the project in my spare time.
 
 If you want to help, pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

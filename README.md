@@ -13,6 +13,14 @@
 
 ## DevUI is a free and open source developer toolkit. It is a set of React Components and Templates that aim to be fully accessible and customizable in order to speed up the development process.
 
+
+## Contributing
+
+This is now only a hobby project for me, so I update and maintain the project in my spare time.
+
+If you want to help, pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+
 ## 🛠 Development
 
 Clone the repository

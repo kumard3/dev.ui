@@ -37,6 +37,9 @@ import Card9 from '../../app/components/card/Card9'
 import Card8 from '../../app/components/card/Card8'
 import HeroSection10 from '../../app/components/Hero/HeroSection10'
 import Card10 from '../../app/components/card/Card10'
+import Button6 from '../../app/components/button/Button6'
+import Button7 from '../../app/components/button/Button7'
+import Button8 from '../../app/components/button/Button8'
 
 export const codeData = [
   {
@@ -1573,11 +1576,42 @@ export const codeData = [
     urlTitle: 'button',
     store: [
       {
-        component: <Button4 />,
+        component: <Button6 />,
         jsx: `
-      <button className="relative rounded bg-[#6c757d] px-10 py-2 shadow-[0_5px_#495057] duration-300 ease-in-out hover:top-[1px] hover:shadow-[0_3px_#495057] active:shadow-[#495057]">
-        Button
+        <button className="relative block group ">
+        <span className="absolute inset-0 border-2 border-white border-dashed rounded-lg"></span>
+        <div className="transition bg-black border-2 border-white rounded-lg group-hover:-translate-x-2 group-hover:-translate-y-2">
+          <div className="p-2 ">
+            <p className="text-xl font-outerSans font-medium">Button</p>
+          </div>
+        </div>
       </button>
+      `,
+      },
+      {
+        component: <Button7 />,
+        jsx: `
+        <button className="relative block group ">
+        <span className="absolute inset-0  bg-indigo-500  rounded-lg"></span>
+        <div className="transition bg-black relative border-2 rounded-lg group-hover:-translate-x-2 group-hover:-translate-y-2">
+          <div className="p-2 ">
+            <p className="text-xl font-outerSans font-medium">Button</p>
+          </div>
+        </div>
+      </button>
+      `,
+      },
+      {
+        component: <Button8 />,
+        jsx: `
+     <button className="relative block group ">
+      <span className="absolute inset-0  bg-indigo-500  rounded-lg"></span>
+      <div className="transition bg-black relative border-2 rounded-lg -translate-x-2 -translate-y-2">
+        <div className="p-2 ">
+          <p className="text-xl font-outerSans font-medium">Button</p>
+        </div>
+      </div>
+    </button>
       `,
       },
       {

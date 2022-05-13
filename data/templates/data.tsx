@@ -64,6 +64,13 @@ export const showCode = [
     url: '/templates/',
     store: [
       {
+        title: 'UP Business Landing Page',
+        Weburl: 'https://agency-landingpage.pages.dev/',
+        image:
+          'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1652454652/agency-landing-page_cn9x2t.jpg',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-11',
+      },
+      {
         title: 'Agency Landing Page',
         Weburl: 'https://agency-landing-page.pages.dev/',
         image:

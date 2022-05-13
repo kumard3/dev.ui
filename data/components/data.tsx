@@ -36,6 +36,7 @@ import Card7 from '../../app/components/card/Card7'
 import Card9 from '../../app/components/card/Card9'
 import Card8 from '../../app/components/card/Card8'
 import HeroSection10 from '../../app/components/Hero/HeroSection10'
+import Card10 from '../../app/components/card/Card10'
 
 export const codeData = [
   {
@@ -978,6 +979,37 @@ export const codeData = [
     title: 'Card',
     urlTitle: 'card',
     store: [
+      {
+        component: <Card10 />,
+        jsx: `  <div className="flex flex-col rounded-xl  p-4"
+        style={{
+          border: '0.88px solid',
+  
+          backdropFilter: 'saturate(180%) blur(14px)',
+          background: ' #ffffff0d',
+        }}
+      >
+        <div>
+          <img
+            src="https://res.cloudinary.com/ddcg0rzlo/image/upload/v1652470298/9StaF0UBJfih_df0248.gif"
+            alt="nft-gif"
+            width="400"
+            height="400"
+            className="rounded-xl"
+          />
+        </div>
+        <div className="flex flex-col  rounded-b-xl py-4 ">
+          <div className="flex justify-between">
+            <h1 className="font-RubikBold ">Bored ape nft accidental</h1>
+            <h1 className="font-bold font-RubikBold">Price</h1>
+          </div>
+          <div className="flex  justify-between font-mono">
+            <p>#345</p>
+            <p>0.01</p>
+          </div>
+        </div>
+      </div>`,
+      },
       {
         component: <Card8 />,
         jsx: `    <div className=" w-72 flex flex-col rounded-xl glass  min-h-72 mt-3 ">

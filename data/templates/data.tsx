@@ -6,6 +6,12 @@ export const showCode = [
     store: [
       {
         title: 'NFT Landing Page',
+        Weburl: 'https://nft-template.pages.dev/',
+        image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1652528707/nft_zqkups.jpg',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-12',
+      },
+      {
+        title: 'NFT Landing Page',
         Weburl: 'https://youthful-swartz-a170a5.netlify.app/',
         image: 'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175277/template4_hnw95f.jpg',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-4',

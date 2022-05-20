@@ -2,7 +2,9 @@
 <div align="center">
 
 <a target="_blank" href="https://dev-ui.vercel.app">
-   <img width="1437" alt="Website" src="https://user-images.githubusercontent.com/62591080/158015344-c5a65490-f618-4ee5-9642-52f29e488c1a.png">
+<!--    ![ezgif-3-776c06c68e](https://user-images.githubusercontent.com/62591080/169439105-325e7551-65b5-4d1e-ad0d-b4395c6043d5.gif)
+ -->
+   <img width="1437" alt="Website" src="https://user-images.githubusercontent.com/62591080/169439105-325e7551-65b5-4d1e-ad0d-b4395c6043d5.gif">
 </a>
 
 [![Website](https://img.shields.io/badge/%20%F0%9F%8F%A1%20website-0072ff.svg?longCache=true&style=for-the-badge)](https://dev-ui.vercel.app)

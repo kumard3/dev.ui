@@ -49,6 +49,13 @@ export const showCode = [
         image:
           'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1650175148/template-8-min_x2ynj2.jpg',
         github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-8',
+      },      
+      {
+        title: 'UI/UX Developer Portfolio',
+        Weburl: 'https://designer-portfolio.pages.dev/',
+        image:
+          'https://res.cloudinary.com/ddcg0rzlo/image/upload/v1653754269/2022-05-28_21.28.01_ftmxrp.jpg',
+        github: 'https://github.com/kumard3/dev-ui-templates/tree/main/template-13',
       },
       {
         title: 'Portfolio',

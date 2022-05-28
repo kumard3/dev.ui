@@ -82,7 +82,7 @@ export default function AppLayout({ children, title, url }: Children) {
       </Head>
 
       <Nav />
-      <div className="flex px-5 w-full min-h-screen">{children}</div>
+      <div className="flex px-5 w-full ">{children}</div>
     </div>
   )
 }

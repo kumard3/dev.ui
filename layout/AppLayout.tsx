@@ -36,7 +36,7 @@ export const LayoutNav = ({ children, toggleSidebar, setToggleSidebar }: Props) 
 
 export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
   return (
-    <div className="flex-1 px-2 flex flex-col  w-full lg:h-screen lg:overflow-y-scroll  ">
+    <div className="flex-1 px-1 flex flex-col  w-full lg:h-screen lg:overflow-y-scroll  ">
       <button
         className="  transition fixed z-50 flex items-center justify-center w-16 h-16 text-white bg-white  rounded-full  bottom-4 right-4 lg:hidden focus:outline-none focus-visible:ring bg-opacity-20 backdrop-filter backdrop-blur"
         onClick={() => setToggleSidebar((prevState: any) => !prevState)}
@@ -82,7 +82,7 @@ export default function AppLayout({ children, title, url }: Children) {
       </Head>
 
       <Nav />
-      <div className="flex px-5 w-full ">{children}</div>
+      <div className="flex px-1 md:px-5 w-full ">{children}</div>
     </div>
   )
 }

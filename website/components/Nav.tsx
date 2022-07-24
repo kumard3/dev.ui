@@ -30,7 +30,9 @@ export default function Nav() {
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href} passHref>
-                    <h1 className={`${button} text-[25px] cursor-pointer`}>{n.name}</h1>
+                    <button type="button" className={`${button} text-[25px] cursor-pointer`}>
+                      {n.name}
+                    </button>
                   </Link>
                 )
               })}

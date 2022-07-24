@@ -38,7 +38,8 @@ export const LayoutBody = ({ children, setToggleSidebar }: Props) => {
   return (
     <div className="flex-1 px-1 flex flex-col  w-full lg:h-screen lg:overflow-y-scroll  ">
       <button
-        className="  transition fixed z-50 flex items-center justify-center w-16 h-16 text-white bg-white  rounded-full  bottom-4 right-4 lg:hidden focus:outline-none focus-visible:ring bg-opacity-20 backdrop-filter backdrop-blur"
+        type="button"
+        className="transition fixed z-50 flex items-center justify-center w-16 h-16 text-white bg-white  rounded-full  bottom-4 right-4 lg:hidden focus:outline-none focus-visible:ring bg-opacity-20 backdrop-filter backdrop-blur"
         onClick={() => setToggleSidebar((prevState: any) => !prevState)}
       >
         <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none">

@@ -20,18 +20,58 @@ This is now only a hobby project for me, so I update and maintain the project in
 
 If you want to help, pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
+# Steps For Contribution
 
+0. Star 
+
+1. Fork 
+
+2. Clone the forked repository.
+```css
+git clone https://github.com/<your-github-username>/dev.ui
+```
+  
+3. Navigate to the project directory.
+```py
+cd dev.ui
+```
+
+4. Create a new branch.
+```css
+git checkout -b <your_branch_name>
+```
+
+5. Make changes.
+
+6. Stage your changes and commit
+```css
+git add -A
+
+git commit -m "<your_commit_message>"
+```
+
+7. Push your local commits to the remote repo.
+```css
+git push -u origin <your_branch_name>
+```
+
+8. Create a Pull Request.
+
+9. Congratulations! 🎉 you've made your contribution.
+
+
+---
 ## 🛠 Development
 
 Clone the repository
 
-```zsh
+```css
 git clone https://github.com/kumard3/dev.ui.git
 ```
 
 Install dependencies
 
-```zsh
+```
 npm install
 
 # Or using Yarn
@@ -41,7 +81,7 @@ yarn
 
 Start the development server
 
-```zsh
+```
 npm run dev
 
 # Or using Yarn
@@ -51,7 +91,7 @@ yarn dev
 
 Build for production
 
-```zsh
+```
 npm run build
 
 # Or using Yarn

@@ -25,13 +25,13 @@ If you want to help, pull requests are welcome. For major changes, please open a
 
 Clone the repository
 
-```zsh
+```css
 git clone https://github.com/kumard3/dev.ui.git
 ```
 
 Install dependencies
 
-```zsh
+```css
 npm install
 
 # Or using Yarn
@@ -41,7 +41,7 @@ yarn
 
 Start the development server
 
-```zsh
+```css
 npm run dev
 
 # Or using Yarn
@@ -51,7 +51,7 @@ yarn dev
 
 Build for production
 
-```zsh
+```css
 npm run build
 
 # Or using Yarn

@@ -5,7 +5,5 @@ module.exports = {
   images: {
     domains: ['res.cloudinary.com', 'media4.giphy.com'],
   },
-  experimental: { appDir: true,
-    nextScriptWorkers: true,
-  },
+  experimental: { appDir: true, nextScriptWorkers: true },
 }

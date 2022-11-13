@@ -1,5 +1,3 @@
-"use client";
-
 import GA from "./GoogleAnalytics";
 
 const Analytics = () => {

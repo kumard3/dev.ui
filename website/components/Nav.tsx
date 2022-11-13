@@ -1,3 +1,6 @@
+'use client'
+
+import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 
 const navData = [
@@ -7,12 +10,14 @@ const navData = [
   },
   {
     name: 'Templates',
-    href: '/templates/nftlandingpage',
+    href: '/templates',
   },
 ]
 
 export default function Nav() {
-  const button = `min-h-[3rem] px-4 active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`
+  const pathname = usePathname()
+
+  const button = `  min-h-[3rem] px-4 active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`
   return (
     <>
       <div className=" w-full outerSans flex  text-xl font-bold border-b-2 border-gray-600  ">
@@ -30,7 +35,12 @@ export default function Nav() {
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href} passHref>
-                    <button type="button" className={`${button} text-[25px] cursor-pointer`}>
+                    <button
+                      type="button"
+                      className={`${button} ${
+                        pathname?.includes(n.href)  && 'bg-white/10'
+                      } text-[25px] cursor-pointer`}
+                    >
                       {n.name}
                     </button>
                   </Link>
@@ -56,12 +66,12 @@ export default function Nav() {
               </svg>
             </a>
           </div>
-          <div className="justify-center flex py-4 md:hidden sm:py-0">
+          <div className="justify-center  flex py-4 md:hidden sm:py-0">
             <nav className="flex md:hidden w-full justify-around items-center">
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href} passHref>
-                    <h1 className={`${button} text-[25px] cursor-pointer`}>{n.name}</h1>
+                    <h1 className={`${button} text-xl md:text-2xl cursor-pointer`}>{n.name}</h1>
                   </Link>
                 )
               })}

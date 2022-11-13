@@ -1,12 +1,8 @@
-import "../styles/globals.css";
-import Analytics from "../website/analytics";
-import Nav from "../website/components/Nav";
+import '../styles/globals.css'
+import Analytics from '../website/analytics'
+import Nav from '../website/components/Nav'
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
       <head />
@@ -26,5 +22,5 @@ export default function RootLayout({
         <div className=" overflow-hidden">{children}</div>
       </body>
     </html>
-  );
+  )
 }

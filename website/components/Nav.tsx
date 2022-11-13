@@ -3,7 +3,7 @@ import Link from 'next/link'
 const navData = [
   {
     name: 'Component',
-    href: '/components/hero',
+    href: '/components',
   },
   {
     name: 'Templates',
@@ -15,7 +15,7 @@ export default function Nav() {
   const button = `min-h-[3rem] px-4 active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`
   return (
     <>
-      <div className=" w-full outerSans flex  text-xl font-bold border-b-2 border-gray-600 ">
+      <div className=" w-full outerSans flex  text-xl font-bold border-b-2 border-gray-600  ">
         <div className="w-full container mx-auto">
           <div className="flex justify-between items-center px-4 pt-6 md:pb-6">
             <div className="flex ">

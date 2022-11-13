@@ -1,6 +1,7 @@
-/* eslint-disable @next/next/link-passhref */
+
 import React, { useRef, useState } from "react";
-import useOnClickOutside from "../../../hooks/useOnClickOutside";
+import useOnClickOutside from "../../hooks/useOnClickOutside";
+// import useOnClickOutside from "../../../hooks/useOnClickOutside";
 
 export default function Nav1() {
   const ref = useRef<HTMLDivElement>(null);

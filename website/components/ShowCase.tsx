@@ -1,5 +1,7 @@
+"use client"
+
 import Link from 'next/link'
-import React, { useState } from 'react'
+import  { useState } from 'react'
 
 const ShowCaseProfile = () => {
   const [play, setPlay] = useState(false)

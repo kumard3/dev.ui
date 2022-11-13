@@ -1,28 +1,33 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-sync-scripts */
 
-import { ReactNode } from 'react'
-import Image from 'next/image'
-import { Head } from 'next/document'
+import { ReactNode } from "react";
+
 interface Props {
-  component?: ReactNode
-  Weburl?: string
-  github?: string
-  images?: string
-  title?: string
+  component?: ReactNode;
+  Weburl?: string;
+  github?: string;
+  images?: string;
+  title?: string;
 }
 
-export default function TemplateDisplay({ Weburl, github, images, title }: Props) {
+export default function TemplateDisplay({
+  Weburl,
+  github,
+  images,
+  title,
+}: Props) {
   const data = [
     {
-      title: 'Preview',
+      title: "Preview",
       Weburl: Weburl,
       github: github,
     },
-  ]
+  ];
 
   return (
     <>
-      <section className="container bg-[#111111] mx-auto max-w-lg 2xl:max-w-xl overflow-hidden  scrollbar-none my-5 ">
+      <section className="container bg-[#111111] mx-auto max-w-lg overflow-hidden my-5 ">
         <div className=" mx-1 flex flex-col   border-gray-500  border relative rounded">
           <div className="flex-1 flex justify-center items-center overflow-hidden p-2  ">
             <img
@@ -97,5 +102,5 @@ export default function TemplateDisplay({ Weburl, github, images, title }: Props
         </div>
       </section>
     </>
-  )
+  );
 }

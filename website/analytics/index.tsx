@@ -1,11 +1,13 @@
-import GA from './GoogleAnalytics'
+"use client";
+
+import GA from "./GoogleAnalytics";
 
 const Analytics = () => {
   return (
     <>
       <GA />
     </>
-  )
-}
+  );
+};
 
-export default Analytics
+export default Analytics;

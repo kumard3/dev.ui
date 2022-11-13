@@ -1,4 +1,4 @@
-export const showCode = [
+export const templateData = [
   {
     title: 'Web3 landingpage',
     urlTitle: 'nftlandingpage',

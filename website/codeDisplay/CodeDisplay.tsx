@@ -1,53 +1,53 @@
-/* eslint-disable @next/next/no-sync-scripts */
-import { useState, ReactNode, useEffect } from 'react'
-//@ts-ignore
-import SyntaxHighlighter from 'react-syntax-highlighter'
-//@ts-ignore
-import { stackoverflowDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
-import useCopyToClipboard from './useCopyToClipboard'
+"use client";
 
-import { useRouter } from 'next/router'
-import { Head } from 'next/document'
-import { title } from 'process'
+/* eslint-disable @next/next/no-sync-scripts */
+import { useState, ReactNode, useEffect } from "react";
+//@ts-ignore
+import SyntaxHighlighter from "react-syntax-highlighter";
+//@ts-ignore
+import { stackoverflowDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+import useCopyToClipboard from "./useCopyToClipboard";
+
+import { usePathname } from "next/navigation";
 
 interface Props {
-  component?: ReactNode
-  jsx?: string
+  component?: ReactNode;
+  jsx?: string;
+  params: { title: string };
 }
 
-export default function CodeDisplay({ component, jsx }: Props) {
-  const [value, copy] = useCopyToClipboard()
-  const [tab, setTab] = useState('Preview')
-  const [CopiedText, setCopiedText] = useState(false)
+export default function CodeDisplay({ component, jsx, params }: Props) {
+  const [value, copy] = useCopyToClipboard();
+  const [tab, setTab] = useState("Preview");
+  const [CopiedText, setCopiedText] = useState(false);
   const data = [
     {
-      title: 'Preview',
+      title: "Preview",
     },
     {
-      title: 'Code',
+      title: "Code",
     },
-  ]
+  ];
 
-  const router = useRouter()
+  const pathname = usePathname();
 
   useEffect(() => {
-    if (router.asPath.slice(12).toString() === router.query.title) {
-      setTab('Preview')
+    if (pathname?.slice(12).toString() === params.title) {
+      setTab("Preview");
     }
-  }, [router.asPath])
+  }, [params.title, pathname]);
 
   function handleCopy(e: any) {
-    e.preventDefault()
-    copy(`${jsx}`)
-    setCopiedText(true)
+    e.preventDefault();
+    copy(`${jsx}`);
+    setCopiedText(true);
     setTimeout(() => {
-      setCopiedText(false)
-    }, 3000)
+      setCopiedText(false);
+    }, 3000);
   }
-  console.log(component)
+
   return (
     <>
-      
       <section className="bg-[#120e0e] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
         <section className="flex p-3 bg-[#111111] justify-center items-center lg:justify-between">
           <div>
@@ -62,7 +62,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
                     {n.title}
                   </button>
                 </>
-              )
+              );
             })}
           </div>
         </section>
@@ -70,7 +70,7 @@ export default function CodeDisplay({ component, jsx }: Props) {
 
         <div>
           <>
-            {tab === 'Preview' ? (
+            {tab === "Preview" ? (
               <div className="max-h-[50rem] overflow-scroll bg-[#181818]  ">
                 <section className="min-h-[5rem] py-2 flex flex-col justify-center items-center  w-full ">
                   {component}
@@ -90,7 +90,10 @@ export default function CodeDisplay({ component, jsx }: Props) {
                     )}
                   </button>
                 </div>
-                <SyntaxHighlighter language="javascript" style={stackoverflowDark}>
+                <SyntaxHighlighter
+                  language="javascript"
+                  style={stackoverflowDark}
+                >
                   {jsx}
                 </SyntaxHighlighter>
               </div>
@@ -99,5 +102,5 @@ export default function CodeDisplay({ component, jsx }: Props) {
         </div>
       </section>
     </>
-  )
+  );
 }

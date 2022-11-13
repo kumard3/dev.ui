@@ -5,11 +5,11 @@ const GAScript = () => {
   return (
     <>
       <Script
-        strategy="worker"
+        strategy="afterInteractive"
         src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsID}`}
       />
 
-      <Script strategy="worker" id="ga-script">
+      <Script strategy="afterInteractive" id="ga-script">
         {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}

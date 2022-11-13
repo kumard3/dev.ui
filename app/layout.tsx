@@ -17,9 +17,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           ⭐️ Star DevUI on GitHub ⭐️
         </a>
-        <Analytics />
         <Nav />
         <div className=" overflow-hidden">{children}</div>
+        <Analytics />
       </body>
     </html>
   )

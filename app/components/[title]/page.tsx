@@ -5,6 +5,12 @@ import { codeData } from '../../../data/components/data'
 import CodeDisplay from '../../../website/codeDisplay/CodeDisplay'
 import Loader from '../../loader'
 
+export async function generateStaticParams() {
+  return codeData.map((post) => ({
+    title: [post.urlTitle],
+  }))
+}
+
 export default function page({ params }: any) {
   const route = params?.title
   const filterdata = codeData.filter((e) => e.urlTitle === route)

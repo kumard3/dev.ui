@@ -51,7 +51,7 @@ export const codeData = [
       {
         name: '',
         component: <HeroSection10 />,
-        jsx: ` export default function HeroSection() {
+        jsx: `export default function HeroSection() {
           return (
             <div className="relative min-h-screen overflow-hidden">
               <nav className=" container relative mx-auto flex w-full items-center justify-between px-5 py-3 text-xl ">

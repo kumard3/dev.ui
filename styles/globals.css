@@ -64,10 +64,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @font-face {
-  font-family: 'Joyride';
-  src: url(/fonts/Joyride-Round.otf) format('opentype');
-} */
 
 .Readex{
   font-family: 'Readex Pro', sans-serif;

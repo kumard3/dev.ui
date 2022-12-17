@@ -7,6 +7,7 @@ export default function page() {
         alt="pc_guy"
         className="object-contain h-80 sm:h-96 md:h-112 xl:h-128"
         src="/pc_guy.png"
+        loading="lazy"
       />
     </div>
   );

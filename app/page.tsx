@@ -5,25 +5,10 @@ interface herocard {
   title: string
   description: string
 }
-const HeroCardData = [
-  {
-    title: 'Easy to use UI elements based on Tailwind CSS ' as string,
-    description:
-      'dev.UI is a toolkit for developers and designers to make creating interfaces easier. Everything is modular and customizable to fit your brand.',
-  },
-  {
-    title: 'Get the essentials in one place    ',
-    description:
-      "We know it's frustrating to find an UI kit with all the right components and then find out that each element costs money, so we're offering 100+ building blocks for free. And there are many more on the way!    ",
-  },
-  {
-    title: 'Stop wasting time with CSS',
-    description:
-      "You don't have to be a professional designer or developer to create something beautiful.Just copy-paste the code from dev.UI into your project, add your own content and hit publish.  ",
-  },
-]
+
 
 const HeroCard = ({ title, description }: herocard) => {
+  
   return (
     <div className=" glass m-2  h-[15rem]  max-w-[400px] p-5 rounded-lg">
       <h1 className="font-bold text-xl">{title}</h1>
@@ -33,6 +18,23 @@ const HeroCard = ({ title, description }: herocard) => {
 }
 
 const Home = () => {
+  const HeroCardData = [
+    {
+      title: 'Easy to use UI elements based on Tailwind CSS ' as string,
+      description:
+        'dev.UI is a toolkit for developers and designers to make creating interfaces easier. Everything is modular and customizable to fit your brand.',
+    },
+    {
+      title: 'Get the essentials in one place    ',
+      description:
+        "We know it's frustrating to find an UI kit with all the right components and then find out that each element costs money, so we're offering 100+ building blocks for free. And there are many more on the way!    ",
+    },
+    {
+      title: 'Stop wasting time with CSS',
+      description:
+        "You don't have to be a professional designer or developer to create something beautiful.Just copy-paste the code from dev.UI into your project, add your own content and hit publish.  ",
+    },
+  ]
   return (
     <div className="min-h-screen overflow-hidden">
       <div className="relative  w-full -right-[1rem] ">

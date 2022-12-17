@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "export": "next export",
-    "build": "next build && next-sitemap",
+    "build": "next build",
     "postbuild": "next-sitemap",
     "lint": "next lint --fix --dir app --dir components --dir lib --dir layouts --dir scripts",
     "lint.fix": "next lint --fix"

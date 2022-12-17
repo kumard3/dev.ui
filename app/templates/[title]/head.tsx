@@ -5,7 +5,7 @@ export default function head() {
   const pathname = usePathname()
   return (
     <>
-      <title>{`Dev ui | ${pathname?.slice(12)}`}</title>
+      <title>{`Dev ui | ${pathname?.slice(11)}`}</title>
     </>
   )
 }

@@ -2,6 +2,13 @@ import '../styles/globals.css'
 import Analytics from '../website/analytics'
 import Nav from '../website/components/Nav'
 
+export const dynamic = 'auto',
+  dynamicParams = true,
+  revalidate = false,
+  fetchCache = 'auto',
+  runtime = 'nodejs',
+  preferredRegion = 'auto'
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>

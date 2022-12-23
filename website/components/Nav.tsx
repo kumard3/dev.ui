@@ -26,8 +26,7 @@ export default function Nav() {
             <div className="flex ">
               <Link href="/" passHref>
                 <button className={`gradientText hero-title text-[50px] font-bold leading-none `}>
-                  {' '}
-                  dev.UI{' '}
+                  <h1>dev.UI</h1>
                 </button>
               </Link>
             </div>
@@ -38,7 +37,7 @@ export default function Nav() {
                     <button
                       type="button"
                       className={`${button} ${
-                        pathname?.includes(n.href)  && 'bg-white/10'
+                        pathname?.includes(n.href) && 'bg-white/10'
                       } text-[25px] cursor-pointer`}
                     >
                       {n.name}
@@ -71,7 +70,9 @@ export default function Nav() {
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href} passHref>
-                    <h1 className={`${button} text-xl md:text-2xl cursor-pointer`}>{n.name}</h1>
+                    <button className={`${button} text-xl md:text-2xl cursor-pointer`}>
+                      {n.name}
+                    </button>
                   </Link>
                 )
               })}

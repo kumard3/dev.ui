@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import Card1 from '../../components/card/Card1'
 import Card2 from '../../components/card/Card2'
 import Card3 from '../../components/card/Card3'
@@ -878,103 +878,11 @@ export const codeData = [
     store: [
       {
         component: <VerticalTab />,
-        jsx: `import { useState } from 'react'
-
-        export default function VerticalTab() {
-          const data = [
-            {
-              title: 'Item One',
-              data: 'lorem ipsum dolor sit amet, consectetur adip',
-            },
-            {
-              title: 'Item two',
-              data: 'lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip',
-            },
-          ]
-          const [tab, setTab] = useState(data[0].title)
-        
-          const filterdata = data.filter((e) => e.title === tab)
-          const active = filterdata[0].title
-        
-          return (
-            <div className=" flex h-60 bg-black rounded-xl">
-              <div className=" flex flex-col mt-5">
-                {data.map((n, index) => {
-                  return (
-                    <button
-                      onClick={() => setTab(n.title)}
-                      className={ $ {
-                        active === n.title
-                          ? 'text-blue-400 border-r-blue-400 border-r-2 max-w-full transition-all  duration-200 ease-in-out'
-                          : ''
-                      }  px-10 py-5 }
-                      key={index}
-                    >
-                      {n.title}
-                    </button>
-                  )
-                })}
-              </div>
-              <div className=" pt-4 px-4 max-w-xs">
-                {filterdata.map((n, index) => {
-                  return <div key={index}>{n.data}</div>
-                })}
-              </div>
-            </div>
-          )
-        }
-        
-          `,
+        jsx: "import { useState } from 'react'\n\nexport default function TabSection() {\n  const data = [\n    {\n      title: 'Item One',\n      data: 'lorem ipsum dolor sit amet, consectetur adip',\n    },\n    {\n      title: 'Item two',\n      data: 'lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip',\n    },\n  ]\n  const [tab, setTab] = useState(data[0].title)\n\n  const filterdata = data.filter((e) => e.title === tab)\n  const active = filterdata[0].title\n\n  return (\n    <div className=\"h-60 bg-black max-w-xs mx-2 sm:w-[20rem] rounded-xl\">\n      <div className=\"px-10 flex justify-between\">\n        {data.map((n, index) => {\n          return (\n            <button\n              onClick={() => setTab(n.title)}\n              className={`${\n                active === n.title\n                  ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'\n                  : ''\n              } w-[110px] py-2 `}\n              key={index}\n            >\n              {n.title}\n            </button>\n          )\n        })}\n      </div>\n\n      <div className=\"pt-4 px-4\">\n        {filterdata.map((n, index) => {\n          return <div key={index}>{n.data}</div>\n        })}\n      </div>\n    </div>\n  )\n}\n",
       },
       {
         component: <TabSection />,
-        jsx: ` 
-        export default function TabSection() {
-          const data = [
-            {
-              title: 'Item One',
-              data: 'lorem ipsum dolor sit amet, consectetur adip',
-            },
-            {
-              title: 'Item two',
-              data: 'lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip',
-            },
-          ]
-          const [tab, setTab] = useState(data[0].title)
-        
-          const filterdata = data.filter((e) => e.title === tab)
-          const active = filterdata[0].title
-        
-          return (
-            <div className="h-60 bg-black max-w-xs mx-2 sm:w-[20rem] rounded-xl">
-      <div className="px-10 flex justify-between">
-        {data.map((n, index) => {
-          return (
-            <button
-              onClick={() => setTab(n.title)}
-              className={ $ {
-                active === n.title
-                  ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'
-                  : ''
-              } w-[110px] py-2 }
-              key={index}
-            >
-              {n.title}
-            </button>
-          )
-        })}
-      </div>
-
-      <div className="pt-4 px-4">
-        {filterdata.map((n, index) => {
-          return <div key={index}>{n.data}</div>
-        })}
-      </div>
-    </div>
-
-          )
-        }
-        `,
+        jsx: "import { useState } from 'react'\n\nexport default function TabSection() {\n  const data = [\n    {\n      title: 'Item One',\n      data: 'lorem ipsum dolor sit amet, consectetur adip',\n    },\n    {\n      title: 'Item two',\n      data: 'lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip',\n    },\n  ]\n  const [tab, setTab] = useState(data[0].title)\n\n  const filterdata = data.filter((e) => e.title === tab)\n  const active = filterdata[0].title\n\n  return (\n    <div className=\"h-60 bg-black max-w-xs mx-2 sm:w-[20rem] rounded-xl\">\n      <div className=\"px-10 flex justify-between\">\n        {data.map((n, index) => {\n          return (\n            <button\n              onClick={() => setTab(n.title)}\n              className={`${\n                active === n.title\n                  ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'\n                  : ''\n              } w-[110px] py-2 `}\n              key={index}\n            >\n              {n.title}\n            </button>\n          )\n        })}\n      </div>\n\n      <div className=\"pt-4 px-4\">\n        {filterdata.map((n, index) => {\n          return <div key={index}>{n.data}</div>\n        })}\n      </div>\n    </div>\n  )\n}",
       },
     ],
   },
@@ -1320,82 +1228,7 @@ export const codeData = [
     store: [
       {
         component: <Modal />,
-        jsx: `<import { useState } from 'react'
-
-          export default function Modal() {
-            const [isModalOpen, setModalOpen] = useState(false)
-          
-            return (
-              <div className=" flex flex-col">
-                <button className="bg-white/20 p-3 rounded-xl" onClick={() => setModalOpen(true)}>
-                  click me
-                </button>
-                <>
-                  {isModalOpen ? (
-                    <div
-                      className="fixed z-50 inset-0 overflow-y-auto"
-                      aria-labelledby="modal-title"
-                      role="model"
-                      aria-modal="true"
-                    >
-                      <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
-                        <div
-                          className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity"
-                          aria-hidden="true"
-                        ></div>
-          
-                        <span
-                          className="hidden sm:inline-block sm:align-middle sm:h-screen"
-                          aria-hidden="true"
-                        >
-                          &#8203;
-                        </span>
-          
-                        <div className="inline-block align-bottom bg-white dark:bg-black/80 dark:text-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">
-                          <div className="bg-white dark:bg-black/80 dark:text-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
-                            <div className="sm:flex sm:items-start">
-                              <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                                <h3 className="text-lg leading-6 font-medium text-gray-900 " id="modal-title">
-                                  Lorem ipsum
-                                </h3>
-                                <div className="mt-2">
-                                  <p className="text-sm text-gray-500 dark:bg-black/80 dark:text-white">
-                                    dolor sit amet consectetur adipisicing elit. Corporis atque beatae
-                                    exercitationem. Eligendi sit excepturi harum necessitatibus. Veritatis
-                                    sequi nemo corporis, autem, itaque quae debitis error laboriosam
-                                    recusandae optio ea!
-                                  </p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <div className="bg-gray-50 dark:bg-black/80 dark:text-white px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
-                            <button
-                              type="button"
-                              onClick={() => setModalOpen(!true)}
-                              className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 sm:ml-3 sm:w-auto sm:text-sm"
-                            >
-                              Accept
-                            </button>
-                            <button
-                              type="button"
-                              onClick={() => setModalOpen(!true)}
-                              className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"
-                            >
-                              Cancel
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    ''
-                  )}
-                </>
-              </div>
-            )
-          }
-          `,
+        jsx: 'import { useState } from \'react\'\n\nexport default function Modal() {\n  const [isModalOpen, setModalOpen] = useState(false)\n\n  return (\n    <div className=" flex flex-col">\n      <button className="bg-white/20 p-3 rounded-xl" onClick={() => setModalOpen(true)}>\n        click me\n      </button>\n      <>\n        {isModalOpen ? (\n          <div\n            className="fixed z-50 inset-0 overflow-y-auto"\n            aria-labelledby="modal-title"\n            role="model"\n            aria-modal="true"\n          >\n            <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">\n              <div\n                className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity"\n                aria-hidden="true"\n              ></div>\n\n              <span\n                className="hidden sm:inline-block sm:align-middle sm:h-screen"\n                aria-hidden="true"\n              >\n                &#8203;\n              </span>\n\n              <div className="inline-block align-bottom bg-white dark:bg-black/80 dark:text-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">\n                <div className="bg-white dark:bg-black/80 dark:text-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">\n                  <div className="sm:flex sm:items-start">\n                    <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">\n                      <h3 className="text-lg leading-6 font-medium text-gray-900 " id="modal-title">\n                        Lorem ipsum\n                      </h3>\n                      <div className="mt-2">\n                        <p className="text-sm text-gray-500 dark:bg-black/80 dark:text-white">\n                          dolor sit amet consectetur adipisicing elit. Corporis atque beatae\n                          exercitationem. Eligendi sit excepturi harum necessitatibus. Veritatis\n                          sequi nemo corporis, autem, itaque quae debitis error laboriosam\n                          recusandae optio ea!\n                        </p>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n                <div className="bg-gray-50 dark:bg-black/80 dark:text-white px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">\n                  <button\n                    type="button"\n                    onClick={() => setModalOpen(!true)}\n                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 sm:ml-3 sm:w-auto sm:text-sm"\n                  >\n                    Accept\n                  </button>\n                  <button\n                    type="button"\n                    onClick={() => setModalOpen(!true)}\n                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"\n                  >\n                    Cancel\n                  </button>\n                </div>\n              </div>\n            </div>\n          </div>\n        ) : (\n          \'\'\n        )}\n      </>\n    </div>\n  )\n}',
       },
     ],
   },
@@ -1406,168 +1239,12 @@ export const codeData = [
     store: [
       {
         component: <Footer1 />,
-        jsx: `footer className="px-4 py-8 dark:bg-gray-800 dark:text-gray-400">
-                  <div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
-                    <div className="flex flex-row pr-3 space-x-4 sm:space-x-8">
-                      <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full dark:bg-indigo-400">
-                        Logo
-                      </div>
-                      <ul className="flex flex-wrap items-center space-x-4 sm:space-x-8">
-                        <li>
-                          <a href="#">Terms of Use</a>
-                        </li>
-                        <li>
-                          <a href="#">Privacy</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <ul className="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
-                      <li>
-                        <a href="#">Instagram</a>
-                      </li>
-                      <li>
-                        <a href="#">Facebook</a>
-                      </li>
-                      <li>
-                        <a href="#">Twitter</a>
-                      </li>
-                    </ul>
-                  </div>
-                </footer>`,
+        jsx: 'export default function Footer1() {\n  return (\n    <footer className="px-4 py-8  w-full bg-black">\n      <div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">\n        <div className="flex flex-row pr-3 space-x-4 sm:space-x-8">\n          <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-white/30 ">\n            Logo\n          </div>\n          <ul className="flex flex-wrap items-center space-x-4 sm:space-x-8">\n            <li>\n              <a href="#">Terms of Use</a>\n            </li>\n            <li>\n              <a href="#">Privacy</a>\n            </li>\n          </ul>\n        </div>\n        <ul className="flex flex-wrap pl-3 space-x-4 sm:space-x-8">\n          <li>\n            <a href="#">Instagram</a>\n          </li>\n          <li>\n            <a href="#">Facebook</a>\n          </li>\n          <li>\n            <a href="#">Twitter</a>\n          </li>\n        </ul>\n      </div>\n    </footer>\n  )\n}',
       },
       {
         component: <Footer2 />,
 
-        jsx: `<footer className="py-6 bg-black w-full">
-        <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">
-          <div className="grid grid-cols-12">
-            <div className="pb-6 col-span-full md:pb-0 md:col-span-6">
-              <a href="#" className="flex justify-center space-x-3 md:justify-start">
-                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/30">
-                  Logo
-                </div>
-                <span className="self-center text-2xl font-semibold">Brand name</span>
-              </a>
-            </div>
-            <div className="col-span-6 text-center md:text-left md:col-span-3">
-              <p className="pb-1 text-lg font-medium">Category</p>
-              <ul>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-span-6 text-center md:text-left md:col-span-3">
-              <p className="pb-1 text-lg font-medium">Category</p>
-              <ul>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:dark:text-gray-400">
-                    Link
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="grid justify-center pt-6 lg:justify-between">
-            <div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">
-              <span>©2021 All rights reserved</span>
-              <a href="#">
-                <span>Privacy policy</span>
-              </a>
-              <a href="#">
-                <span>Terms of service</span>
-              </a>
-            </div>
-            <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">
-              <a
-                href="#"
-                title="Email"
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
-                </svg>
-              </a>
-              <a
-                href="#"
-                title="Twitter"
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 50 50"
-                  fill="currentColor"
-                  className="w-5 h-5"
-                >
-                  <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>
-                </svg>
-              </a>
-              <a
-                href="#"
-                title="GitHub"
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  className="w-5 h-5"
-                >
-                  <path d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>`,
+        jsx: 'export default function Footer2() {\n  return (\n    <footer className="py-6 bg-black w-full">\n      <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">\n        <div className="grid grid-cols-12">\n          <div className="pb-6 col-span-full md:pb-0 md:col-span-6">\n            <a href="#" className="flex justify-center space-x-3 md:justify-start">\n              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/30">\n                Logo\n              </div>\n              <span className="self-center text-2xl font-semibold">Brand name</span>\n            </a>\n          </div>\n          <div className="col-span-6 text-center md:text-left md:col-span-3">\n            <p className="pb-1 text-lg font-medium">Category</p>\n            <ul>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n            </ul>\n          </div>\n          <div className="col-span-6 text-center md:text-left md:col-span-3">\n            <p className="pb-1 text-lg font-medium">Category</p>\n            <ul>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n            </ul>\n          </div>\n        </div>\n        <div className="grid justify-center pt-6 lg:justify-between">\n          <div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">\n            <span>©2021 All rights reserved</span>\n            <a href="#">\n              <span>Privacy policy</span>\n            </a>\n            <a href="#">\n              <span>Terms of service</span>\n            </a>\n          </div>\n          <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">\n            <a\n              href="#"\n              title="Email"\n              className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30"\n            >\n              <svg\n                xmlns="http://www.w3.org/2000/svg"\n                viewBox="0 0 20 20"\n                fill="currentColor"\n                className="w-5 h-5"\n              >\n                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>\n                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>\n              </svg>\n            </a>\n            <a\n              href="#"\n              title="Twitter"\n              className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30"\n            >\n              <svg\n                xmlns="http://www.w3.org/2000/svg"\n                viewBox="0 0 50 50"\n                fill="currentColor"\n                className="w-5 h-5"\n              >\n                <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>\n              </svg>\n            </a>\n            <a\n              href="#"\n              title="GitHub"\n              className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30"\n            >\n              <svg\n                xmlns="http://www.w3.org/2000/svg"\n                fill="currentColor"\n                viewBox="0 0 24 24"\n                className="w-5 h-5"\n              >\n                <path d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z"></path>\n              </svg>\n            </a>\n          </div>\n        </div>\n      </div>\n    </footer>\n  )\n}',
       },
     ],
   },

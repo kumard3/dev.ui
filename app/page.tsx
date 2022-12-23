@@ -6,9 +6,7 @@ interface herocard {
   description: string
 }
 
-
 const HeroCard = ({ title, description }: herocard) => {
-  
   return (
     <div className=" glass m-2  h-[15rem]  max-w-[400px] p-5 rounded-lg">
       <h1 className="font-bold text-xl">{title}</h1>

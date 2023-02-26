@@ -1,4 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+export const metadata = {
+  title: 'Templates',
+}
 
 export default  function page() {
 

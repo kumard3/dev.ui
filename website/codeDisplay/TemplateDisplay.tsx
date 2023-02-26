@@ -1,7 +1,8 @@
+
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-sync-scripts */
 
-import { ReactNode, useState } from 'react'
+import { ReactNode, } from 'react'
 
 interface Props {
   component?: ReactNode
@@ -12,8 +13,7 @@ interface Props {
 }
 
 export default function TemplateDisplay({ Weburl, github, images, title }: Props) {
-  const [loaded, setLoaded] = useState(false)
-  console.log(loaded, 'loaded')
+
   return (
     <>
       <section className="container bg-[#111111] mx-auto max-w-lg overflow-hidden my-5 min-h-[15rem] ">

@@ -9,14 +9,16 @@ import { stackoverflowDark } from "react-syntax-highlighter/dist/cjs/styles/hljs
 import useCopyToClipboard from "./useCopyToClipboard";
 
 import { usePathname } from "next/navigation";
+import { codeData } from "../../data/components/data";
 
 interface Props {
   component?: ReactNode;
   jsx?: string;
   params: { title: string };
+  route: any;
 }
 
-export default function CodeDisplay({ component, jsx, params }: Props) {
+export default function CodeDisplay({ component, jsx, params, route }: Props) {
   const [value, copy] = useCopyToClipboard();
   const [tab, setTab] = useState("Preview");
   const [CopiedText, setCopiedText] = useState(false);
@@ -46,6 +48,10 @@ export default function CodeDisplay({ component, jsx, params }: Props) {
     }, 3000);
   }
 
+  const testData = codeData.filter((n) => n.urlTitle === route);
+  // const t = codeData.filter((n) => n.store.filter((n) => n.name === component));
+  const t = testData[0].store.filter((n) => n.name === component);
+
   return (
     <>
       <section className="bg-[#120e0e] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
@@ -73,7 +79,7 @@ export default function CodeDisplay({ component, jsx, params }: Props) {
             {tab === "Preview" ? (
               <div className="max-h-[50rem] overflow-scroll bg-[#181818]  ">
                 <section className="min-h-[5rem] py-2 flex flex-col justify-center items-center  w-full ">
-                  {component}
+                  {t[0]?.component}
                 </section>
               </div>
             ) : (

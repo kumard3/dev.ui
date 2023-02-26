@@ -1,55 +1,59 @@
-'use client'
-import Card1 from '../../components/card/Card1'
-import Card2 from '../../components/card/Card2'
-import Card3 from '../../components/card/Card3'
-import Card4 from '../../components/card/Card4'
-import Card5 from '../../components/card/Card5'
-import Card6 from '../../components/card/Card6'
+"use client";
+import Card1 from "../../components/card/Card1";
+import Card2 from "../../components/card/Card2";
+import Card3 from "../../components/card/Card3";
+import Card4 from "../../components/card/Card4";
+import Card5 from "../../components/card/Card5";
+import Card6 from "../../components/card/Card6";
 
-import Footer1 from '../../components/footer/Footer1'
-import Footer2 from '../../components/footer/Footer2'
+import Footer1 from "../../components/footer/Footer1";
+import Footer2 from "../../components/footer/Footer2";
 
-import Button1 from '../../components/button/Button1'
-import Button2 from '../../components/button/Button2'
-import Button3 from '../../components/button/Button3'
-import Button4 from '../../components/button/Button4'
-import Button5 from '../../components/button/Button5'
+import Button1 from "../../components/button/Button1";
+import Button2 from "../../components/button/Button2";
+import Button3 from "../../components/button/Button3";
+import Button4 from "../../components/button/Button4";
+import Button5 from "../../components/button/Button5";
 
-import Nav1 from '../../components/nav/Nav1'
-import Nav2 from '../../components/nav/Nav2'
-import { Feature1 } from '../../components/features/Features1'
+import Nav1 from "../../components/nav/Nav1";
+import Nav2 from "../../components/nav/Nav2";
+import { Feature1 } from "../../components/features/Features1";
 
-import TabSection from '../../components/tab/TabSection'
-import VerticalTab from '../../components/tab/VerticalTab'
+import TabSection from "../../components/tab/TabSection";
+import VerticalTab from "../../components/tab/VerticalTab";
 
-import { SquareAvatar, ContentAvatar, CircleAvatar } from '../../components/avatar/index'
+import {
+  SquareAvatar,
+  ContentAvatar,
+  CircleAvatar,
+} from "../../components/avatar/index";
 
-import HeroSection from '../../components/Hero/HeroSection'
-import HeroSection2 from '../../components/Hero/HeroSection2'
-import Modal from '../../components/modal/Modal'
-import HeroSection3 from '../../components/Hero/HeroSection3'
-import HeroSection4 from '../../components/Hero/HeroSection4'
-import HeroSection5 from '../../components/Hero/HeroSection5'
-import HeroSection6 from '../../components/Hero/HeroSection6'
-import HeroSection7 from '../../components/Hero/HeroSection7'
-import HeroSection8 from '../../components/Hero/HeroSection8'
-import Card7 from '../../components/card/Card7'
-import Card9 from '../../components/card/Card9'
-import Card8 from '../../components/card/Card8'
-import HeroSection10 from '../../components/Hero/HeroSection10'
-import Card10 from '../../components/card/Card10'
-import Button6 from '../../components/button/Button6'
-import Button7 from '../../components/button/Button7'
-import Button8 from '../../components/button/Button8'
+import HeroSection from "../../components/Hero/HeroSection";
+import HeroSection2 from "../../components/Hero/HeroSection2";
+import Modal from "../../components/modal/Modal";
+import HeroSection3 from "../../components/Hero/HeroSection3";
+import HeroSection4 from "../../components/Hero/HeroSection4";
+import HeroSection5 from "../../components/Hero/HeroSection5";
+import HeroSection6 from "../../components/Hero/HeroSection6";
+import HeroSection7 from "../../components/Hero/HeroSection7";
+import HeroSection8 from "../../components/Hero/HeroSection8";
+import Card7 from "../../components/card/Card7";
+import Card9 from "../../components/card/Card9";
+import Card8 from "../../components/card/Card8";
+import HeroSection10 from "../../components/Hero/HeroSection10";
+import Card10 from "../../components/card/Card10";
+import Button6 from "../../components/button/Button6";
+import Button7 from "../../components/button/Button7";
+import Button8 from "../../components/button/Button8";
 
 export const codeData = [
   {
-    url: '/components/',
-    title: 'Hero',
-    urlTitle: 'hero',
+    url: "/components/",
+    title: "Hero",
+    urlTitle: "hero",
     store: [
       {
-        name: '',
+        name: "HeroSection10",
         component: <HeroSection10 />,
         jsx: `export default function HeroSection() {
           return (
@@ -100,7 +104,7 @@ export const codeData = [
         `,
       },
       {
-        name: '',
+        name: "HeroSection8",
         component: <HeroSection8 />,
         jsx: ` export default function HeroSection8() {
           const data = ['HOME', 'GALLERY', 'BLOG', 'KNET']
@@ -296,7 +300,7 @@ export const codeData = [
         `,
       },
       {
-        name: '',
+        name: "HeroSection7",
         component: <HeroSection7 />,
         jsx: `export default function HeroSection7() {
           return (
@@ -442,7 +446,7 @@ export const codeData = [
         `,
       },
       {
-        name: '',
+        name: "HeroSection6",
         component: <HeroSection6 />,
         jsx: `export default function HeroSection6() {
           return (
@@ -494,7 +498,7 @@ export const codeData = [
         `,
       },
       {
-        name: '',
+        name: "HeroSection5",
         component: <HeroSection5 />,
         jsx: `export default function HeroSection5() {
           const NavData = ['Marketplace', 'Artists', 'Community']
@@ -627,6 +631,7 @@ export const codeData = [
         `,
       },
       {
+        name: "HeroSection2",
         component: <HeroSection2 />,
         jsx: `  <div className="relative min-h-screen w-full ">
         <div className="absolute inset-0 -z-0 opacity-90 w-full min-h-screen">
@@ -697,6 +702,8 @@ export const codeData = [
         `,
       },
       {
+        name: "HeroSection3",
+
         component: <HeroSection3 />,
         jsx: `  <div className="relative min-h-screen w-full ">
         <div className="absolute inset-0 -z-0 opacity-90 w-full min-h-screen">
@@ -767,6 +774,8 @@ export const codeData = [
         `,
       },
       {
+        name: "HeroSection4",
+
         component: <HeroSection4 />,
         jsx: `  <div className="relative min-h-screen w-full ">
         <div className="absolute inset-0 -z-0 opacity-90 w-full min-h-screen">
@@ -837,6 +846,8 @@ export const codeData = [
         `,
       },
       {
+        name: "HeroSection",
+
         component: <HeroSection />,
         jsx: ` <div className="container mx-auto flex flex-col items-center justify-center rounded-md bg-white">
         <section className="flex flex-col text-center">
@@ -872,26 +883,32 @@ export const codeData = [
     ],
   },
   {
-    url: '/components/',
-    title: 'Tab',
-    urlTitle: 'Tab',
+    url: "/components/",
+    title: "Tab",
+    urlTitle: "Tab",
     store: [
       {
+        name: "VerticalTab",
+
         component: <VerticalTab />,
         jsx: "import { useState } from 'react'\n\nexport default function TabSection() {\n  const data = [\n    {\n      title: 'Item One',\n      data: 'lorem ipsum dolor sit amet, consectetur adip',\n    },\n    {\n      title: 'Item two',\n      data: 'lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip',\n    },\n  ]\n  const [tab, setTab] = useState(data[0].title)\n\n  const filterdata = data.filter((e) => e.title === tab)\n  const active = filterdata[0].title\n\n  return (\n    <div className=\"h-60 bg-black max-w-xs mx-2 sm:w-[20rem] rounded-xl\">\n      <div className=\"px-10 flex justify-between\">\n        {data.map((n, index) => {\n          return (\n            <button\n              onClick={() => setTab(n.title)}\n              className={`${\n                active === n.title\n                  ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'\n                  : ''\n              } w-[110px] py-2 `}\n              key={index}\n            >\n              {n.title}\n            </button>\n          )\n        })}\n      </div>\n\n      <div className=\"pt-4 px-4\">\n        {filterdata.map((n, index) => {\n          return <div key={index}>{n.data}</div>\n        })}\n      </div>\n    </div>\n  )\n}\n",
       },
       {
+        name: "TabSection",
+
         component: <TabSection />,
         jsx: "import { useState } from 'react'\n\nexport default function TabSection() {\n  const data = [\n    {\n      title: 'Item One',\n      data: 'lorem ipsum dolor sit amet, consectetur adip',\n    },\n    {\n      title: 'Item two',\n      data: 'lorem ipsum dolor sit amet, consectetur adip lorem ipsum dolor sit amet, consectetur adip',\n    },\n  ]\n  const [tab, setTab] = useState(data[0].title)\n\n  const filterdata = data.filter((e) => e.title === tab)\n  const active = filterdata[0].title\n\n  return (\n    <div className=\"h-60 bg-black max-w-xs mx-2 sm:w-[20rem] rounded-xl\">\n      <div className=\"px-10 flex justify-between\">\n        {data.map((n, index) => {\n          return (\n            <button\n              onClick={() => setTab(n.title)}\n              className={`${\n                active === n.title\n                  ? 'text-blue-400 border-b-blue-400 border-b-2 transition-all  duration-200 ease-in-out'\n                  : ''\n              } w-[110px] py-2 `}\n              key={index}\n            >\n              {n.title}\n            </button>\n          )\n        })}\n      </div>\n\n      <div className=\"pt-4 px-4\">\n        {filterdata.map((n, index) => {\n          return <div key={index}>{n.data}</div>\n        })}\n      </div>\n    </div>\n  )\n}",
       },
     ],
   },
   {
-    url: '/components/',
-    title: 'Card',
-    urlTitle: 'card',
+    url: "/components/",
+    title: "Card",
+    urlTitle: "card",
     store: [
       {
+        name: "Card10",
+
         component: <Card10 />,
         jsx: `  <div className="flex flex-col rounded-xl  p-4"
         style={{
@@ -923,6 +940,7 @@ export const codeData = [
       </div>`,
       },
       {
+        name: "Card8",
         component: <Card8 />,
         jsx: `    <div className=" w-72 flex flex-col rounded-xl glass  min-h-72 mt-3 ">
         <div>
@@ -947,6 +965,8 @@ export const codeData = [
       </div>`,
       },
       {
+        name: "Card7",
+
         component: <Card7 />,
         jsx: `<div className="w-60 h-60 rounded-xl">
         <img
@@ -960,6 +980,8 @@ export const codeData = [
       </div>`,
       },
       {
+        name: "Card9",
+
         component: <Card9 />,
         jsx: `import  { useState } from 'react'
 
@@ -1043,6 +1065,8 @@ export const codeData = [
       },
 
       {
+        name: "Card1",
+
         component: <Card1 />,
         jsx: `<div className="max-w-xs p-6 rounded-md shadow-md bg-black">
         <img
@@ -1063,6 +1087,8 @@ export const codeData = [
       </div>`,
       },
       {
+        name: "Card2",
+
         component: <Card2 />,
         jsx: `<div className="max-w-xs rounded-md shadow-md bg-black text-gray-100">
         <img
@@ -1088,6 +1114,8 @@ export const codeData = [
       </div>`,
       },
       {
+        name: "Card3",
+
         component: <Card3 />,
         jsx: ` <div className="w-60 flex flex-col rounded-xl bg-black min-h-[19rem] ">
         <div>
@@ -1111,6 +1139,8 @@ export const codeData = [
         `,
       },
       {
+        name: "Card4",
+
         component: <Card4 />,
         jsx: `    <div className="relative max-w-lg p-8 border bg-black border-gray-100 shadow-xl rounded-xl">
         <span className="absolute right-4 top-4 rounded-full px-3 py-1.5 bg-green-100 text-green-600 font-medium text-xs">
@@ -1143,6 +1173,8 @@ export const codeData = [
         `,
       },
       {
+        name: "Card5",
+
         component: <Card5 />,
         jsx: `<div className="p-1 shadow-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl">
           <div className=" bg-black sm:p-10 p-6 rounded-xl">
@@ -1157,6 +1189,8 @@ export const codeData = [
         </div>`,
       },
       {
+        name: "Card6",
+
         component: <Card6 />,
         jsx: ` <div className="relative block group  ">
         <span className="absolute inset-0 border-2 border-white border-dashed rounded-lg"></span>
@@ -1172,11 +1206,13 @@ export const codeData = [
     ],
   },
   {
-    url: '/components/',
-    title: 'Features',
-    urlTitle: 'features',
+    url: "/components/",
+    title: "Features",
+    urlTitle: "features",
     store: [
       {
+        name: "Feature1",
+
         component: <Feature1 />,
         jsx: `<div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="grid gap-5 row-gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -1222,38 +1258,45 @@ export const codeData = [
     ],
   },
   {
-    url: '/components/',
-    title: 'Modal',
-    urlTitle: 'modal',
+    url: "/components/",
+    title: "Modal",
+    urlTitle: "modal",
     store: [
       {
+        name: "Modal",
+
         component: <Modal />,
         jsx: 'import { useState } from \'react\'\n\nexport default function Modal() {\n  const [isModalOpen, setModalOpen] = useState(false)\n\n  return (\n    <div className=" flex flex-col">\n      <button className="bg-white/20 p-3 rounded-xl" onClick={() => setModalOpen(true)}>\n        click me\n      </button>\n      <>\n        {isModalOpen ? (\n          <div\n            className="fixed z-50 inset-0 overflow-y-auto"\n            aria-labelledby="modal-title"\n            role="model"\n            aria-modal="true"\n          >\n            <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">\n              <div\n                className="fixed inset-0 bg-slate-500 bg-opacity-75 transition-opacity"\n                aria-hidden="true"\n              ></div>\n\n              <span\n                className="hidden sm:inline-block sm:align-middle sm:h-screen"\n                aria-hidden="true"\n              >\n                &#8203;\n              </span>\n\n              <div className="inline-block align-bottom bg-white dark:bg-black/80 dark:text-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full">\n                <div className="bg-white dark:bg-black/80 dark:text-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">\n                  <div className="sm:flex sm:items-start">\n                    <div className="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">\n                      <h3 className="text-lg leading-6 font-medium text-gray-900 " id="modal-title">\n                        Lorem ipsum\n                      </h3>\n                      <div className="mt-2">\n                        <p className="text-sm text-gray-500 dark:bg-black/80 dark:text-white">\n                          dolor sit amet consectetur adipisicing elit. Corporis atque beatae\n                          exercitationem. Eligendi sit excepturi harum necessitatibus. Veritatis\n                          sequi nemo corporis, autem, itaque quae debitis error laboriosam\n                          recusandae optio ea!\n                        </p>\n                      </div>\n                    </div>\n                  </div>\n                </div>\n                <div className="bg-gray-50 dark:bg-black/80 dark:text-white px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">\n                  <button\n                    type="button"\n                    onClick={() => setModalOpen(!true)}\n                    className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-red-600 text-base font-medium text-white hover:bg-red-700 sm:ml-3 sm:w-auto sm:text-sm"\n                  >\n                    Accept\n                  </button>\n                  <button\n                    type="button"\n                    onClick={() => setModalOpen(!true)}\n                    className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50  sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm"\n                  >\n                    Cancel\n                  </button>\n                </div>\n              </div>\n            </div>\n          </div>\n        ) : (\n          \'\'\n        )}\n      </>\n    </div>\n  )\n}',
       },
     ],
   },
   {
-    url: '/components/',
-    title: 'Footer',
-    urlTitle: 'footer',
+    url: "/components/",
+    title: "Footer",
+    urlTitle: "footer",
     store: [
       {
+        name: "Footer1",
+
         component: <Footer1 />,
         jsx: 'export default function Footer1() {\n  return (\n    <footer className="px-4 py-8  w-full bg-black">\n      <div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">\n        <div className="flex flex-row pr-3 space-x-4 sm:space-x-8">\n          <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full bg-white/30 ">\n            Logo\n          </div>\n          <ul className="flex flex-wrap items-center space-x-4 sm:space-x-8">\n            <li>\n              <a href="#">Terms of Use</a>\n            </li>\n            <li>\n              <a href="#">Privacy</a>\n            </li>\n          </ul>\n        </div>\n        <ul className="flex flex-wrap pl-3 space-x-4 sm:space-x-8">\n          <li>\n            <a href="#">Instagram</a>\n          </li>\n          <li>\n            <a href="#">Facebook</a>\n          </li>\n          <li>\n            <a href="#">Twitter</a>\n          </li>\n        </ul>\n      </div>\n    </footer>\n  )\n}',
       },
       {
         component: <Footer2 />,
+        name: "Footer2",
 
         jsx: 'export default function Footer2() {\n  return (\n    <footer className="py-6 bg-black w-full">\n      <div className="container px-6 mx-auto space-y-6 divide-y divide-gray-400 md:space-y-12 divide-opacity-50">\n        <div className="grid grid-cols-12">\n          <div className="pb-6 col-span-full md:pb-0 md:col-span-6">\n            <a href="#" className="flex justify-center space-x-3 md:justify-start">\n              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-white/30">\n                Logo\n              </div>\n              <span className="self-center text-2xl font-semibold">Brand name</span>\n            </a>\n          </div>\n          <div className="col-span-6 text-center md:text-left md:col-span-3">\n            <p className="pb-1 text-lg font-medium">Category</p>\n            <ul>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n            </ul>\n          </div>\n          <div className="col-span-6 text-center md:text-left md:col-span-3">\n            <p className="pb-1 text-lg font-medium">Category</p>\n            <ul>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n              <li>\n                <a href="#" className="hover:dark:text-gray-400">\n                  Link\n                </a>\n              </li>\n            </ul>\n          </div>\n        </div>\n        <div className="grid justify-center pt-6 lg:justify-between">\n          <div className="flex flex-col self-center text-sm text-center md:block lg:col-start-1 md:space-x-6">\n            <span>©2021 All rights reserved</span>\n            <a href="#">\n              <span>Privacy policy</span>\n            </a>\n            <a href="#">\n              <span>Terms of service</span>\n            </a>\n          </div>\n          <div className="flex justify-center pt-4 space-x-4 lg:pt-0 lg:col-end-13">\n            <a\n              href="#"\n              title="Email"\n              className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30"\n            >\n              <svg\n                xmlns="http://www.w3.org/2000/svg"\n                viewBox="0 0 20 20"\n                fill="currentColor"\n                className="w-5 h-5"\n              >\n                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>\n                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>\n              </svg>\n            </a>\n            <a\n              href="#"\n              title="Twitter"\n              className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30"\n            >\n              <svg\n                xmlns="http://www.w3.org/2000/svg"\n                viewBox="0 0 50 50"\n                fill="currentColor"\n                className="w-5 h-5"\n              >\n                <path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path>\n              </svg>\n            </a>\n            <a\n              href="#"\n              title="GitHub"\n              className="flex items-center justify-center w-10 h-10 rounded-full bg-white/30"\n            >\n              <svg\n                xmlns="http://www.w3.org/2000/svg"\n                fill="currentColor"\n                viewBox="0 0 24 24"\n                className="w-5 h-5"\n              >\n                <path d="M10.9,2.1c-4.6,0.5-8.3,4.2-8.8,8.7c-0.5,4.7,2.2,8.9,6.3,10.5C8.7,21.4,9,21.2,9,20.8v-1.6c0,0-0.4,0.1-0.9,0.1 c-1.4,0-2-1.2-2.1-1.9c-0.1-0.4-0.3-0.7-0.6-1C5.1,16.3,5,16.3,5,16.2C5,16,5.3,16,5.4,16c0.6,0,1.1,0.7,1.3,1c0.5,0.8,1.1,1,1.4,1 c0.4,0,0.7-0.1,0.9-0.2c0.1-0.7,0.4-1.4,1-1.8c-2.3-0.5-4-1.8-4-4c0-1.1,0.5-2.2,1.2-3C7.1,8.8,7,8.3,7,7.6C7,7.2,7,6.6,7.3,6 c0,0,1.4,0,2.8,1.3C10.6,7.1,11.3,7,12,7s1.4,0.1,2,0.3C15.3,6,16.8,6,16.8,6C17,6.6,17,7.2,17,7.6c0,0.8-0.1,1.2-0.2,1.4 c0.7,0.8,1.2,1.8,1.2,3c0,2.2-1.7,3.5-4,4c0.6,0.5,1,1.4,1,2.3v2.6c0,0.3,0.3,0.6,0.7,0.5c3.7-1.5,6.3-5.1,6.3-9.3 C22,6.1,16.9,1.4,10.9,2.1z"></path>\n              </svg>\n            </a>\n          </div>\n        </div>\n      </div>\n    </footer>\n  )\n}',
       },
     ],
   },
   {
-    url: '/components/',
-    title: 'Button',
-    urlTitle: 'button',
+    url: "/components/",
+    title: "Button",
+    urlTitle: "button",
     store: [
       {
+        name: "Button6",
+
         component: <Button6 />,
         jsx: `
         <button className="relative block group ">
@@ -1267,6 +1310,8 @@ export const codeData = [
       `,
       },
       {
+        name: "Button7",
+
         component: <Button7 />,
         jsx: `
         <button className="relative block group ">
@@ -1280,6 +1325,8 @@ export const codeData = [
       `,
       },
       {
+        name: "Button8",
+
         component: <Button8 />,
         jsx: `
      <button className="relative block group ">
@@ -1293,6 +1340,8 @@ export const codeData = [
       `,
       },
       {
+        name: "Button5",
+
         component: <Button5 />,
         jsx: `
     <button className="relative z-0 rounded bg-pink-500 px-10 py-3 transition-[all_0.3s_ease] after:absolute after:left-0 after:top-0 after:-z-10 after:h-full after:w-0 after:rounded after:bg-pink-700 after:transition-[all_0.3s_ease]  hover:after:w-full ">
@@ -1301,25 +1350,33 @@ export const codeData = [
       `,
       },
       {
+        name: "Button1",
+
         component: <Button1 />,
         jsx: `<button type="button" className="px-8 py-3 font-semibold rounded dark:bg-gray-100 dark:text-gray-800">Basic</button>`,
       },
       {
+        name: "Button2",
+
         component: <Button2 />,
         jsx: `<button type="button" className="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">Border</button>`,
       },
       {
+        name: "Button3",
+
         component: <Button3 />,
         jsx: `<button type="button" className="px-8 py-3 font-semibold rounded-full dark:bg-gray-100 dark:text-gray-800">Rounded</button>`,
       },
     ],
   },
   {
-    url: '/components/',
-    title: 'Nav',
-    urlTitle: 'nav',
+    url: "/components/",
+    title: "Nav",
+    urlTitle: "nav",
     store: [
       {
+        name: "Nav1",
+
         component: <Nav1 />,
         jsx: `<header className="p-4 bg-coolGray-100 text-coolGray-800 w-full">
         <div className="container flex justify-between h-16 mx-auto">
@@ -1401,6 +1458,8 @@ export const codeData = [
       </header>`,
       },
       {
+        name: "Nav2",
+
         component: <Nav2 />,
         jsx: `<header className = "p-4 dark:bg-gray-800 dark:text-gray-100">
           <div className="container flex justify-between h-16 mx-auto">
@@ -1504,11 +1563,13 @@ export const codeData = [
     ],
   },
   {
-    url: '/components/',
-    title: 'Avatar',
-    urlTitle: 'avatar',
+    url: "/components/",
+    title: "Avatar",
+    urlTitle: "avatar",
     store: [
       {
+        name: "SquareAvatar",
+
         component: <SquareAvatar />,
         jsx: `
         export const SquareAvatar = () => {
@@ -1522,6 +1583,8 @@ export const codeData = [
         };`,
       },
       {
+        name: "CircleAvatar",
+
         component: <CircleAvatar />,
         jsx: `export const CircleAvatar = () => {
           return (
@@ -1538,6 +1601,8 @@ export const codeData = [
         }`,
       },
       {
+        name: "ContentAvatar",
+
         component: <ContentAvatar />,
         jsx: `export const ContentAvatar = () => {
           return (
@@ -1555,4 +1620,4 @@ export const codeData = [
       },
     ],
   },
-]
+];

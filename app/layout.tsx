@@ -1,15 +1,58 @@
-import '../styles/globals.css'
-import Analytics from '../website/analytics'
-import Nav from '../website/components/Nav'
+import "../styles/globals.css";
+import Analytics from "../website/analytics";
+import Nav from "../website/components/Nav";
 
-export const dynamic = 'auto',
+export const metadata = {
+  title: {
+    default: "Dev.UI",
+    template: "%s | Dev.UI",
+  },
+  description:
+    "Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS",
+  keywords: [
+    "next.js",
+    "react.js",
+    "open source",
+    "dev.ui",
+    "component library",
+    "free components",
+    "free template",
+  ],
+  openGraph: {
+    type: "website",
+    url: "https://dev-ui.vercel.app/",
+    title: "Dev.Ui",
+    description:
+      "Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS",
+    siteName: "Dev.Ui",
+    images: [
+      {
+        url: "https://dev-ui.vercel.app/dev-ui.gif",
+      },
+    ],
+    videos: [
+      {
+        url: "https://dev-ui.vercel.app/dev-ui.gif",
+      },
+    ],
+  },
+  robots: "index, follow",
+  other: {
+    "google-site-verification": "ojrNbpH_TNGvB76f7GhW14IFc9z24nOduorPB2SOdYc",
+  },
+};
+export const dynamic = "auto",
   dynamicParams = true,
   revalidate = false,
-  fetchCache = 'auto',
-  runtime = 'nodejs',
-  preferredRegion = 'auto'
+  fetchCache = "auto",
+  runtime = "nodejs",
+  preferredRegion = "auto";
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html>
       <head />
@@ -29,5 +72,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

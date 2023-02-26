@@ -72,9 +72,9 @@ export default function CodeDisplay({ component, jsx, params }: Props) {
           <>
             {tab === "Preview" ? (
               <div className="max-h-[50rem] overflow-scroll bg-[#181818]  ">
-                <section className="min-h-[5rem] py-2 flex flex-col justify-center items-center  w-full ">
-                  {component}
-                </section>
+                {/* <section className="min-h-[5rem] py-2 flex flex-col justify-center items-center  w-full ">
+                  {!component}
+                </section> */}
               </div>
             ) : (
               <div className="max-h-[50rem] overflow-scroll relative ">

@@ -1,10 +1,8 @@
-import React from 'react'
-
 export default function Loader() {
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center w-full h-screen items-center">
       <svg
-        className="animate-spin   h-28 w-28 text-white fill-white"
+        className="animate-spin   h-10 w-10 text-white fill-white"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
@@ -24,5 +22,5 @@ export default function Loader() {
         ></path>
       </svg>
     </div>
-  )
+  );
 }

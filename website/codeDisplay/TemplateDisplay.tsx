@@ -1,36 +1,33 @@
-
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable @next/next/no-sync-scripts */
-
-import { ReactNode, } from 'react'
+import { ReactNode } from "react";
 
 interface Props {
-  component?: ReactNode
-  Weburl?: string
-  github?: string
-  images?: string
-  title?: string
+  component?: ReactNode;
+  Weburl?: string;
+  github?: string;
+  images?: string;
+  title?: string;
 }
 
-export default function TemplateDisplay({ Weburl, github, images, title }: Props) {
-
+export default function TemplateDisplay({
+  Weburl,
+  github,
+  images,
+  title,
+}: Props) {
   return (
     <>
-      <section className="container bg-[#111111] mx-auto max-w-lg overflow-hidden my-5 min-h-[15rem] ">
-        <div className=" mx-1 flex flex-col   border-gray-500  border relative rounded">
-          <div className="flex-1 flex justify-center items-center overflow-hidden p-2 bg-[#111111] min-h-[10rem] ">
+      <section className="container bg-black-1 mx-auto max-w-lg rounded overflow-hidden my-5 h-80 ">
+        <div className=" mx-1 flex flex-col rounded  border-gray-500  border relative ">
+          <div className=" relative h-[270px] w-full overflow-hidden rounded ">
             <img
               src={images}
               loading="lazy"
-              alt="Template"
-              width="100%"
-              height="100%"
-              className="rounded"
+              alt={title}
+              className="h-full w-full object-cover object-center transition duration-200 "
             />
           </div>
-
           <div className="h-12 flex justify-between items-center shrink-0  border-gray-500  border-t">
-            <h1 className=" text-md font-bold ml-10 ">{title} </h1>
+            <h1 className=" text-md font-bold ml-10 ">{title}</h1>
             <nav className="flex shrink-0 divide-x border-gray-500  border-l">
               <a
                 href={Weburl}
@@ -91,5 +88,5 @@ export default function TemplateDisplay({ Weburl, github, images, title }: Props
         </div>
       </section>
     </>
-  )
+  );
 }

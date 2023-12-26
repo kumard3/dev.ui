@@ -55,7 +55,7 @@ export default function CodeDisplay({ component, jsx, params, route }: Props) {
   return (
     <>
       <section className="bg-[#120e0e] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
-        <section className="flex p-3 bg-[#111111] justify-center items-center lg:justify-between">
+        <section className="flex p-3 bg-black-1 justify-center items-center lg:justify-between">
           <div>
             {data.map((n, index) => {
               return (

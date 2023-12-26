@@ -1,9 +1,9 @@
-import Link from 'next/link'
+import Link from "next/link";
 
-import ShowCase from '../website/components/ShowCase'
+import ShowCase from "../website/components/ShowCase";
 interface herocard {
-  title: string
-  description: string
+  title: string;
+  description: string;
 }
 
 const HeroCard = ({ title, description }: herocard) => {
@@ -12,27 +12,27 @@ const HeroCard = ({ title, description }: herocard) => {
       <h1 className="font-bold text-xl">{title}</h1>
       <p className="text-[17px] py-3 text-gray-200">{description}</p>
     </div>
-  )
-}
+  );
+};
 
 const Home = () => {
   const HeroCardData = [
     {
-      title: 'Easy to use UI elements based on Tailwind CSS ' as string,
+      title: "Easy to use UI elements based on Tailwind CSS " as string,
       description:
-        'dev.UI is a toolkit for developers and designers to make creating interfaces easier. Everything is modular and customizable to fit your brand.',
+        "dev.UI is a toolkit for developers and designers to make creating interfaces easier. Everything is modular and customizable to fit your brand.",
     },
     {
-      title: 'Get the essentials in one place    ',
+      title: "Get the essentials in one place    ",
       description:
         "We know it's frustrating to find an UI kit with all the right components and then find out that each element costs money, so we're offering 100+ building blocks for free. And there are many more on the way!    ",
     },
     {
-      title: 'Stop wasting time with CSS',
+      title: "Stop wasting time with CSS",
       description:
         "You don't have to be a professional designer or developer to create something beautiful.Just copy-paste the code from dev.UI into your project, add your own content and hit publish.  ",
     },
-  ]
+  ];
   return (
     <div className="min-h-screen overflow-hidden">
       <div className="relative  w-full -right-[1rem] ">
@@ -1294,8 +1294,8 @@ const Home = () => {
       <div className="flex  justify-between mx-auto container py-9 z-50 ">
         <div className="flex mt-10 flex-col dark:text-white  lg:max-w-3xl lg:text-left p-6  rounded-sm  ">
           <h1 className="hero-title text-5xl sm:text-[60px] font-bold leading-none ">
-            Make <span className="gradientText"> beautiful</span> websites regardless of your design
-            experience.
+            Make <span className="gradientText"> beautiful</span> websites
+            regardless of your design experience.
           </h1>
 
           <h1 className="hero-title text-lg font-semibold flex flex-col my-4 ">
@@ -1320,11 +1320,13 @@ const Home = () => {
       </div>
       <div className=" grid md:grid-cols-2 lg:grid-cols-3 container mx-auto w-full justify-center items-center">
         {HeroCardData.map((n, index) => {
-          return <HeroCard title={n.title} description={n.description} key={index} />
+          return (
+            <HeroCard title={n.title} description={n.description} key={index} />
+          );
         })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

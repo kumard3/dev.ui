@@ -26,6 +26,7 @@ import {
   SquareAvatar,
   ContentAvatar,
   CircleAvatar,
+  UserAvatar,
 } from "../../components/avatar/index";
 
 import HeroSection from "../../components/Hero/HeroSection";
@@ -1617,6 +1618,11 @@ export const codeData = [
             </div>
           );
         };`,
+      },
+      {
+        name: "UserAvatar",
+        component: <UserAvatar />,
+        jsx: 'export const UserAvatar = () => {\n            return (\n              <div className="max-w-full py-4 px-2 w-full h-full scrollbar-hide overflow-x-scroll">\n              <div className="flex h-full w-full ">\n                <div className="inline-flex items-center justify-center gap-2 rounded-small outline-none   ">\n                  <span className="flex relative justify-center items-center box-border overflow-hidden align-middle z-0 outline-none    w-10 h-10 rounded-full">\n                    <img\n                      src="https://source.unsplash.com/120x120/?portrait"\n                      className="flex object-cover w-full h-full transition-opacity duration-500  "\n                      alt="image avatar"\n                    />\n                  </span>\n                  <div className="inline-flex flex-col items-start">\n                    <span className="text-base text-inherit">Jane Doe</span>\n                    <span className="text-xs text-gray-300">Web Designer</span>\n                  </div>\n                </div>\n              </div>\n            </div>\n            );\n          };',
       },
     ],
   },

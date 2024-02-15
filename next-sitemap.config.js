@@ -1,5 +1,5 @@
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: 'https://dev-ui.vercel.app',
+  siteUrl: "https://devui.kumard3.com",
   generateRobotsTxt: true,
-}
+};

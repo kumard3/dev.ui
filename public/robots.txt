@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://dev-ui.vercel.app
+Host: https://devui.kumard3.com
 
 # Sitemaps
-Sitemap: https://dev-ui.vercel.app/sitemap.xml
+Sitemap: https://devui.kumard3.com/sitemap.xml

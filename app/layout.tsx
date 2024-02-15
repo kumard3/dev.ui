@@ -20,19 +20,19 @@ export const metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://dev-ui.vercel.app/",
+    url: "https://devui.kumard3.com/",
     title: "Dev.Ui",
     description:
       "Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS",
     siteName: "Dev.Ui",
     images: [
       {
-        url: "https://dev-ui.vercel.app/dev-ui.gif",
+        url: "https://devui.kumard3.com/dev-ui.gif",
       },
     ],
     videos: [
       {
-        url: "https://dev-ui.vercel.app/dev-ui.gif",
+        url: "https://devui.kumard3.com/dev-ui.gif",
       },
     ],
   },

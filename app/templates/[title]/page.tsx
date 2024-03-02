@@ -2,11 +2,10 @@ import { Metadata } from "next";
 import { Key, Suspense } from "react";
 import TemplateDisplay from "../../../website/codeDisplay/TemplateDisplay";
 import Loader from "../../loader";
-import { getBaseUrl } from "../../../utils/getBaseUrl";
 
 export const dynamic = "force-static";
 export async function generateStaticParams() {
-  const res = await fetch(`${getBaseUrl()}/api/template`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
 
   const data = await res.json();
   return data.map((post: { urlTitle: any }) => ({
@@ -28,7 +27,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
 export default async function page({ params }: any) {
   const route = params?.title;
-  const res = await fetch(`${getBaseUrl()}/api/template`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
   const data = await res.json();
   const filterdata = data.filter(
     (e: { urlTitle: any }) => e.urlTitle === route

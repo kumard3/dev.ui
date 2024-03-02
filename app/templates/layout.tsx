@@ -1,9 +1,8 @@
 import { ReactNode } from "react";
 import TemplateNavbar from "../../website/components/template-navbar";
-import { getBaseUrl } from "../../utils/getBaseUrl";
 
 export default async function layout({ children }: { children: ReactNode }) {
-  const res = await fetch(`${getBaseUrl()}/api/template`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
   const data = await res.json();
   return (
     <div className="flex px-1 md:px-5 w-full ">

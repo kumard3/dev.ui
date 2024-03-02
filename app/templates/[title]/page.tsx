@@ -4,14 +4,14 @@ import TemplateDisplay from "../../../website/codeDisplay/TemplateDisplay";
 import Loader from "../../loader";
 
 export const dynamic = "force-static";
-export async function generateStaticParams() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
+// export async function generateStaticParams() {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
 
-  const data = await res.json();
-  return data.map((post: { urlTitle: any }) => ({
-    title: post.urlTitle,
-  }));
-}
+//   const data = await res.json();
+//   return data.map((post: { urlTitle: any }) => ({
+//     title: post.urlTitle,
+//   }));
+// }
 export async function generateMetadata({ params }: any): Promise<Metadata> {
   const capitalize = (s: string | any[]) =>
     s && s[0].toUpperCase() + s.slice(1);

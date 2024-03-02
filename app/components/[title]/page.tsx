@@ -19,13 +19,13 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/components/`);
-  const data = await res.json();
-  return data.map((post: { urlTitle: any }) => ({
-    title: post.urlTitle,
-  }));
-}
+// export async function generateStaticParams() {
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/components/`);
+//   const data = await res.json();
+//   return data.map((post: { urlTitle: any }) => ({
+//     title: post.urlTitle,
+//   }));
+// }
 
 export default async function page({ params }: any) {
   const route = params?.title;

@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   return {
     title: capitalize(params?.title) + " Templates",
-    metadataBase: new URL("https://devui.in/template"),
+    metadataBase: new URL("https://www.devui.in/template"),
     openGraph: {
       images: "/dev-ui.gif",
     },

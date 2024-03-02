@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://devui.in/api/templates</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/api/components</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/templates/nft-landing-page</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/templates/portfolio-template</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/templates/landing-page-design</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/components/hero</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/components/Tab</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/components/card</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/components/features</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/components/modal</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/components/footer</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/components/button</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/components/nav</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://devui.in/components/avatar</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/api/templates</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/api/components</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/templates/nft-landing-page</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/templates/portfolio-template</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/templates/landing-page-design</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/components/hero</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/components/Tab</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/components/card</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/components/features</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/components/modal</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/components/footer</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/components/button</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/components/nav</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.devui.in/components/avatar</loc><lastmod>2023-02-26T20:56:42.700Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>

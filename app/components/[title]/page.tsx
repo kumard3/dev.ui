@@ -12,7 +12,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
   return {
     title: capitalize(params?.title) + " Components",
-    metadataBase: new URL("https://devui.in/components"),
+    metadataBase: new URL("https://www.devui.in/components"),
     openGraph: {
       images: "/dev-ui.gif",
     },

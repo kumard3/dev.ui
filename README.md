@@ -1,10 +1,10 @@
 <div align="center">
 
-<a target="_blank" href="https://devui.in">
+<a target="_blank" href="https://www.devui.in">
    <img alt="Website" src="https://user-images.githubusercontent.com/62591080/169439105-325e7551-65b5-4d1e-ad0d-b4395c6043d5.gif">
 </a>
 
-[![Website](https://img.shields.io/badge/%20%F0%9F%8F%A1%20website-0072ff.svg?longCache=true&style=for-the-badge)](https://devui.in)
+[![Website](https://img.shields.io/badge/%20%F0%9F%8F%A1%20website-0072ff.svg?longCache=true&style=for-the-badge)](https://www.devui.in)
 
 <!-- [![License](https://img.shields.io/badge/-mit-red.svg?longCache=true&style=for-the-badge)](https://github.com/tdemapp/website/blob/master/LICENSE) -->
 <!-- [![Website](https://img.shields.io/badge/Deploy-brightgreen.svg?logo=vercel&longCache=true&style=for-the-badge)](https://vercel.com/import/project?template=https://github.com/nurodev/nuro.dev) -->

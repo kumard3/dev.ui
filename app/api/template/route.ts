@@ -1,5 +1,3 @@
-import { NextRequest, NextResponse } from "next/server";
-
 export async function GET() {
   const res = [
     {
@@ -128,8 +126,5 @@ export async function GET() {
       ],
     },
   ];
-
-  const data = res;
-
   return Response.json(res);
 }

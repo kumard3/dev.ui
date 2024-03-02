@@ -5,7 +5,8 @@ import Loader from "../../loader";
 
 export const dynamic = "force-static";
 export async function generateStaticParams() {
-  const res = await fetch("https://dev-ui-api.vercel.app/api/template");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
+
   const data = await res.json();
   return data.map((post: { urlTitle: any }) => ({
     title: post.urlTitle,
@@ -15,12 +16,18 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
   const capitalize = (s: string | any[]) =>
     s && s[0].toUpperCase() + s.slice(1);
 
-  return { title: capitalize(params?.title) + " Templates" };
+  return {
+    title: capitalize(params?.title) + " Templates",
+    metadataBase: new URL("https://devui.in/template"),
+    openGraph: {
+      images: "/dev-ui.gif",
+    },
+  };
 }
 
 export default async function page({ params }: any) {
   const route = params?.title;
-  const res = await fetch("https://dev-ui-api.vercel.app/api/template");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
   const data = await res.json();
   const filterdata = data.filter(
     (e: { urlTitle: any }) => e.urlTitle === route

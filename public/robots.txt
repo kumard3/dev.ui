@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://devui.kumard3.com
+Host: https://devui.in
 
 # Sitemaps
-Sitemap: https://devui.kumard3.com/sitemap.xml
+Sitemap: https://devui.in/sitemap.xml

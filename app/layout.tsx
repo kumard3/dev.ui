@@ -20,26 +20,24 @@ export const metadata = {
   ],
   openGraph: {
     type: "website",
-    url: "https://devui.kumard3.com/",
+    url: "https://devui.in/",
     title: "Dev.Ui",
     description:
       "Dev UI is a free, open-source collection of UI components and templates based on Tailwind CSS",
     siteName: "Dev.Ui",
     images: [
       {
-        url: "https://devui.kumard3.com/dev-ui.gif",
+        url: "https://devui.in/dev-ui.gif",
       },
     ],
     videos: [
       {
-        url: "https://devui.kumard3.com/dev-ui.gif",
+        url: "https://devui.in/dev-ui.gif",
       },
     ],
   },
   robots: "index, follow",
-  other: {
-    "google-site-verification": "ojrNbpH_TNGvB76f7GhW14IFc9z24nOduorPB2SOdYc",
-  },
+  metadataBase: new URL("https://devui.in/"),
 };
 export const dynamic = "auto",
   dynamicParams = true,

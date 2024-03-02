@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import TemplateNavbar from "../../website/components/template-navbar";
 
 export default async function layout({ children }: { children: ReactNode }) {
-  const res = await fetch("https://dev-ui-api.vercel.app/api/template");
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
   const data = await res.json();
   return (
     <div className="flex px-1 md:px-5 w-full ">

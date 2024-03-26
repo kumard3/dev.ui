@@ -67,7 +67,7 @@ export default function RootLayout({
         </a>
         <Nav />
         <div className=" overflow-hidden">{children}</div>
-        {/* <Analytics /> */}
+        <Analytics />
       </body>
     </html>
   );

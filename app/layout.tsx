@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import Analytics from "../website/analytics";
 import Nav from "../website/components/Nav";
+export const dynamic = "force-static";
 
 export const metadata = {
   title: {

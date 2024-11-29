@@ -5,7 +5,7 @@ interface herocard {
   title: string;
   description: string;
 }
-
+export const dynamic = "force-static";
 const HeroCard = ({ title, description }: herocard) => {
   return (
     <div className=" glass m-2  h-[15rem]  max-w-[400px] p-5 rounded-lg">

@@ -5,7 +5,7 @@ import Loader from "../../loader";
 
 export const dynamic = "force-static";
 // export async function generateStaticParams() {
-//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
+//   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/template`);
 
 //   const data = await res.json();
 //   return data.map((post: { urlTitle: any }) => ({

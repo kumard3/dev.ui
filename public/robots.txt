@@ -1,5 +1,8 @@
 # *
 User-agent: *
+
+# *
+User-agent: *
 Allow: /
 
 # Host

@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 
 export default async function page({ params }: any) {
   const route = params?.title;
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/template`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/template`);
   const data = await res.json();
   const filterdata = data.filter(
     (e: { urlTitle: any }) => e.urlTitle === route

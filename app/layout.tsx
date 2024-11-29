@@ -39,12 +39,6 @@ export const metadata = {
   robots: "index, follow",
   metadataBase: new URL("https://www.devui.in/"),
 };
-export const dynamic = "auto",
-  dynamicParams = true,
-  revalidate = false,
-  fetchCache = "auto",
-  runtime = "nodejs",
-  preferredRegion = "auto";
 
 export default function RootLayout({
   children,

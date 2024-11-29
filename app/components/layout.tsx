@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import ComponentNav from "./ComponentNav";
+export const dynamic = "force-static";
 
 export default function layout({ children }: { children: ReactNode }) {
   return (

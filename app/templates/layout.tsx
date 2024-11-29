@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import TemplateNavbar from "../../website/components/template-navbar";
+export const dynamic = "force-static";
 
 export default async function layout({ children }: { children: ReactNode }) {
   const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/template`);

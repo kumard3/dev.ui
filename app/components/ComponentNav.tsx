@@ -2,10 +2,21 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { codeData } from "../../data/components/data";
 import { Componentbutton } from "../../website/components/ComponentButton";
 
-export default function ComponentNav() {
+export default function ComponentNav({
+  data,
+}: {
+  data: {
+    title: string;
+    urlTitle: string;
+    url: string;
+    store: {
+      title: string;
+      jsx: string;
+    }[];
+  }[];
+}) {
   const [toggleSidebar, setToggleSidebar] = useState<boolean>(false);
   return (
     <div>
@@ -30,7 +41,7 @@ export default function ComponentNav() {
               <Link href="/components"> Components</Link>
             </h1>
             <section className="dark:text-white text-dark flex flex-wrap flex-col justify-center items-start  my-4 ">
-              {codeData.map((n) => (
+              {data.map((n) => (
                 <div
                   className="flex flex-wrap my-2 w-full text-left "
                   key={n.title}

@@ -1,8 +1,7 @@
 import React, { useRef, useState } from "react";
-// import useOnClickOutside from "../../../hooks/useOnClickOutside";
 
 import Link from "next/link";
-import useOnClickOutside from "../../hooks/useOnClickOutside";
+import useOnClickOutside from "@/hooks/useOnClickOutside";
 
 const navData = [
   {
@@ -18,24 +17,23 @@ const navData = [
 export default function Nav2() {
   // Create a ref that we add to the element for which we want to detect outside clicks
   const ref = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLDivElement>(null);
 
   // State for our modal
   const [isModalOpen, setModalOpen] = useState(false);
   // Call hook passing in the ref and a function to call on outside click
   useOnClickOutside(ref, () => setModalOpen(false));
 
-
   return (
-    // <Popover className= {`sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-gray-900/10 bg-white supports-backdrop-blur:bg-white/95 ${show && 'bg-inherit	'}`}>
     <div className="w-full backdrop-blur-sm  bg-[#818CF8] text-xl font-bold drop-shadow-xl flex-none transition-colors duration-500 lg:z-50 ">
       <div className="w-full container mx-auto">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 ">
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
             <div className="flex justify-start items-center text-center lg:w-0 lg:flex-1">
-              
               <Link href="#home">
-                <h1 className="h-[3.5rem] flex items-center text-center" > Dev.ui </h1>
+                <h1 className="h-[3.5rem] flex items-center text-center">
+                  {" "}
+                  Dev.ui{" "}
+                </h1>
               </Link>
             </div>
             <div className=" sm:hidden">
@@ -129,5 +127,3 @@ export default function Nav2() {
     </div>
   );
 }
-
-

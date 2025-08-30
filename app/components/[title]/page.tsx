@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import { Key, Suspense } from "react";
 
-import CodeDisplay from "../../../website/codeDisplay/CodeDisplay";
+import CodeDisplay from "@/website/codeDisplay/CodeDisplay";
+// import Loader from "@/app/loader";
 import Loader from "../../loader";
 
 export const dynamic = "force-static";
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: any): Promise<Metadata> {
 }
 
 export async function generateStaticParams() {
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/components/`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/v2/component/`);
   const data = await res.json();
   return data.map((post: { urlTitle: any }) => ({
     title: post.urlTitle,
@@ -29,15 +30,16 @@ export async function generateStaticParams() {
 
 export default async function page({ params }: any) {
   const route = params?.title;
-  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/components/`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/v2/component/`);
   const data = await res.json();
   const filterdata = data.filter(
     (e: { urlTitle: any }) => e.urlTitle === route
   );
   const Filter = filterdata[0]?.store;
+
   return (
     <div>
-      <div className="flex w-full justify-center flex-col items-center">
+      <div className="flex w-full justify-center flex-col gap-3 py-4 items-center">
         <Suspense fallback={<Loader />}>
           {Filter?.map(
             (

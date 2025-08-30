@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
 export default function Card10() {
   return (
     <div
       className="flex flex-col rounded-xl  p-4"
       style={{
-        border: '0.88px solid',
+        border: "0.88px solid",
 
-        backdropFilter: 'saturate(180%) blur(14px)',
-        background: ' #ffffff0d',
+        backdropFilter: "saturate(180%) blur(14px)",
+        background: " #ffffff0d",
       }}
     >
       <div>
@@ -31,5 +31,5 @@ export default function Card10() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,23 +1,23 @@
-'use client'
+"use client";
 
-import { usePathname } from 'next/navigation'
-import Link from 'next/link'
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const navData = [
   {
-    name: 'Component',
-    href: '/components',
+    name: "Component",
+    href: "/components",
   },
   {
-    name: 'Templates',
-    href: '/templates',
+    name: "Templates",
+    href: "/templates",
   },
-]
+];
 
 export default function Nav() {
-  const pathname = usePathname()
+  const pathname = usePathname();
 
-  const button = `  min-h-[3rem] px-4 active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`
+  const button = `min-h-[1rem] px-4 active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`;
   return (
     <>
       <div className=" w-full outerSans flex  text-xl font-bold border-b-2 border-gray-600  ">
@@ -25,7 +25,9 @@ export default function Nav() {
           <div className="flex justify-between items-center px-4 pt-6 md:pb-6">
             <div className="flex ">
               <Link href="/" passHref>
-                <button className={`gradientText hero-title text-[50px] font-bold leading-none `}>
+                <button
+                  className={`gradientText hero-title text-3xl font-bold leading-none `}
+                >
                   <h1>dev.UI</h1>
                 </button>
               </Link>
@@ -37,13 +39,13 @@ export default function Nav() {
                     <button
                       type="button"
                       className={`${button} ${
-                        pathname?.includes(n.href) && 'bg-white/10'
-                      } text-[25px] cursor-pointer`}
+                        pathname?.includes(n.href) && "bg-white/10"
+                      } text-lg cursor-pointer`}
                     >
                       {n.name}
                     </button>
                   </Link>
-                )
+                );
               })}
             </nav>
 
@@ -70,18 +72,20 @@ export default function Nav() {
               {navData.map((n) => {
                 return (
                   <Link key={n.name} href={n.href} passHref>
-                    <button className={`${button} text-xl md:text-2xl cursor-pointer`}>
+                    <button
+                      className={`${button} text-xl md:text-2xl cursor-pointer`}
+                    >
                       {n.name}
                     </button>
                   </Link>
-                )
+                );
               })}
             </nav>
           </div>
         </div>
       </div>
     </>
-  )
+  );
 }
 
 // bg-[#EF404A]

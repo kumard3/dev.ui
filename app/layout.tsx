@@ -1,6 +1,9 @@
-import "../styles/globals.css";
-import Analytics from "../website/analytics";
-import Nav from "../website/components/Nav";
+import "@/styles/globals.css";
+import { Inter } from "next/font/google";
+import Analytics from "@/website/analytics";
+import Nav from "@/website/components/Nav";
+const inter = Inter({ subsets: ["latin"] });
+
 export const dynamic = "force-static";
 
 export const metadata = {
@@ -49,7 +52,9 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className="bg-black w-full min-h-screen text-white ">
+      <body
+        className={`${inter.className} bg-black w-full min-h-screen text-white antialiased`}
+      >
         <a
           title="Github link Dev.Ui"
           href="https://github.com/kumard3/dev.ui"

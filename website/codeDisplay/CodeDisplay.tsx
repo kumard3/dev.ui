@@ -9,7 +9,7 @@ import { stackoverflowDark } from "react-syntax-highlighter/dist/cjs/styles/hljs
 import useCopyToClipboard from "./useCopyToClipboard";
 
 import { usePathname } from "next/navigation";
-import { codeData } from "../../data/components/data";
+import ComponentDisplay from "./ComponentDisplay";
 
 interface Props {
   component?: ReactNode;
@@ -48,13 +48,9 @@ export default function CodeDisplay({ component, jsx, params, route }: Props) {
     }, 3000);
   }
 
-  const testData = codeData.filter((n) => n.urlTitle === route);
-  // const t = codeData.filter((n) => n.store.filter((n) => n.name === component));
-  const t = testData[0].store.filter((n) => n.name === component);
-
   return (
     <>
-      <section className="bg-[#120e0e] mb-5 min-h-[10rem] w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none my-5 ">
+      <section className="bg-[#120e0e]  w-full flex flex-col  container mx-auto overflow-hidden rounded-lg shadow-sm scrollbar-none  ">
         <section className="flex p-3 bg-black-1 justify-center items-center lg:justify-between">
           <div>
             {data.map((n, index) => {
@@ -75,36 +71,34 @@ export default function CodeDisplay({ component, jsx, params, route }: Props) {
         <hr />
 
         <div>
-          <>
-            {tab === "Preview" ? (
-              <div className="max-h-[50rem] overflow-scroll bg-[#181818]  ">
-                <section className="min-h-[5rem] py-2 flex flex-col justify-center items-center  w-full ">
-                  {t[0]?.component}
-                </section>
+          {tab === "Preview" ? (
+            <div className="  bg-[#181818]  ">
+              <div className="py-3 px-2 flex justify-center ">
+                <ComponentDisplay componentName={component as string} />
               </div>
-            ) : (
-              <div className="max-h-[50rem] overflow-scroll relative ">
-                <div className="sticky right-2 top-2">
-                  <button
-                    onClick={(e) => handleCopy(e)}
-                    className="absolute right-2 top-2 bg-white/10 backdrop-blur-xl backdrop-filter filter w-40 h-10 rounded-md "
-                  >
-                    {CopiedText ? (
-                      <span className="text-green-400">Copied</span>
-                    ) : (
-                      <span className="text-white">Copy</span>
-                    )}
-                  </button>
-                </div>
-                <SyntaxHighlighter
-                  language="javascript"
-                  style={stackoverflowDark}
+            </div>
+          ) : (
+            <div className="max-h-[50rem] overflow-scroll relative ">
+              <div className="sticky right-2 top-2">
+                <button
+                  onClick={(e) => handleCopy(e)}
+                  className="absolute right-2 top-2 bg-white/10 backdrop-blur-xl backdrop-filter filter w-40 h-10 rounded-md "
                 >
-                  {jsx}
-                </SyntaxHighlighter>
+                  {CopiedText ? (
+                    <span className="text-green-400">Copied</span>
+                  ) : (
+                    <span className="text-white">Copy</span>
+                  )}
+                </button>
               </div>
-            )}
-          </>
+              <SyntaxHighlighter
+                language="javascript"
+                style={stackoverflowDark}
+              >
+                {jsx}
+              </SyntaxHighlighter>
+            </div>
+          )}
         </div>
       </section>
     </>

@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+"use client";
+import React, { useState } from "react";
 
 export default function Card9() {
-  const [play, setPlay] = useState(false)
+  const [play, setPlay] = useState(false);
   return (
     <div className="border  w-[350px] glass rounded-xl flex">
       <img
@@ -75,5 +76,5 @@ export default function Card9() {
         </div>
       </div>
     </div>
-  )
+  );
 }

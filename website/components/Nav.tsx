@@ -17,7 +17,7 @@ const navData = [
 export default function Nav() {
   const pathname = usePathname();
 
-  const button = `min-h-[1rem] px-4 active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`;
+  const button = `min-h-[3rem] px-4 active:scale-105 scale-110 active:transition-all duration-50 active:bg-white/10 hover:bg-white/10 flex justify-center items-center rounded-xl`;
   return (
     <>
       <div className=" w-full outerSans flex  text-xl font-bold border-b-2 border-gray-600  ">
@@ -73,7 +73,7 @@ export default function Nav() {
                 return (
                   <Link key={n.name} href={n.href} passHref>
                     <button
-                      className={`${button} text-xl md:text-2xl cursor-pointer`}
+                      className={`${button} text-xl py-2 md:text-2xl cursor-pointer`}
                     >
                       {n.name}
                     </button>

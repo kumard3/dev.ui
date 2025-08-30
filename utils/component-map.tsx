@@ -40,7 +40,7 @@ import Button6 from "@/components/button/Button6";
 import Button7 from "@/components/button/Button7";
 import Button8 from "@/components/button/Button8";
 import HeroSection9 from "@/components/Hero/HeroSection9";
-import Spinner from "@/components/loading/Spinner";
+import Spinner from "@/components/loading/Spinner-Component";
 import CirlceImage from "@/components/avatar/CirlceImage";
 import ContentAvatar from "@/components/avatar/ContentAvatar";
 import SquareAvatar from "@/components/avatar/SquareAvatar";

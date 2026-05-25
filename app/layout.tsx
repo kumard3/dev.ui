@@ -74,10 +74,10 @@ export default function RootLayout({
           className="group relative block w-full font-mono text-sm py-2 px-4 text-center bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 transition-colors"
         >
           <span className="hidden sm:inline">
-            Building AI agents? <span className="font-bold">Lumbox</span> gives them a real email inbox, stealth browser, and credential vault. Free to get started
+            AI agent workflows on <span className="font-bold">Lumbox</span>: email, browser automation, inbox RAG, credential vault. Free to get started
           </span>
           <span className="sm:hidden">
-            <span className="font-bold">Lumbox</span>: email + browser + vault for AI agents. Free to start
+            <span className="font-bold">Lumbox</span>: workflows + browser automation + RAG for AI agents. Free
           </span>
           <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
         </a>

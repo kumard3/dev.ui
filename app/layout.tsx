@@ -65,6 +65,22 @@ export default function RootLayout({
         >
           ⭐️ Star DevUI on GitHub ⭐️
         </a>
+        <a
+          title="Lumbox: email, browser, and credential vault for AI agents"
+          href="https://lumbox.co?utm_source=devui&utm_medium=banner&utm_campaign=devui-top"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Lumbox for AI agents"
+          className="group relative block w-full font-mono text-sm py-2 px-4 text-center bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 hover:from-indigo-500 hover:via-purple-500 hover:to-pink-500 transition-colors"
+        >
+          <span className="hidden sm:inline">
+            Building AI agents? <span className="font-bold">Lumbox</span> gives them a real email inbox, stealth browser, and credential vault. Free to get started
+          </span>
+          <span className="sm:hidden">
+            <span className="font-bold">Lumbox</span>: email + browser + vault for AI agents. Free to start
+          </span>
+          <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
+        </a>
         <Nav />
         <div className=" overflow-hidden">{children}</div>
         <Analytics />
